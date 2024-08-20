@@ -116,3 +116,6 @@ venv.bak/
 # imputed results & large files
 imputations/*
 *.h5
+SERGIO/data_sets
+SERGIO/imputation_data_temp
+SERGIO/run.sbatch
