@@ -1,5 +1,5 @@
 from consolidated_runs import run_sergio
-from Pearson.pearson import Pearson
+from metrics.Pearson.pearson import Pearson
 from scipy.stats import norm
 import numpy as np
 import pandas as pd

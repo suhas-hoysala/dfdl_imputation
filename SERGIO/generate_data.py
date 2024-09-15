@@ -9,12 +9,12 @@ sim.simulate()
 expr = sim.getExpressions()
 expr_clean = np.concatenate(expr, axis = 1)
 
-np.save('imputation_data_temp/DS6_clean', expr_clean)
-np.save('imputation_data_temp/DS6_expr', expr)
+np.save('imputation_data/DS6_clean', expr_clean)
+np.save('imputation_data/DS6_expr', expr)
 
 cmat_clean = sim.convert_to_UMIcounts(expr)
 cmat_clean = np.concatenate(cmat_clean, axis = 1)
-np.save('imputation_data_temp/DS6_clean_counts', cmat_clean)
+np.save('imputation_data/DS6_clean_counts', cmat_clean)
 
 """
 Add outlier genes
@@ -29,7 +29,8 @@ libFactor, expr_O_L = sim.lib_size_effect(expr_O, mean = 4.5, scale = 0.7)
 """
 Add Dropouts
 """
-binary_ind = sim.dropout_indicator(expr_O_L, shape = 8, percentile = 45)
+percentile = 45
+binary_ind = sim.dropout_indicator(expr_O_L, shape = 8, percentile = percentile)
 expr_O_L_D = np.multiply(binary_ind, expr_O_L)
 
 """
@@ -42,4 +43,4 @@ Make a 2d gene expression matrix
 """
 count_matrix = np.concatenate(count_matrix, axis = 1)
 
-np.save('imputation_data_temp/DS6_45', count_matrix)
+np.save(f'imputation_data/DS6_{percentile}', count_matrix)

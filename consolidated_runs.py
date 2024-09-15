@@ -23,20 +23,20 @@ from sklearn.metrics import roc_auc_score
 from SERGIO.SERGIO.sergio import sergio
 # if path_to_MAGIC not in sys.path:
 #     sys.path.insert(0, path_to_MAGIC)
-import MAGIC.magic as magic
+import baselines.MAGIC.magic as magic
 # if path_to_SAUCIE not in sys.path:
 #     sys.path.insert(0, path_to_SAUCIE)
-import SAUCIE.SAUCIE as SAUCIE
+import baselines.SAUCIE.SAUCIE as SAUCIE
 # if path_to_scScope not in sys.path:
 #     sys.path.insert(0, path_to_scScope)
-import scScope.scscope.scscope as DeepImpute
+import baselines.scScope.scscope.scscope as scScope
 # if path_to_DeepImpute not in sys.path:
 #     sys.path.insert(0, path_to_DeepImpute)
-import deepimpute.deepimpute as deepimpute
+import baselines.deepimpute as deepImpute
 
-from Pearson.pearson import Pearson
+from metrics.Pearson.pearson import Pearson
 
-import arboreto as arboreto
+import prev_methods.reconstruct_grn.arboreto as arboreto
 
 from utils import gt_benchmark, reload_modules, delete_modules 
 from utils import plot_precisions, precision_at_k
@@ -81,7 +81,32 @@ def run_sergio(input_file, reg_file, ind, n_genes=1200, n_bins=9, n_sc=300, file
     expr_O_L_D = np.multiply(binary_ind, expr_O_L)
     count_matrix = sim.convert_to_UMIcounts(expr_O_L_D)
     count_matrix = np.concatenate(count_matrix, axis = 1)
-    np.save(save_path + '/DS6_noisy' + file_extension, count_matrix)
+    np.save(save_path + '/DS6_45' + file_extension, count_matrix)
+
+def run_exp1(x_path, y_path, ind):
+    #reload_modules('tensorflow.compat')
+    tf = importlib.import_module('tensorflow.compat.v1')
+    ds_str = 'DS' + str(ind)
+    save_path = './imputations/' + ds_str
+    print(f"Loading data for DS{ind}")
+    x = np.transpose(np.load(x_path))  # Clean data
+    y = np.transpose(np.load(y_path))  # Noisy data
+    print(f"Running Exp1 imputation for DS{ind}")
+    imputed_y = np.copy(y)
+    for gene_idx in range(imputed_y.shape[1]):
+        gene_values = imputed_y[:, gene_idx]
+        non_zero_values = gene_values[gene_values != 0]  # Exclude missing values (if marked as zero)
+        
+        if len(non_zero_values) > 0:
+            mean_gene = np.mean(non_zero_values)
+            std_gene = np.std(non_zero_values)
+            missing_indices = np.where(gene_values == 0)[0]
+            imputed_values = np.random.normal(mean_gene, std_gene, size=missing_indices.shape[0])
+            imputed_y[missing_indices, gene_idx] = imputed_values
+    print(f"Saving imputed data for DS{ind}")
+    save_str = '/yhat_exp1'
+    np.save(save_path + save_str, imputed_y)
+    print(f"Exp1 imputation completed for DS{ind} and results saved.")
 
 def run_saucie(x_path, y_path, ind):
     #reload_modules('tensorflow.compat')
@@ -112,7 +137,7 @@ def run_saucie(x_path, y_path, ind):
 def run_deepImpute(x_path, y_path, ind):
     #reload_modules('tensorflow.compat')
     importlib.invalidate_caches()
-    multinet = importlib.import_module('deepimpute.deepimpute.multinet')
+    multinet = importlib.import_module('deepImpute.multinet')
     importlib.reload(multinet)
     tf = importlib.import_module('tensorflow.compat.v1')
     #tf = importlib.import_module('tensorflow')
@@ -165,7 +190,7 @@ def run_scScope(x_path, y_path, ind):
     save_path = './imputations/' + ds_str
     y = np.transpose(np.load(y_path))
     x = np.transpose(np.load(x_path))
-    DI_model = DeepImpute.train(
+    DI_model = scScope.train(
           y,
           15,
           use_mask=True,
@@ -179,7 +204,7 @@ def run_scScope(x_path, y_path, ind):
           learning_rate=0.0001,
           beta1=0.05,
           num_gpus=1)
-    latent_code, rec_y, _ = DeepImpute.predict(y, DI_model, batch_effect=[])
+    latent_code, rec_y, _ = scScope.predict(y, DI_model, batch_effect=[])
     save_str = '/yhat_scScope'
     np.save(save_path + save_str, rec_y)
 
@@ -190,7 +215,7 @@ def run_arboreto(path, roc, precision_recall_k, method_name, target, ind, regs=N
     df = pd.DataFrame(dataset)
     c_names = [str(c) for c in df.columns]
     df.columns = c_names
-    from arboreto import algo
+    from prev_methods.reconstruct_grn.arboreto import algo
     #network = algo.grnboost2(expression_data=df, tf_names=regs, verbose=True)
     network = algo.genie3(expression_data=df, tf_names=regs, verbose=True)
     network['TF'] = network['TF'].astype(int)
@@ -271,6 +296,11 @@ def run_simulations(datasets, sergio=True, saucie=True, scScope=True, deepImpute
             print(f"---> Running MAGIC on DS{i}")
             run_magic(save_path + '/DS6_clean.npy', save_path + '/DS6_45.npy', i)
             count_methods += 3
+        
+        if exp1:
+            print(f"---> Running MAGIC on DS{i}")
+            run_exp1(save_path + '/DS6_clean.npy', save_path + '/DS6_45.npy', i)
+            count_methods += 1
 
         y = np.transpose(np.load(save_path + '/DS6_45.npy'))
         x = np.transpose(np.load(save_path + '/DS6_clean.npy'))
@@ -366,7 +396,7 @@ def run_simulations(datasets, sergio=True, saucie=True, scScope=True, deepImpute
             elif i == 2:
                 reg_file = './SERGIO/data_sets/De-noised_400G_9T_300cPerT_5_DS2/Regs_cID_5.txt'
             else:
-                reg_file = 'SERGIO/data_sets/De-noised_1200G_9T_300cPerT_6_DS3/Regs_cID_6.txt'
+                reg_file = './SERGIO/data_sets/De-noised_1200G_9T_300cPerT_6_DS3/Regs_cID_6.txt'
             master_regs = pd.read_table(reg_file, header=None, sep=',')
             master_regs = master_regs[0].values.astype(int).astype(str).tolist()
 

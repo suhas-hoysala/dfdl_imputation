@@ -1,0 +1,3 @@
+cd SERGIO
+conda activate bio-zi
+jupyter-notebook --no-browser --ip=0.0.0.0 --port 8888

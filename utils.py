@@ -95,7 +95,7 @@ def plot_precisions(precisions, flat_precisions, avg_precisions, method_name, gt
 
 def run_script_with_subprocess(method, script, args):
     if method == 'DeepDRIM':
-        script = './DeepDRIM/' + script
+        script = './reconstruct_grn/DeepDRIM/' + script
         print("Running DeepDRIM " + script)
         subprocess.run(['python3', script] + args)
     elif method == "BEELINE":

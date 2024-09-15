@@ -1,0 +1,117 @@
+Comparison results for percentile 81:
+expr_O is different across attempts: False
+libFactor is different across attempts: True
+expr_O_L is different across attempts: True
+binary_ind is different across attempts: True
+count_matrix is different across attempts: True
+
+Attempt 1 data:
+expr_O:
+  checksum: c727c3d2904b4f27e6ce55dee05e98cb
+  mean: 4.849195099218511
+  std: 3.7646177598530124
+libFactor:
+  checksum: 1be6d3120abb63d712196959d2e70f63
+  mean: 113.73667421241915
+  std: 84.85694616087389
+expr_O_L:
+  checksum: fba4ea374aae20a0dbea71a1af625edb
+  mean: 1.137366742124191
+  std: 1.3860360984547926
+binary_ind:
+  checksum: 1f144654cf380fd80aa819eeee8af21a
+  mean: 0.20909259259259258
+  std: 0.40666064515207356
+count_matrix:
+  checksum: d4cf60acf1a9a944e405398546d4ad47
+  mean: 0.6251407407407408
+  std: 1.7099986405147853
+
+Attempt 2 data:
+expr_O:
+  checksum: c727c3d2904b4f27e6ce55dee05e98cb
+  mean: 24.491298901885777
+  std: 167.13880525033971
+libFactor:
+  checksum: ce98103e135a881af6bf15483f00ab67
+  mean: 119.78023642683578
+  std: 97.49013581480939
+expr_O_L:
+  checksum: 007465f2c330bf6aac044d62ef543cca
+  mean: 1.197802364268358
+  std: 9.724722405488468
+binary_ind:
+  checksum: 012f24a18c96d5c982ab7e70473a8f49
+  mean: 0.2868074074074074
+  std: 0.4522708463560844
+count_matrix:
+  checksum: 411a33272e7bd0fc96ec27d23f47c4a1
+  mean: 1.0905185185185184
+  std: 9.839321665757739
+
+Attempt 3 data:
+expr_O:
+  checksum: c727c3d2904b4f27e6ce55dee05e98cb
+  mean: 8.742529373499707
+  std: 45.27219233408938
+libFactor:
+  checksum: 1832f0c4a20d1523ed6fdbeb32177d67
+  mean: 114.5134150055878
+  std: 90.79387821614834
+expr_O_L:
+  checksum: c0c50d3c354c4fa77ada0becaedffec9
+  mean: 1.1451341500558783
+  std: 6.354432156018565
+binary_ind:
+  checksum: b7b2d4807a69b19acf7ec57a1c7b866f
+  mean: 0.22204814814814816
+  std: 0.4156233487812327
+count_matrix:
+  checksum: 33b77a3b5f85327dd939fee23f4b2c02
+  mean: 0.8530444444444445
+  std: 6.479129198881781
+
+Attempt 4 data:
+expr_O:
+  checksum: c727c3d2904b4f27e6ce55dee05e98cb
+  mean: 4.849195099218511
+  std: 3.7646177598530124
+libFactor:
+  checksum: 6ffc03d00c33a4d96ac2d69360e8a291
+  mean: 114.2036130040677
+  std: 84.77498563419435
+expr_O_L:
+  checksum: f49b9d92b8b05eac1f8cec9f79a0a49d
+  mean: 1.142036130040677
+  std: 1.3812392065378887
+binary_ind:
+  checksum: cb4c6fcefe1c0e43e04a0d977f89c757
+  mean: 0.21018148148148147
+  std: 0.4074373894523318
+count_matrix:
+  checksum: 2d0490607ab51d03f6e01e7d9ea85a1b
+  mean: 0.6288
+  std: 1.7019409956260507
+
+Attempt 5 data:
+expr_O:
+  checksum: c727c3d2904b4f27e6ce55dee05e98cb
+  mean: 115.20102958445115
+  std: 1231.5691683171735
+libFactor:
+  checksum: 5c99c5985e80c09ddb4b3dedaa510b34
+  mean: 115.18476923339738
+  std: 88.08042158595806
+expr_O_L:
+  checksum: e8d1e766272368d2e6d05279a5dbfbc4
+  mean: 1.1518476923339742
+  std: 12.767340488077982
+binary_ind:
+  checksum: 7926a3580374423bc014a590d968580d
+  mean: 0.42905185185185185
+  std: 0.4949407644095891
+count_matrix:
+  checksum: 1260697819775dfac4f507b9b53b1518
+  mean: 1.1275074074074074
+  std: 12.833998439112042
+
