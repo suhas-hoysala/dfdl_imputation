@@ -1,0 +1,16 @@
+Dataset: DS3, Method: substitute
+ROC AUC Score: 0.8080882232429307
+Elapsed time: 8804.13 seconds
+
+Dataset: DS3, Method: substitute
+ROC AUC Score: 0.8103357256098136
+Elapsed time: 10013.54 seconds
+
+Dataset: DS3, Method: normalized_substitute
+ROC AUC Score: 0.7956512413819979
+Elapsed time: 10252.22 seconds
+
+Dataset: DS3, Method: novar_substitute
+ROC AUC Score: 0.8079026558502114
+Elapsed time: 9961.97 seconds
+
