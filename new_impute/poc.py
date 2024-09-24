@@ -14,6 +14,8 @@ import SERGIO.SERGIO.sergio as sergio
 from sklearn.metrics import roc_auc_score
 from copy import deepcopy
 
+nthreads = 12
+
 def ensure_dir(directory):
     if not os.path.exists(directory):
         os.makedirs(directory)
@@ -26,7 +28,7 @@ def substitute_dataset(ds):
         var_array = np.nanvar(ds_cell_type, axis=1)
         for j in range(100):
             ds_cell_type[j,:] = np.random.normal(loc=mean_array[j], scale=np.sqrt(var_array[j]), size=300)
-    ds[ds==0] = 0.0
+    ds[ds<0] = 0.0
     np.nan_to_num(ds, copy=False)
     return(ds)
 
@@ -40,7 +42,7 @@ def normalized_substitute_dataset(ds):
         std_array /= np.nansum(mean_array)
         for j in range(100):
             ds_cell_type[j,:] = np.random.normal(loc=mean_array[j], scale=std_array[j], size=300)
-    ds[ds==0] = 0.0
+    ds[ds<0] = 0.0
     np.nan_to_num(ds, copy=False)
     return(ds)
 
@@ -51,7 +53,7 @@ def novar_substitute_dataset(ds):
         mean_array = np.nanmean(ds_cell_type, axis=1)
         for j in range(100):
             ds_cell_type[j,:] = np.random.normal(loc=mean_array[j], scale=1.0, size=300)
-    ds[ds==0] = 0.0
+    ds[ds<0] = 0.0
     np.nan_to_num(ds, copy=False)
     return(ds)
 
@@ -132,7 +134,7 @@ def process_dataset(dataset_info, clean_path):
     ]:
         start_time = time.time()
         ds_processed = method_func(ds_clean.astype(np.float32))
-        VIM = GENIE3(np.transpose(ds_processed), ntrees=100, regulators='all',
+        VIM = GENIE3(np.transpose(ds_processed), nthreads=nthreads, ntrees=100, regulators='all',
                      gene_names=[str(s) for s in range(np.transpose(ds_processed).shape[1])])
         
         roc_auc = roc_auc_score(gt.flatten(), VIM.flatten())
@@ -148,12 +150,12 @@ def process_dataset(dataset_info, clean_path):
 ensure_dir('./results/poc')
 
 cleans = {
-    1: '../SERGIO/imputation_data/DS1/DS6_clean_iter_0.npy',
-    2: '../SERGIO/imputation_data/DS2/DS6_clean_iter_0.npy',
-    3: '../SERGIO/imputation_data/DS3/DS6_clean.npy'
+    1: '../SERGIO/imputation_data_2/DS1/DS6_clean.npy',
+    2: '../SERGIO/imputation_data_2/DS2/DS6_clean.npy',
+    3: '../SERGIO/imputation_data_2/DS3/DS6_clean.npy'
 }
 
-datasets = [get_datasets()[2]]
+datasets = get_datasets()
 for dataset_info in tqdm(datasets):
     process_dataset(dataset_info, cleans[dataset_info['dataset_id']])
 

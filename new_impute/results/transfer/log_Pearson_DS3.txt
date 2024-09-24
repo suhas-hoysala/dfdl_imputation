@@ -13,3 +13,9 @@ Dataset: DS3, Iteration: 3
 Dataset: DS3, Iteration: 4
   AUC (Pearson): 0.5050970705143457
 ---------------------------------------------------
+Dataset: DS3, Iteration: 5
+  AUC (Pearson): 0.5150553407624381
+---------------------------------------------------
+Dataset: DS3, Iteration: Aggregated
+  AUC (Pearson): 0.5087859098010957
+---------------------------------------------------
