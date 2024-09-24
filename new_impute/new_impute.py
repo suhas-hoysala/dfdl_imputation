@@ -1,4 +1,10 @@
 # %%
+import sys
+import os
+current_dir = os.getcwd()
+parent_dir = os.path.dirname(current_dir)
+sys.path.append(parent_dir)
+import re
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -9,7 +15,7 @@ from tqdm import tqdm
 current_dir = os.getcwd()
 
 # Import GENIE3
-from GENIE3.GENIE3 import GENIE3
+from GENIE3.GENIE3 import *
 
 # Import imputation methods
 from sklearn.impute import KNNImputer
@@ -86,10 +92,10 @@ def load_data(dataset_info):
     cells_per_type = dataset_info['cells_per_type']
     num_cells = num_bins * cells_per_type
 
-    data_dir = f'../SERGIO/imputation_data_2/DS{dataset_id}/iterations_seperate'
+    data_dir = f'../SERGIO/imputation_data_2/DS{dataset_id}/'
 
     ds_clean_path = os.path.join(data_dir, 'DS6_clean.npy')
-    ds_noisy_path = os.path.join(data_dir, 'DS6_45.npy')
+    ds_noisy_path = os.path.join(data_dir, 'DS6_45_iter_0.npy')
 
     if not os.path.exists(ds_clean_path) or not os.path.exists(ds_noisy_path):
         print(f"Data files not found for Dataset {dataset_id}. Skipping.")
@@ -446,7 +452,7 @@ for dataset_info in datasets:
     adjacency_matrix = build_adjacency_matrix(num_genes, target_file)
 
     # Prepare log file
-    log_dir = './imputation_results/logs'
+    log_dir = './results/new_impute'
     os.makedirs(log_dir, exist_ok=True)
     log_file_path = os.path.join(log_dir, f'Dataset_{dataset_id}_log.txt')
     with open(log_file_path, 'w') as log_file:

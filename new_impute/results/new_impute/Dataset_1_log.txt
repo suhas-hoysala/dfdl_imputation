@@ -1,0 +1,28 @@
+ROC AUC Score for Clean Data: 0.7089
+ROC AUC Score for Noisy Data: 0.5167
+MSE between Noisy Data and Clean Data: 126.1047
+KNN Imputation ROC AUC: 0.5157, MSE: 119.5321
+Iterative Imputation ROC AUC: 0.5491, MSE: 121.6926
+DeepImpute ROC AUC: 0.5623, MSE: 119.9963
+An error occurred with Graph Convolutional Network Imputation: Input contains NaN.
+Graph Diffusion Imputation ROC AUC: 0.2825, MSE: 125.2667
+An error occurred with SAUCIE: name 'SAUCIE' is not defined
+MAGIC ROC AUC: 0.5597, MSE: 71.4197
+An error occurred with scScope: Input y contains NaN.
+
+Summary of ROC AUC Scores:
+Clean Data: 0.7089
+Noisy Data: 0.5167
+KNN Imputation: 0.5157
+Iterative Imputation: 0.5491
+DeepImpute: 0.5623
+Graph Diffusion Imputation: 0.2825
+MAGIC: 0.5597
+
+Summary of MSE Values:
+Noisy Data: 126.1047
+KNN Imputation: 119.5321
+Iterative Imputation: 121.6926
+DeepImpute: 119.9963
+Graph Diffusion Imputation: 125.2667
+MAGIC: 71.4197
