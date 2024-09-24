@@ -1,0 +1,1268 @@
+285/285 [==============================] - 0s 43us/sample - loss: 0.4371 - val_loss: 0.5181
+Epoch 14/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.4211 - val_loss: 0.4968
+Epoch 15/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.4083 - val_loss: 0.4750
+Epoch 16/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.3913 - val_loss: 0.4527
+Epoch 17/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.3757 - val_loss: 0.4296
+Epoch 18/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.3612 - val_loss: 0.4064
+Epoch 19/500
+285/285 [==============================] - 0s 47us/sample - loss: 0.3419 - val_loss: 0.3829
+Epoch 20/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.3258 - val_loss: 0.3590
+Epoch 21/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.3110 - val_loss: 0.3352
+Epoch 22/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.2968 - val_loss: 0.3118
+Epoch 23/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.2793 - val_loss: 0.2890
+Epoch 24/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.2630 - val_loss: 0.2672
+Epoch 25/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.2474 - val_loss: 0.2460
+Epoch 26/500
+285/285 [==============================] - 0s 46us/sample - loss: 0.2346 - val_loss: 0.2258
+Epoch 27/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.2192 - val_loss: 0.2070
+Epoch 28/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.2068 - val_loss: 0.1896
+Epoch 29/500
+285/285 [==============================] - 0s 46us/sample - loss: 0.1975 - val_loss: 0.1737
+Epoch 30/500
+285/285 [==============================] - 0s 46us/sample - loss: 0.1873 - val_loss: 0.1591
+Epoch 31/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.1764 - val_loss: 0.1460
+Epoch 32/500
+285/285 [==============================] - 0s 47us/sample - loss: 0.1689 - val_loss: 0.1341
+Epoch 33/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.1603 - val_loss: 0.1241
+Epoch 34/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.1531 - val_loss: 0.1155
+Epoch 35/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.1490 - val_loss: 0.1078
+Epoch 36/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.1411 - val_loss: 0.1013
+Epoch 37/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.1402 - val_loss: 0.0960
+Epoch 38/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.1367 - val_loss: 0.0914
+Epoch 39/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.1303 - val_loss: 0.0875
+Epoch 40/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.1285 - val_loss: 0.0843
+Epoch 41/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.1243 - val_loss: 0.0815
+Epoch 42/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.1254 - val_loss: 0.0792
+Epoch 43/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.1209 - val_loss: 0.0771
+Epoch 44/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.1227 - val_loss: 0.0754
+Epoch 45/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.1179 - val_loss: 0.0738
+Epoch 46/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.1167 - val_loss: 0.0725
+Epoch 47/500
+285/285 [==============================] - 0s 46us/sample - loss: 0.1200 - val_loss: 0.0713
+Epoch 48/500
+285/285 [==============================] - 0s 39us/sample - loss: 0.1145 - val_loss: 0.0703
+Epoch 49/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.1130 - val_loss: 0.0693
+Epoch 50/500
+285/285 [==============================] - 0s 46us/sample - loss: 0.1121 - val_loss: 0.0683
+Epoch 51/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.1109 - val_loss: 0.0674
+Epoch 52/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.1138 - val_loss: 0.0666
+Epoch 53/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.1078 - val_loss: 0.0656
+Epoch 54/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.1092 - val_loss: 0.0647
+Epoch 55/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.1048 - val_loss: 0.0637
+Epoch 56/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.1029 - val_loss: 0.0627
+Epoch 57/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.0979 - val_loss: 0.0618
+Epoch 58/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0979 - val_loss: 0.0609
+Epoch 59/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0993 - val_loss: 0.0600
+Epoch 60/500
+285/285 [==============================] - 0s 46us/sample - loss: 0.0977 - val_loss: 0.0591
+Epoch 61/500
+285/285 [==============================] - 0s 46us/sample - loss: 0.0944 - val_loss: 0.0583
+Epoch 62/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0935 - val_loss: 0.0574
+Epoch 63/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0944 - val_loss: 0.0565
+Epoch 64/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0935 - val_loss: 0.0557
+Epoch 65/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0907 - val_loss: 0.0548
+Epoch 66/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0940 - val_loss: 0.0540
+Epoch 67/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0896 - val_loss: 0.0532
+Epoch 68/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0843 - val_loss: 0.0523
+Epoch 69/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.0831 - val_loss: 0.0515
+Epoch 70/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0855 - val_loss: 0.0507
+Epoch 71/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0877 - val_loss: 0.0498
+Epoch 72/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0818 - val_loss: 0.0490
+Epoch 73/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0795 - val_loss: 0.0482
+Epoch 74/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.0770 - val_loss: 0.0474
+Epoch 75/500
+285/285 [==============================] - 0s 46us/sample - loss: 0.0769 - val_loss: 0.0466
+Epoch 76/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0790 - val_loss: 0.0458
+Epoch 77/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0777 - val_loss: 0.0450
+Epoch 78/500
+285/285 [==============================] - 0s 47us/sample - loss: 0.0731 - val_loss: 0.0442
+Epoch 79/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0736 - val_loss: 0.0434
+Epoch 80/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0710 - val_loss: 0.0427
+Epoch 81/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.0695 - val_loss: 0.0419
+Epoch 82/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0727 - val_loss: 0.0411
+Epoch 83/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0707 - val_loss: 0.0404
+Epoch 84/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.0673 - val_loss: 0.0396
+Epoch 85/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0650 - val_loss: 0.0388
+Epoch 86/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0657 - val_loss: 0.0381
+Epoch 87/500
+285/285 [==============================] - 0s 47us/sample - loss: 0.0622 - val_loss: 0.0374
+Epoch 88/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0603 - val_loss: 0.0366
+Epoch 89/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0610 - val_loss: 0.0359
+Epoch 90/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0597 - val_loss: 0.0351
+Epoch 91/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.0600 - val_loss: 0.0344
+Epoch 92/500
+285/285 [==============================] - 0s 40us/sample - loss: 0.0596 - val_loss: 0.0337
+Epoch 93/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0571 - val_loss: 0.0330
+Epoch 94/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0537 - val_loss: 0.0323
+Epoch 95/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.0549 - val_loss: 0.0316
+Epoch 96/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0500 - val_loss: 0.0310
+Epoch 97/500
+285/285 [==============================] - 0s 40us/sample - loss: 0.0519 - val_loss: 0.0305
+Epoch 98/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.0511 - val_loss: 0.0299
+Epoch 99/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0515 - val_loss: 0.0292
+Epoch 100/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0471 - val_loss: 0.0286
+Epoch 101/500
+285/285 [==============================] - 0s 40us/sample - loss: 0.0457 - val_loss: 0.0280
+Epoch 102/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0478 - val_loss: 0.0274
+Epoch 103/500
+285/285 [==============================] - 0s 40us/sample - loss: 0.0472 - val_loss: 0.0268
+Epoch 104/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0427 - val_loss: 0.0262
+Epoch 105/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0427 - val_loss: 0.0257
+Epoch 106/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0436 - val_loss: 0.0251
+Epoch 107/500
+285/285 [==============================] - 0s 46us/sample - loss: 0.0435 - val_loss: 0.0246
+Epoch 108/500
+285/285 [==============================] - 0s 46us/sample - loss: 0.0420 - val_loss: 0.0240
+Epoch 109/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0412 - val_loss: 0.0235
+Epoch 110/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0386 - val_loss: 0.0231
+Epoch 111/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0398 - val_loss: 0.0226
+Epoch 112/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0351 - val_loss: 0.0221
+Epoch 113/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0364 - val_loss: 0.0216
+Epoch 114/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0377 - val_loss: 0.0211
+Epoch 115/500
+285/285 [==============================] - 0s 46us/sample - loss: 0.0326 - val_loss: 0.0206
+Epoch 116/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0348 - val_loss: 0.0201
+Epoch 117/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.0323 - val_loss: 0.0197
+Epoch 118/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0347 - val_loss: 0.0194
+Epoch 119/500
+285/285 [==============================] - 0s 40us/sample - loss: 0.0303 - val_loss: 0.0191
+Epoch 120/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0309 - val_loss: 0.0187
+Epoch 121/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0302 - val_loss: 0.0182
+Epoch 122/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0309 - val_loss: 0.0179
+Epoch 123/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0299 - val_loss: 0.0174
+Epoch 124/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.0287 - val_loss: 0.0170
+Epoch 125/500
+285/285 [==============================] - 0s 47us/sample - loss: 0.0285 - val_loss: 0.0167
+Epoch 126/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.0263 - val_loss: 0.0165
+Epoch 127/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.0269 - val_loss: 0.0162
+Epoch 128/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0260 - val_loss: 0.0159
+Epoch 129/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0249 - val_loss: 0.0156
+Epoch 130/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0241 - val_loss: 0.0153
+Epoch 131/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.0251 - val_loss: 0.0150
+Epoch 132/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.0247 - val_loss: 0.0147
+Epoch 133/500
+285/285 [==============================] - 0s 40us/sample - loss: 0.0238 - val_loss: 0.0144
+Epoch 134/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0228 - val_loss: 0.0142
+Epoch 135/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0229 - val_loss: 0.0140
+Epoch 136/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0234 - val_loss: 0.0138
+Epoch 137/500
+285/285 [==============================] - 0s 47us/sample - loss: 0.0221 - val_loss: 0.0135
+Epoch 138/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0210 - val_loss: 0.0134
+Epoch 139/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.0202 - val_loss: 0.0132
+Epoch 140/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0208 - val_loss: 0.0130
+Epoch 141/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0197 - val_loss: 0.0128
+Epoch 142/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0199 - val_loss: 0.0127
+Epoch 143/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.0196 - val_loss: 0.0126
+Epoch 144/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0190 - val_loss: 0.0124
+Epoch 145/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0195 - val_loss: 0.0122
+Epoch 146/500
+285/285 [==============================] - 0s 40us/sample - loss: 0.0186 - val_loss: 0.0120
+Epoch 147/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.0196 - val_loss: 0.0118
+Epoch 148/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0187 - val_loss: 0.0117
+Epoch 149/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.0185 - val_loss: 0.0115
+Epoch 150/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0173 - val_loss: 0.0115
+Epoch 151/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0177 - val_loss: 0.0115
+Epoch 152/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0183 - val_loss: 0.0114
+Epoch 153/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0164 - val_loss: 0.0113
+Epoch 154/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0170 - val_loss: 0.0111
+Epoch 155/500
+285/285 [==============================] - 0s 40us/sample - loss: 0.0167 - val_loss: 0.0110
+Epoch 156/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0171 - val_loss: 0.0108
+Epoch 157/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0154 - val_loss: 0.0107
+Epoch 158/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0167 - val_loss: 0.0106
+Epoch 159/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.0160 - val_loss: 0.0105
+Epoch 160/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.0157 - val_loss: 0.0104
+Epoch 161/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0146 - val_loss: 0.0103
+Epoch 162/500
+285/285 [==============================] - 0s 46us/sample - loss: 0.0154 - val_loss: 0.0102
+Epoch 163/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.0153 - val_loss: 0.0101
+Epoch 164/500
+285/285 [==============================] - 0s 40us/sample - loss: 0.0152 - val_loss: 0.0101
+Epoch 165/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0143 - val_loss: 0.0100
+Epoch 166/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.0145 - val_loss: 0.0100
+Epoch 167/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.0148 - val_loss: 0.0099
+Epoch 168/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0146 - val_loss: 0.0098
+Epoch 169/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0139 - val_loss: 0.0099
+Epoch 170/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0141 - val_loss: 0.0098
+Epoch 171/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0134 - val_loss: 0.0097
+Epoch 172/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0141 - val_loss: 0.0097
+Epoch 173/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0139 - val_loss: 0.0096
+Epoch 174/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0148 - val_loss: 0.0095
+Epoch 175/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0129 - val_loss: 0.0095
+Epoch 176/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0147 - val_loss: 0.0095
+Epoch 177/500
+285/285 [==============================] - 0s 46us/sample - loss: 0.0137 - val_loss: 0.0095
+Epoch 178/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0129 - val_loss: 0.0095
+Epoch 179/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0133 - val_loss: 0.0095
+Epoch 180/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.0128 - val_loss: 0.0095
+Epoch 181/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0131 - val_loss: 0.0095
+Epoch 182/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0131 - val_loss: 0.0094
+Epoch 183/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.0129 - val_loss: 0.0093
+Epoch 184/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.0125 - val_loss: 0.0092
+Epoch 185/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0125 - val_loss: 0.0092
+Epoch 186/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0125 - val_loss: 0.0092
+Epoch 187/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0132 - val_loss: 0.0093
+Epoch 188/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0122 - val_loss: 0.0092
+Epoch 189/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0128 - val_loss: 0.0092
+Epoch 190/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.0124 - val_loss: 0.0092
+Epoch 191/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0130 - val_loss: 0.0092
+Epoch 192/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0129 - val_loss: 0.0092
+Epoch 193/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0123 - val_loss: 0.0093
+Epoch 194/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.0121 - val_loss: 0.0093
+Epoch 195/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0124 - val_loss: 0.0093
+Epoch 196/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0124 - val_loss: 0.0092
+Stopped fitting after 196 epochs
+Saved model to disk in /state/partition1/job-51123945/tmpm0kz9v5u
+/scratch/yz5944/miniconda3/envs/bio2/lib/python3.10/site-packages/keras/src/engine/training_v1.py:2359: UserWarning: `Model.state_updates` will be removed in a future version. This property should not be used in TensorFlow 2.0, as `updates` are applied automatically.
+  updates=self.state_updates,
+2024-09-18 14:49:37.759296: W tensorflow/c/c_api.cc:304] Operation '{name:'dense_33/Softplus' id:2444 op device:{requested: '', assigned: ''} def:{{{node dense_33/Softplus}} = Softplus[T=DT_FLOAT, _has_manual_control_dependencies=true](dense_33/BiasAdd)}}' was changed by setting attribute after it was run by a session. This mutation will have no effect, and will trigger an error in the future. Either don't modify nodes after running them or create a new session.
+2024-09-18 14:49:37.886208: W tensorflow/c/c_api.cc:304] Operation '{name:'dense_33_1/bias/Assign' id:2758 op device:{requested: '', assigned: ''} def:{{{node dense_33_1/bias/Assign}} = AssignVariableOp[_has_manual_control_dependencies=true, dtype=DT_FLOAT, validate_shape=false](dense_33_1/bias, dense_33_1/bias/Initializer/zeros)}}' was changed by setting attribute after it was run by a session. This mutation will have no effect, and will trigger an error in the future. Either don't modify nodes after running them or create a new session.
+2024-09-18 14:49:37.946734: W tensorflow/c/c_api.cc:304] Operation '{name:'dense_33_1/Softplus' id:2764 op device:{requested: '', assigned: ''} def:{{{node dense_33_1/Softplus}} = Softplus[T=DT_FLOAT, _has_manual_control_dependencies=true](dense_33_1/BiasAdd)}}' was changed by setting attribute after it was run by a session. This mutation will have no effect, and will trigger an error in the future. Either don't modify nodes after running them or create a new session.
+Filling zeros
+Using all the cores (48)
+Input dataset is 300 cells (rows) and 100 genes (columns)
+First 3 rows and columns:
+          0         1         2
+0  0.049723  0.314568  0.000000
+1  0.962583  1.235080  0.000000
+2  0.187149  0.212220  0.090571
+512 genes selected for imputation
+Net 0: 100 predictors, 512 targets
+Normalization
+Building network
+[{'type': 'dense', 'neurons': 256, 'activation': 'relu'}, {'type': 'dropout', 'rate': 0.2}]
+Fitting with 300 cells
+Train on 285 samples, validate on 15 samples
+Epoch 1/500
+/scratch/ab9738/dfdl_imputation/baselines/deepimpute/deepimpute/multinet.py:356: UserWarning: Warning: number of target genes lower than output dim. Consider lowering down the sub_outputdim parameter
+  warnings.warn('Warning: number of target genes lower than output dim. Consider lowering down the sub_outputdim parameter',
+/scratch/yz5944/miniconda3/envs/bio2/lib/python3.10/site-packages/keras/src/optimizers/legacy/adam.py:118: UserWarning: The `lr` argument is deprecated, use `learning_rate` instead.
+  super().__init__(name, **kwargs)
+2024-09-18 14:49:38.180350: W tensorflow/c/c_api.cc:304] Operation '{name:'training_14/Adam/learning_rate/Assign' id:2996 op device:{requested: '', assigned: ''} def:{{{node training_14/Adam/learning_rate/Assign}} = AssignVariableOp[_has_manual_control_dependencies=true, dtype=DT_FLOAT, validate_shape=false](training_14/Adam/learning_rate, training_14/Adam/learning_rate/Initializer/initial_value)}}' was changed by setting attribute after it was run by a session. This mutation will have no effect, and will trigger an error in the future. Either don't modify nodes after running them or create a new session.
+285/285 [==============================] - 0s 805us/sample - loss: 0.5903 - val_loss: 0.6138
+Epoch 2/500
+285/285 [==============================] - 0s 58us/sample - loss: 0.5811 - val_loss: 0.6047
+Epoch 3/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.5700 - val_loss: 0.5955
+Epoch 4/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.5591 - val_loss: 0.5863
+Epoch 5/500
+285/285 [==============================] - 0s 49us/sample - loss: 0.5483 - val_loss: 0.5768
+Epoch 6/500
+285/285 [==============================] - 0s 49us/sample - loss: 0.5381 - val_loss: 0.5671
+Epoch 7/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.5264 - val_loss: 0.5570
+Epoch 8/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.5163 - val_loss: 0.5465
+Epoch 9/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.5017 - val_loss: 0.5357
+Epoch 10/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.4902 - val_loss: 0.5245
+Epoch 11/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.4773 - val_loss: 0.5130
+Epoch 12/500
+ 64/285 [=====>........................] - ETA: 0s - loss: 0.4479/scratch/yz5944/miniconda3/envs/bio2/lib/python3.10/site-packages/keras/src/engine/training_v1.py:2335: UserWarning: `Model.state_updates` will be removed in a future version. This property should not be used in TensorFlow 2.0, as `updates` are applied automatically.
+  updates = self.state_updates
+2024-09-18 14:49:38.298498: W tensorflow/c/c_api.cc:304] Operation '{name:'loss_7/mul' id:2864 op device:{requested: '', assigned: ''} def:{{{node loss_7/mul}} = Mul[T=DT_FLOAT, _has_manual_control_dependencies=true](loss_7/mul/x, loss_7/dense_35_loss/value)}}' was changed by setting attribute after it was run by a session. This mutation will have no effect, and will trigger an error in the future. Either don't modify nodes after running them or create a new session.
+285/285 [==============================] - 0s 44us/sample - loss: 0.4642 - val_loss: 0.5009
+Epoch 13/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.4496 - val_loss: 0.4885
+Epoch 14/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.4353 - val_loss: 0.4753
+Epoch 15/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.4214 - val_loss: 0.4616
+Epoch 16/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.4036 - val_loss: 0.4472
+Epoch 17/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.3874 - val_loss: 0.4326
+Epoch 18/500
+285/285 [==============================] - 0s 47us/sample - loss: 0.3719 - val_loss: 0.4173
+Epoch 19/500
+285/285 [==============================] - 0s 46us/sample - loss: 0.3531 - val_loss: 0.4015
+Epoch 20/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.3367 - val_loss: 0.3856
+Epoch 21/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.3186 - val_loss: 0.3695
+Epoch 22/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.3028 - val_loss: 0.3531
+Epoch 23/500
+285/285 [==============================] - 0s 46us/sample - loss: 0.2867 - val_loss: 0.3368
+Epoch 24/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.2700 - val_loss: 0.3204
+Epoch 25/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.2543 - val_loss: 0.3043
+Epoch 26/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.2386 - val_loss: 0.2885
+Epoch 27/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.2270 - val_loss: 0.2734
+Epoch 28/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.2135 - val_loss: 0.2586
+Epoch 29/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.2033 - val_loss: 0.2446
+Epoch 30/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.1906 - val_loss: 0.2313
+Epoch 31/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.1808 - val_loss: 0.2191
+Epoch 32/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.1726 - val_loss: 0.2077
+Epoch 33/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.1661 - val_loss: 0.1969
+Epoch 34/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.1573 - val_loss: 0.1870
+Epoch 35/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.1533 - val_loss: 0.1780
+Epoch 36/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.1479 - val_loss: 0.1702
+Epoch 37/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.1457 - val_loss: 0.1634
+Epoch 38/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.1403 - val_loss: 0.1571
+Epoch 39/500
+285/285 [==============================] - 0s 46us/sample - loss: 0.1364 - val_loss: 0.1517
+Epoch 40/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.1347 - val_loss: 0.1466
+Epoch 41/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.1335 - val_loss: 0.1422
+Epoch 42/500
+285/285 [==============================] - 0s 46us/sample - loss: 0.1316 - val_loss: 0.1386
+Epoch 43/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.1326 - val_loss: 0.1357
+Epoch 44/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.1284 - val_loss: 0.1328
+Epoch 45/500
+285/285 [==============================] - 0s 40us/sample - loss: 0.1259 - val_loss: 0.1303
+Epoch 46/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.1268 - val_loss: 0.1275
+Epoch 47/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.1265 - val_loss: 0.1255
+Epoch 48/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.1251 - val_loss: 0.1234
+Epoch 49/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.1187 - val_loss: 0.1210
+Epoch 50/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.1230 - val_loss: 0.1185
+Epoch 51/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.1173 - val_loss: 0.1160
+Epoch 52/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.1160 - val_loss: 0.1140
+Epoch 53/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.1179 - val_loss: 0.1121
+Epoch 54/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.1143 - val_loss: 0.1101
+Epoch 55/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.1103 - val_loss: 0.1081
+Epoch 56/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.1123 - val_loss: 0.1067
+Epoch 57/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.1112 - val_loss: 0.1057
+Epoch 58/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.1116 - val_loss: 0.1045
+Epoch 59/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.1094 - val_loss: 0.1036
+Epoch 60/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.1087 - val_loss: 0.1022
+Epoch 61/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.1063 - val_loss: 0.1013
+Epoch 62/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.1031 - val_loss: 0.1005
+Epoch 63/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.1008 - val_loss: 0.0994
+Epoch 64/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.1012 - val_loss: 0.0977
+Epoch 65/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.1002 - val_loss: 0.0958
+Epoch 66/500
+285/285 [==============================] - 0s 46us/sample - loss: 0.1024 - val_loss: 0.0938
+Epoch 67/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.0987 - val_loss: 0.0922
+Epoch 68/500
+285/285 [==============================] - 0s 46us/sample - loss: 0.0957 - val_loss: 0.0911
+Epoch 69/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0962 - val_loss: 0.0896
+Epoch 70/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0940 - val_loss: 0.0874
+Epoch 71/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0948 - val_loss: 0.0854
+Epoch 72/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0908 - val_loss: 0.0841
+Epoch 73/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.0918 - val_loss: 0.0832
+Epoch 74/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0876 - val_loss: 0.0818
+Epoch 75/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0865 - val_loss: 0.0801
+Epoch 76/500
+285/285 [==============================] - 0s 40us/sample - loss: 0.0862 - val_loss: 0.0785
+Epoch 77/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.0836 - val_loss: 0.0772
+Epoch 78/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0818 - val_loss: 0.0759
+Epoch 79/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0836 - val_loss: 0.0743
+Epoch 80/500
+285/285 [==============================] - 0s 40us/sample - loss: 0.0774 - val_loss: 0.0729
+Epoch 81/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0784 - val_loss: 0.0715
+Epoch 82/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.0785 - val_loss: 0.0697
+Epoch 83/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0786 - val_loss: 0.0686
+Epoch 84/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0742 - val_loss: 0.0671
+Epoch 85/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0737 - val_loss: 0.0654
+Epoch 86/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0745 - val_loss: 0.0640
+Epoch 87/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.0720 - val_loss: 0.0624
+Epoch 88/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0693 - val_loss: 0.0607
+Epoch 89/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0679 - val_loss: 0.0592
+Epoch 90/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0678 - val_loss: 0.0578
+Epoch 91/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0686 - val_loss: 0.0562
+Epoch 92/500
+285/285 [==============================] - 0s 39us/sample - loss: 0.0659 - val_loss: 0.0553
+Epoch 93/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0647 - val_loss: 0.0542
+Epoch 94/500
+285/285 [==============================] - 0s 40us/sample - loss: 0.0631 - val_loss: 0.0529
+Epoch 95/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0595 - val_loss: 0.0522
+Epoch 96/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0607 - val_loss: 0.0512
+Epoch 97/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0586 - val_loss: 0.0501
+Epoch 98/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0575 - val_loss: 0.0490
+Epoch 99/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0568 - val_loss: 0.0478
+Epoch 100/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0551 - val_loss: 0.0461
+Epoch 101/500
+285/285 [==============================] - 0s 46us/sample - loss: 0.0542 - val_loss: 0.0448
+Epoch 102/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0518 - val_loss: 0.0432
+Epoch 103/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0529 - val_loss: 0.0421
+Epoch 104/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0508 - val_loss: 0.0409
+Epoch 105/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0495 - val_loss: 0.0398
+Epoch 106/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0513 - val_loss: 0.0389
+Epoch 107/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0468 - val_loss: 0.0379
+Epoch 108/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0466 - val_loss: 0.0365
+Epoch 109/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0461 - val_loss: 0.0352
+Epoch 110/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0436 - val_loss: 0.0343
+Epoch 111/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.0445 - val_loss: 0.0333
+Epoch 112/500
+285/285 [==============================] - 0s 46us/sample - loss: 0.0428 - val_loss: 0.0326
+Epoch 113/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0419 - val_loss: 0.0317
+Epoch 114/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0413 - val_loss: 0.0307
+Epoch 115/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0400 - val_loss: 0.0296
+Epoch 116/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0392 - val_loss: 0.0287
+Epoch 117/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0380 - val_loss: 0.0278
+Epoch 118/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0389 - val_loss: 0.0271
+Epoch 119/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0382 - val_loss: 0.0267
+Epoch 120/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0369 - val_loss: 0.0262
+Epoch 121/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0350 - val_loss: 0.0255
+Epoch 122/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0351 - val_loss: 0.0246
+Epoch 123/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0342 - val_loss: 0.0239
+Epoch 124/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0323 - val_loss: 0.0231
+Epoch 125/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0337 - val_loss: 0.0223
+Epoch 126/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0323 - val_loss: 0.0217
+Epoch 127/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0306 - val_loss: 0.0211
+Epoch 128/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0322 - val_loss: 0.0205
+Epoch 129/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0311 - val_loss: 0.0200
+Epoch 130/500
+285/285 [==============================] - 0s 46us/sample - loss: 0.0286 - val_loss: 0.0192
+Epoch 131/500
+285/285 [==============================] - 0s 46us/sample - loss: 0.0287 - val_loss: 0.0186
+Epoch 132/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.0275 - val_loss: 0.0178
+Epoch 133/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0281 - val_loss: 0.0172
+Epoch 134/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0274 - val_loss: 0.0167
+Epoch 135/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0263 - val_loss: 0.0162
+Epoch 136/500
+285/285 [==============================] - 0s 40us/sample - loss: 0.0261 - val_loss: 0.0159
+Epoch 137/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.0243 - val_loss: 0.0156
+Epoch 138/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0262 - val_loss: 0.0152
+Epoch 139/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0253 - val_loss: 0.0148
+Epoch 140/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0245 - val_loss: 0.0144
+Epoch 141/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0240 - val_loss: 0.0140
+Epoch 142/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0237 - val_loss: 0.0137
+Epoch 143/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0231 - val_loss: 0.0134
+Epoch 144/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0221 - val_loss: 0.0131
+Epoch 145/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0230 - val_loss: 0.0128
+Epoch 146/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0217 - val_loss: 0.0124
+Epoch 147/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0212 - val_loss: 0.0122
+Epoch 148/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0216 - val_loss: 0.0120
+Epoch 149/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.0211 - val_loss: 0.0119
+Epoch 150/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0215 - val_loss: 0.0116
+Epoch 151/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0206 - val_loss: 0.0113
+Epoch 152/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0207 - val_loss: 0.0111
+Epoch 153/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0210 - val_loss: 0.0108
+Epoch 154/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0199 - val_loss: 0.0106
+Epoch 155/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0194 - val_loss: 0.0104
+Epoch 156/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0199 - val_loss: 0.0102
+Epoch 157/500
+285/285 [==============================] - 0s 46us/sample - loss: 0.0193 - val_loss: 0.0100
+Epoch 158/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0202 - val_loss: 0.0098
+Epoch 159/500
+285/285 [==============================] - 0s 46us/sample - loss: 0.0193 - val_loss: 0.0095
+Epoch 160/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0196 - val_loss: 0.0094
+Epoch 161/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0189 - val_loss: 0.0093
+Epoch 162/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0180 - val_loss: 0.0092
+Epoch 163/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0182 - val_loss: 0.0091
+Epoch 164/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0168 - val_loss: 0.0090
+Epoch 165/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.0186 - val_loss: 0.0089
+Epoch 166/500
+285/285 [==============================] - 0s 46us/sample - loss: 0.0173 - val_loss: 0.0088
+Epoch 167/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0179 - val_loss: 0.0087
+Epoch 168/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0173 - val_loss: 0.0087
+Epoch 169/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0172 - val_loss: 0.0086
+Epoch 170/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0168 - val_loss: 0.0084
+Epoch 171/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0173 - val_loss: 0.0084
+Epoch 172/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0173 - val_loss: 0.0083
+Epoch 173/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.0167 - val_loss: 0.0082
+Epoch 174/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0165 - val_loss: 0.0081
+Epoch 175/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0162 - val_loss: 0.0080
+Epoch 176/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.0170 - val_loss: 0.0079
+Epoch 177/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0167 - val_loss: 0.0078
+Epoch 178/500
+285/285 [==============================] - 0s 46us/sample - loss: 0.0166 - val_loss: 0.0078
+Epoch 179/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0164 - val_loss: 0.0078
+Epoch 180/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0158 - val_loss: 0.0077
+Epoch 181/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.0164 - val_loss: 0.0077
+Epoch 182/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0160 - val_loss: 0.0077
+Epoch 183/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0162 - val_loss: 0.0077
+Epoch 184/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0157 - val_loss: 0.0076
+Epoch 185/500
+285/285 [==============================] - 0s 46us/sample - loss: 0.0156 - val_loss: 0.0076
+Epoch 186/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0158 - val_loss: 0.0076
+Epoch 187/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0156 - val_loss: 0.0075
+Epoch 188/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0161 - val_loss: 0.0075
+Epoch 189/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0159 - val_loss: 0.0075
+Epoch 190/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.0154 - val_loss: 0.0074
+Epoch 191/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0152 - val_loss: 0.0074
+Epoch 192/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0151 - val_loss: 0.0074
+Epoch 193/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0156 - val_loss: 0.0073
+Epoch 194/500
+285/285 [==============================] - 0s 47us/sample - loss: 0.0150 - val_loss: 0.0073
+Epoch 195/500
+285/285 [==============================] - 0s 46us/sample - loss: 0.0149 - val_loss: 0.0073
+Epoch 196/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0152 - val_loss: 0.0073
+Epoch 197/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0152 - val_loss: 0.0073
+Epoch 198/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.0148 - val_loss: 0.0072
+Epoch 199/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0145 - val_loss: 0.0072
+Epoch 200/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0143 - val_loss: 0.0071
+Epoch 201/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0145 - val_loss: 0.0071
+Epoch 202/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0149 - val_loss: 0.0071
+Epoch 203/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0150 - val_loss: 0.0070
+Epoch 204/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.0150 - val_loss: 0.0070
+Epoch 205/500
+285/285 [==============================] - 0s 46us/sample - loss: 0.0142 - val_loss: 0.0070
+Epoch 206/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0141 - val_loss: 0.0069
+Epoch 207/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0142 - val_loss: 0.0069
+Epoch 208/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0140 - val_loss: 0.0069
+Epoch 209/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.0141 - val_loss: 0.0069
+Epoch 210/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.0144 - val_loss: 0.0069
+Epoch 211/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0140 - val_loss: 0.0069
+Epoch 212/500
+285/285 [==============================] - 0s 46us/sample - loss: 0.0138 - val_loss: 0.0069
+Epoch 213/500
+285/285 [==============================] - 0s 46us/sample - loss: 0.0153 - val_loss: 0.0068
+Epoch 214/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0145 - val_loss: 0.0068
+Epoch 215/500
+285/285 [==============================] - 0s 46us/sample - loss: 0.0137 - val_loss: 0.0067
+Epoch 216/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0140 - val_loss: 0.0067
+Epoch 217/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0136 - val_loss: 0.0067
+Epoch 218/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0130 - val_loss: 0.0067
+Epoch 219/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0141 - val_loss: 0.0067
+Epoch 220/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0129 - val_loss: 0.0067
+Epoch 221/500
+285/285 [==============================] - 0s 47us/sample - loss: 0.0139 - val_loss: 0.0067
+Epoch 222/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.0138 - val_loss: 0.0067
+Epoch 223/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0135 - val_loss: 0.0066
+Epoch 224/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.0140 - val_loss: 0.0066
+Epoch 225/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0138 - val_loss: 0.0066
+Epoch 226/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0137 - val_loss: 0.0066
+Epoch 227/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.0134 - val_loss: 0.0066
+Epoch 228/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0131 - val_loss: 0.0065
+Epoch 229/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.0137 - val_loss: 0.0065
+Epoch 230/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0135 - val_loss: 0.0064
+Epoch 231/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.0135 - val_loss: 0.0064
+Epoch 232/500
+285/285 [==============================] - 0s 39us/sample - loss: 0.0133 - val_loss: 0.0064
+Epoch 233/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0130 - val_loss: 0.0064
+Epoch 234/500
+285/285 [==============================] - 0s 40us/sample - loss: 0.0139 - val_loss: 0.0064
+Epoch 235/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.0130 - val_loss: 0.0064
+Epoch 236/500
+285/285 [==============================] - 0s 41us/sample - loss: 0.0133 - val_loss: 0.0064
+Stopped fitting after 236 epochs
+Saved model to disk in /state/partition1/job-51123945/tmpm0kz9v5u
+/scratch/yz5944/miniconda3/envs/bio2/lib/python3.10/site-packages/keras/src/engine/training_v1.py:2359: UserWarning: `Model.state_updates` will be removed in a future version. This property should not be used in TensorFlow 2.0, as `updates` are applied automatically.
+  updates=self.state_updates,
+2024-09-18 14:49:41.414073: W tensorflow/c/c_api.cc:304] Operation '{name:'dense_35/Softplus' id:2841 op device:{requested: '', assigned: ''} def:{{{node dense_35/Softplus}} = Softplus[T=DT_FLOAT, _has_manual_control_dependencies=true](dense_35/BiasAdd)}}' was changed by setting attribute after it was run by a session. This mutation will have no effect, and will trigger an error in the future. Either don't modify nodes after running them or create a new session.
+2024-09-18 14:49:41.548507: W tensorflow/c/c_api.cc:304] Operation '{name:'dense_34_1/bias/Assign' id:3118 op device:{requested: '', assigned: ''} def:{{{node dense_34_1/bias/Assign}} = AssignVariableOp[_has_manual_control_dependencies=true, dtype=DT_FLOAT, validate_shape=false](dense_34_1/bias, dense_34_1/bias/Initializer/zeros)}}' was changed by setting attribute after it was run by a session. This mutation will have no effect, and will trigger an error in the future. Either don't modify nodes after running them or create a new session.
+Filling zeros
+Using all the cores (48)
+Input dataset is 300 cells (rows) and 100 genes (columns)
+First 3 rows and columns:
+          0         1         2
+0  0.107135  0.259938  0.000000
+1  0.132930  0.244517  0.045372
+2  0.000000  0.162319  0.000000
+512 genes selected for imputation
+Net 0: 100 predictors, 512 targets
+Normalization
+Building network
+[{'type': 'dense', 'neurons': 256, 'activation': 'relu'}, {'type': 'dropout', 'rate': 0.2}]
+Fitting with 300 cells
+Train on 285 samples, validate on 15 samples
+Epoch 1/500
+2024-09-18 14:49:41.618095: W tensorflow/c/c_api.cc:304] Operation '{name:'dense_35_1/Softplus' id:3161 op device:{requested: '', assigned: ''} def:{{{node dense_35_1/Softplus}} = Softplus[T=DT_FLOAT, _has_manual_control_dependencies=true](dense_35_1/BiasAdd)}}' was changed by setting attribute after it was run by a session. This mutation will have no effect, and will trigger an error in the future. Either don't modify nodes after running them or create a new session.
+/scratch/ab9738/dfdl_imputation/baselines/deepimpute/deepimpute/multinet.py:356: UserWarning: Warning: number of target genes lower than output dim. Consider lowering down the sub_outputdim parameter
+  warnings.warn('Warning: number of target genes lower than output dim. Consider lowering down the sub_outputdim parameter',
+/scratch/yz5944/miniconda3/envs/bio2/lib/python3.10/site-packages/keras/src/optimizers/legacy/adam.py:118: UserWarning: The `lr` argument is deprecated, use `learning_rate` instead.
+  super().__init__(name, **kwargs)
+285/285 [==============================] - 0s 867us/sample - loss: 0.5780 - val_loss: 0.7087
+Epoch 2/500
+ 64/285 [=====>........................] - ETA: 0s - loss: 0.52992024-09-18 14:49:41.864459: W tensorflow/c/c_api.cc:304] Operation '{name:'training_16/Adam/dense_37/bias/v/Assign' id:3441 op device:{requested: '', assigned: ''} def:{{{node training_16/Adam/dense_37/bias/v/Assign}} = AssignVariableOp[_has_manual_control_dependencies=true, dtype=DT_FLOAT, validate_shape=false](training_16/Adam/dense_37/bias/v, training_16/Adam/dense_37/bias/v/Initializer/zeros)}}' was changed by setting attribute after it was run by a session. This mutation will have no effect, and will trigger an error in the future. Either don't modify nodes after running them or create a new session.
+/scratch/yz5944/miniconda3/envs/bio2/lib/python3.10/site-packages/keras/src/engine/training_v1.py:2335: UserWarning: `Model.state_updates` will be removed in a future version. This property should not be used in TensorFlow 2.0, as `updates` are applied automatically.
+  updates = self.state_updates
+2024-09-18 14:49:41.988428: W tensorflow/c/c_api.cc:304] Operation '{name:'loss_8/mul' id:3261 op device:{requested: '', assigned: ''} def:{{{node loss_8/mul}} = Mul[T=DT_FLOAT, _has_manual_control_dependencies=true](loss_8/mul/x, loss_8/dense_37_loss/value)}}' was changed by setting attribute after it was run by a session. This mutation will have no effect, and will trigger an error in the future. Either don't modify nodes after running them or create a new session.
+285/285 [==============================] - 0s 68us/sample - loss: 0.5692 - val_loss: 0.6941
+Epoch 3/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.5596 - val_loss: 0.6797
+Epoch 4/500
+285/285 [==============================] - 0s 46us/sample - loss: 0.5498 - val_loss: 0.6647
+Epoch 5/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.5397 - val_loss: 0.6493
+Epoch 6/500
+285/285 [==============================] - 0s 48us/sample - loss: 0.5310 - val_loss: 0.6332
+Epoch 7/500
+285/285 [==============================] - 0s 46us/sample - loss: 0.5197 - val_loss: 0.6163
+Epoch 8/500
+285/285 [==============================] - 0s 46us/sample - loss: 0.5081 - val_loss: 0.5987
+Epoch 9/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.4985 - val_loss: 0.5802
+Epoch 10/500
+285/285 [==============================] - 0s 48us/sample - loss: 0.4865 - val_loss: 0.5615
+Epoch 11/500
+285/285 [==============================] - 0s 46us/sample - loss: 0.4755 - val_loss: 0.5421
+Epoch 12/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.4625 - val_loss: 0.5210
+Epoch 13/500
+285/285 [==============================] - 0s 47us/sample - loss: 0.4474 - val_loss: 0.4995
+Epoch 14/500
+285/285 [==============================] - 0s 47us/sample - loss: 0.4355 - val_loss: 0.4774
+Epoch 15/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.4206 - val_loss: 0.4555
+Epoch 16/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.4065 - val_loss: 0.4341
+Epoch 17/500
+285/285 [==============================] - 0s 47us/sample - loss: 0.3925 - val_loss: 0.4124
+Epoch 18/500
+285/285 [==============================] - 0s 46us/sample - loss: 0.3761 - val_loss: 0.3907
+Epoch 19/500
+285/285 [==============================] - 0s 48us/sample - loss: 0.3626 - val_loss: 0.3700
+Epoch 20/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.3454 - val_loss: 0.3501
+Epoch 21/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.3308 - val_loss: 0.3315
+Epoch 22/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.3145 - val_loss: 0.3141
+Epoch 23/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.3013 - val_loss: 0.2987
+Epoch 24/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.2859 - val_loss: 0.2854
+Epoch 25/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.2723 - val_loss: 0.2745
+Epoch 26/500
+285/285 [==============================] - 0s 46us/sample - loss: 0.2599 - val_loss: 0.2654
+Epoch 27/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.2480 - val_loss: 0.2584
+Epoch 28/500
+285/285 [==============================] - 0s 46us/sample - loss: 0.2353 - val_loss: 0.2533
+Epoch 29/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.2281 - val_loss: 0.2494
+Epoch 30/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.2178 - val_loss: 0.2469
+Epoch 31/500
+285/285 [==============================] - 0s 47us/sample - loss: 0.2115 - val_loss: 0.2459
+Epoch 32/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.2037 - val_loss: 0.2467
+Epoch 33/500
+285/285 [==============================] - 0s 42us/sample - loss: 0.1936 - val_loss: 0.2472
+Epoch 34/500
+285/285 [==============================] - 0s 44us/sample - loss: 0.1910 - val_loss: 0.2487
+Epoch 35/500
+285/285 [==============================] - 0s 43us/sample - loss: 0.1860 - val_loss: 0.2515
+Epoch 36/500
+285/285 [==============================] - 0s 45us/sample - loss: 0.1789 - val_loss: 0.2549
+Stopped fitting after 36 epochs
+Saved model to disk in /state/partition1/job-51123945/tmpm0kz9v5u
+/scratch/yz5944/miniconda3/envs/bio2/lib/python3.10/site-packages/keras/src/engine/training_v1.py:2359: UserWarning: `Model.state_updates` will be removed in a future version. This property should not be used in TensorFlow 2.0, as `updates` are applied automatically.
+  updates=self.state_updates,
+2024-09-18 14:49:42.568058: W tensorflow/c/c_api.cc:304] Operation '{name:'dense_37/Softplus' id:3238 op device:{requested: '', assigned: ''} def:{{{node dense_37/Softplus}} = Softplus[T=DT_FLOAT, _has_manual_control_dependencies=true](dense_37/BiasAdd)}}' was changed by setting attribute after it was run by a session. This mutation will have no effect, and will trigger an error in the future. Either don't modify nodes after running them or create a new session.
+2024-09-18 14:49:42.715125: W tensorflow/c/c_api.cc:304] Operation '{name:'dense_37_1/kernel/Assign' id:3547 op device:{requested: '', assigned: ''} def:{{{node dense_37_1/kernel/Assign}} = AssignVariableOp[_has_manual_control_dependencies=true, dtype=DT_FLOAT, validate_shape=false](dense_37_1/kernel, dense_37_1/kernel/Initializer/random_uniform)}}' was changed by setting attribute after it was run by a session. This mutation will have no effect, and will trigger an error in the future. Either don't modify nodes after running them or create a new session.
+Filling zeros
+MSE after DeepImpute: 145.3743
+Tree method: RF
+K: sqrt
+Number of trees: 100
+
+
+running jobs on 80 threads
+2024-09-18 14:49:42.788859: W tensorflow/c/c_api.cc:304] Operation '{name:'dense_37_1/Softplus' id:3558 op device:{requested: '', assigned: ''} def:{{{node dense_37_1/Softplus}} = Softplus[T=DT_FLOAT, _has_manual_control_dependencies=true](dense_37_1/BiasAdd)}}' was changed by setting attribute after it was run by a session. This mutation will have no effect, and will trigger an error in the future. Either don't modify nodes after running them or create a new session.
+Elapsed time: 131.93 seconds
+ROC AUC Score after DeepImpute: 0.5346
+
+Running Graph Convolutional Network Imputation...
+Epoch 10/100, Loss: nan
+Epoch 20/100, Loss: nan
+Epoch 30/100, Loss: nan
+Epoch 40/100, Loss: nan
+Epoch 50/100, Loss: nan
+Epoch 60/100, Loss: nan
+Epoch 70/100, Loss: nan
+Epoch 80/100, Loss: nan
+Epoch 90/100, Loss: nan
+Epoch 100/100, Loss: nan
+An error occurred with Graph Convolutional Network Imputation: Input contains NaN.
+
+Running Graph Diffusion Imputation...
+MSE after Graph Diffusion Imputation: 145.7065
+Tree method: RF
+K: sqrt
+Number of trees: 100
+
+
+running jobs on 80 threads
+Elapsed time: 110.85 seconds
+ROC AUC Score after Graph Diffusion Imputation: 0.5322
+
+Running SAUCIE...
+/scratch/ab9738/dfdl_imputation/baselines/SAUCIE/SAUCIE/model.py:152: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  h1 = tf.layers.dense(self.x, self.layers[0], activation=lrelu, name='encoder_0')
+/scratch/ab9738/dfdl_imputation/baselines/SAUCIE/SAUCIE/model.py:154: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  h2 = tf.layers.dense(h1, self.layers[1], activation=tf.nn.sigmoid, name='encoder_1')
+/scratch/ab9738/dfdl_imputation/baselines/SAUCIE/SAUCIE/model.py:156: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  h3 = tf.layers.dense(h2, self.layers[2], activation=lrelu, name='encoder_2')
+/scratch/ab9738/dfdl_imputation/baselines/SAUCIE/SAUCIE/model.py:158: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  self.embedded = tf.layers.dense(h3, self.layers[3], activation=tf.identity, name='embedding')
+/scratch/ab9738/dfdl_imputation/baselines/SAUCIE/SAUCIE/model.py:161: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  h5 = tf.layers.dense(self.embedded, self.layers[2], activation=lrelu, name='decoder_0')
+/scratch/ab9738/dfdl_imputation/baselines/SAUCIE/SAUCIE/model.py:163: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  h6 = tf.layers.dense(h5, self.layers[1], activation=lrelu, name='decoder_1')
+/scratch/ab9738/dfdl_imputation/baselines/SAUCIE/SAUCIE/model.py:165: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  h7 = tf.layers.dense(h6, self.layers[0], activation=lrelu, name='decoder_2')
+/scratch/ab9738/dfdl_imputation/baselines/SAUCIE/SAUCIE/model.py:169: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  self.reconstructed = tf.layers.dense(h7, self.input_dim, activation=tf.identity, name='recon')
+2024-09-18 14:53:49.574344: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1960] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+2024-09-18 14:53:59.742925: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1960] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+2024-09-18 14:54:09.810401: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1960] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+2024-09-18 14:54:19.822099: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1960] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+2024-09-18 14:54:29.879322: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1960] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+2024-09-18 14:54:39.898523: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1960] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+2024-09-18 14:54:49.936448: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1960] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+2024-09-18 14:54:59.981940: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1960] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+2024-09-18 14:55:10.105193: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1960] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+MSE after SAUCIE: 37.4897
+Tree method: RF
+K: sqrt
+Number of trees: 100
+
+
+running jobs on 80 threads
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+/scratch/ab9738/dfdl_imputation/GENIE3/GENIE3.py:310: RuntimeWarning: invalid value encountered in divide
+  output = output / std(output)
+An error occurred with SAUCIE: Input y contains NaN.
+
+Running MAGIC...
+An error occurred with MAGIC: Input contains NaN.
+
+Running scScope...
+An error occurred with scScope: train() got an unexpected keyword argument 'latent_dim'
+
+Summary of ROC AUC Scores:
+KNN Imputation: 0.5644
+Iterative Imputation: 0.5666
+DeepImpute: 0.5346
+Graph Diffusion Imputation: 0.5322
