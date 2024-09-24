@@ -19,7 +19,8 @@ import torch.optim as optim
 from torch.utils.data import DataLoader, TensorDataset
 import torch.nn.functional as F
 
-# Load Simulation
+nthreads = 12
+
 def parse_dataset_name(folder_name):
     pattern1 = r'De-noised_(\d+)G_(\d+)T_(\d+)cPerT_dynamics_(\d+)_DS(\d+)'
     pattern2 = r'De-noised_(\d+)G_(\d+)T_(\d+)cPerT_(\d+)_DS(\d+)'
@@ -53,35 +54,43 @@ def get_datasets():
             datasets.append(dataset_info)
     return sorted(datasets, key=lambda x: x['dataset_id'])
 
-def zero_impute(ds):
+def zero_impute(ds, num_cell_types, num_genes, cells_per_type):
     ds[ds == 0] = np.nan
-    for i in range(9):
-        ds_cell_type = ds[:, i*300 : (i+1)*300]
-        mean_array = np.nanmean(ds_cell_type, axis=1)  # shape (100,)
-        var_array = np.nanvar(ds_cell_type, axis=1)    # shape (100,)
-        std_array = np.sqrt(var_array)
-        # Generate random numbers for each gene across all cells
-        ds_cell_type[:, :] = np.random.normal(
-            loc=mean_array[:, np.newaxis],
-            scale=std_array[:, np.newaxis],
-            size=(100, 300)
-        )
-    ds[np.isnan(ds)] = 0.0
-    return ds
-
-def substitute_dataset(ds):
-    ds[ds == 0] = np.nan
-    for i in range(9):
-        ds_cell_type = ds[:, i*300 : (i+1)*300]
+    for i in range(num_cell_types):
+        start_idx = i * cells_per_type
+        end_idx = (i + 1) * cells_per_type
+        ds_cell_type = ds[:, start_idx:end_idx]
         mean_array = np.nanmean(ds_cell_type, axis=1)
         var_array = np.nanvar(ds_cell_type, axis=1)
-        std_array = np.sqrt(var_array)
-        ds_cell_type[:, :] = np.random.normal(
-            loc=mean_array[:, np.newaxis],
-            scale=std_array[:, np.newaxis],
-            size=(100, 300)
-        )
-    ds[np.isnan(ds)] = 0.0
+        for j in range(num_genes):
+            np.nan_to_num(
+                ds_cell_type[j, :],
+                copy=False,
+                nan=np.random.normal(
+                    loc=mean_array[j],
+                    scale=np.sqrt(var_array[j]) if var_array[j] > 0 else 0.1  # Avoid sqrt(0)
+                )
+            )
+    ds[ds < 0] = 0.0
+    np.nan_to_num(ds, copy=False)
+    return ds
+
+def substitute_dataset(ds, num_cell_types, num_genes, cells_per_type):
+    ds[ds == 0] = np.nan
+    for i in range(num_cell_types):
+        start_idx = i * cells_per_type
+        end_idx = (i + 1) * cells_per_type
+        ds_cell_type = ds[:, start_idx:end_idx]
+        mean_array = np.nanmean(ds_cell_type, axis=1)
+        var_array = np.nanvar(ds_cell_type, axis=1)
+        for j in range(num_genes):
+            ds_cell_type[j, :] = np.random.normal(
+                loc=mean_array[j],
+                scale=np.sqrt(var_array[j]) if var_array[j] > 0 else 0.1,  # Avoid sqrt(0)
+                size=cells_per_type
+            )
+    ds[ds < 0] = 0.0
+    np.nan_to_num(ds, copy=False)
     return ds
 
 class CNNMultiCTNet(nn.Module):
@@ -152,140 +161,148 @@ def find_x(ds, x_means, x_stds):
     x = np.stack([x_means, x_stds], axis=0)
     x = np.expand_dims(x, axis=0)
     x = np.nan_to_num(x)
-    x = torch.tensor(x, dtype=torch.float32).to(device)
+    x = torch.tensor(x,dtype=torch.float32).to(device)
     return(x)
 
 def simulate_dataset(ds, y_means, y_stds):
     ds = np.zeros_like(ds)
     for i in range(9):
-        ds_cell_type = ds[:, i*300 : (i+1)*300]
-        mean_array = y_means[i, :]  # shape (100,)
-        std_array = y_stds[i, :]    # shape (100,)
-        ds_cell_type[:, :] = np.random.normal(
-            loc=mean_array[:, np.newaxis],
-            scale=std_array[:, np.newaxis],
-            size=(100, 300)
-        )
-    ds[ds < 0] = 0.0
-    return ds
+        ds_cell_type = ds[:,i*300:(i+1)*300]
+        mean_array = y_means[i,:]
+        std_array = y_stds[i,:]
+        for j in range(100):
+            ds_cell_type[j,:] = np.random.normal(loc=mean_array[j],scale=std_array[j],size=300)
+    ds[ds<0] = 0.0
+    np.nan_to_num(ds,copy=False)
+    return(ds)
 
 cleans = {
-    1: '../SERGIO/imputation_data/DS1/DS6_clean_iter_0.npy',
-    2: '../SERGIO/imputation_data/DS2/DS6_clean_iter_0.npy',
-    3: '../SERGIO/imputation_data/DS3/DS6_clean.npy'
+    1: '../SERGIO/imputation_data_2/DS1/DS6_clean.npy',
+    2: '../SERGIO/imputation_data_2/DS2/DS6_clean.npy',
+    3: '../SERGIO/imputation_data_2/DS3/DS6_clean.npy'
 }
 ds_exprs = {
-    1: '../SERGIO/imputation_data/DS1/DS6_expr_iter_0.npy',
-    2: '../SERGIO/imputation_data/DS2/DS6_expr_iter_0.npy',
+    1: '../SERGIO/imputation_data/DS1/DS6_expr.npy',
+    2: '../SERGIO/imputation_data/DS2/DS6_expr.npy',
     3: '../SERGIO/imputation_data/DS3/DS6_expr.npy'
 }
+
 datasets = get_datasets()
-for data_info in datasets[1:]:
-    # Load Data
-    ds_clean = np.load(cleans[data_info['dataset_id']])
-    ds_expr = np.load(ds_exprs[data_info['dataset_id']])
+for data_info in datasets:
+    dataset_id = data_info['dataset_id']
+    ds_clean = np.load(cleans[dataset_id])
+    ds_expr = np.load(ds_exprs[dataset_id])
+
+    number_genes = data_info['number_genes']
+    num_cell_types = data_info['number_bins']
+    cells_per_type = data_info['number_sc']
 
     sim = sergio.sergio(
-        number_genes=data_info['number_genes'],
-        number_bins=data_info['number_bins'],
-        number_sc=data_info['number_sc'],
+        number_genes=number_genes,
+        number_bins=num_cell_types,
+        number_sc=cells_per_type,
         noise_params=1,
         decays=0.8,
         sampling_state=15,
         noise_type='dpd'
     )
 
-    # Load Ground Truth
     target_file = f"../SERGIO/data_sets/{data_info['pattern'].format(**data_info)}/Interaction_cID_{data_info['dynamics']}.txt"
-    gt = np.zeros((100, 100))
-    f = open(target_file, 'r')
-    lines = f.readlines()
-    f.close()
-    for j in range(len(lines)):
-        line = lines[j]
-        line_list = line.split(',')
+    gt = np.zeros((number_genes, number_genes))
+    with open(target_file, 'r') as f:
+        lines = f.readlines()
+    for line in lines:
+        line_list = line.strip().split(',')
         target_index = int(float(line_list[0]))
         num_regs = int(float(line_list[1]))
         for i in range(num_regs):
             try:
-                reg_index = int(float(line_list[i+2]))
+                reg_index = int(float(line_list[i + 2]))
                 gt[reg_index, target_index] = 1
             except:
                 continue
 
     # Part 1: Evaluate the performance on clean and progressively noisier datasets
     # Clean Dataset
-    VIM_clean = GENIE3(np.transpose(ds_clean), ntrees=100, regulators='all', gene_names=[str(s) for s in range(np.transpose(ds_clean).shape[1])])
-    # roc_auc_score(gt.flatten(), VIM_clean.flatten())
+    VIM_clean = GENIE3(
+        np.transpose(ds_clean),
+        nthreads=nthreads,
+        ntrees=100,
+        regulators='all',
+        gene_names=[str(s) for s in range(number_genes)]
+    )
 
     # Add outlier noise
-    expr_O = sim.outlier_effect(ds_expr, outlier_prob = 0.01, mean = 5, scale = 1)
+    expr_O = sim.outlier_effect(ds_expr, outlier_prob=0.01, mean=5, scale=1)
     ds_O = np.concatenate(expr_O, axis=1)
-    VIM_O = GENIE3(np.transpose(ds_O), ntrees=100, regulators='all', gene_names=[str(s) for s in range(np.transpose(ds_O).shape[1])])
-    # roc_auc_score(gt.flatten(), VIM_O.flatten())
+    VIM_O = GENIE3(
+        np.transpose(ds_O),
+        nthreads=nthreads,
+        ntrees=100,
+        regulators='all',
+        gene_names=[str(s) for s in range(number_genes)]
+    )
 
     # Add library noise on top
-    libFactor, expr_O_L = sim.lib_size_effect(expr_O, mean = 4.5, scale = 0.7)
+    libFactor, expr_O_L = sim.lib_size_effect(expr_O, mean=4.5, scale=0.7)
     ds_O_L = np.concatenate(expr_O_L, axis=1)
-    VIM_O_L = GENIE3(np.transpose(ds_O_L), ntrees=100, regulators='all', gene_names=[str(s) for s in range(np.transpose(ds_O_L).shape[1])])
-    # roc_auc_score(gt.flatten(), VIM_O_L.flatten())
+    VIM_O_L = GENIE3(
+        np.transpose(ds_O_L),
+        nthreads=nthreads,
+        ntrees=100,
+        regulators='all',
+        gene_names=[str(s) for s in range(number_genes)]
+    )
 
     # Add dropouts on top
-    binary_ind = sim.dropout_indicator(expr_O_L, shape = 6, percentile = 45)
+    binary_ind = sim.dropout_indicator(expr_O_L, shape=6, percentile=45)
     expr_O_L_D = np.multiply(binary_ind, expr_O_L)
     ds_O_L_D = np.concatenate(expr_O_L_D, axis=1)
-    VIM_O_L_D = GENIE3(np.transpose(ds_O_L_D), ntrees=100, regulators='all', gene_names=[str(s) for s in range(np.transpose(ds_O_L_D).shape[1])])
-    # roc_auc_score(gt.flatten(), VIM_O_L_D.flatten())
+    VIM_O_L_D = GENIE3(
+        np.transpose(ds_O_L_D),
+        nthreads=nthreads,
+        ntrees=100,
+        regulators='all',
+        gene_names=[str(s) for s in range(number_genes)]
+    )
 
     # Convert to UMI Counts
     expr_O_L_D_C = sim.convert_to_UMIcounts(expr_O_L_D)
     ds_O_L_D_C = np.concatenate(expr_O_L_D_C, axis=1)
-    VIM_O_L_D_C = GENIE3(np.transpose(ds_O_L_D_C), ntrees=100, regulators='all', gene_names=[str(s) for s in range(np.transpose(ds_O_L_D_C).shape[1])])
-    # roc_auc_score(gt.flatten(), VIM_O_L_D_C.flatten())
-
+    VIM_O_L_D_C = GENIE3(
+        np.transpose(ds_O_L_D_C),
+        nthreads=nthreads,
+        ntrees=100,
+        regulators='all',
+        gene_names=[str(s) for s in range(number_genes)]
+    )
 
     # Part 2: Apply normalized imputation and assess its effect
     ds_noisy = ds_O_L_D_C
-    ds_imputed = zero_impute(ds_noisy.astype(np.float32))
-    lib_depth_matrix = np.tile(np.sum(ds_imputed, axis=0), (100, 1))
+    ds_imputed = zero_impute(ds_noisy.astype(np.float32), num_cell_types, number_genes, cells_per_type)
+
+    # Correct the creation of lib_depth_matrix
+    lib_depth_matrix = np.tile(np.sum(ds_imputed, axis=0), (number_genes, 1))
     ds_normalized = ds_imputed / lib_depth_matrix
 
-    VIM_normalized = GENIE3(np.transpose(ds_normalized), ntrees=100, regulators='all',
-                            gene_names=[str(s) for s in range(np.transpose(ds_normalized).shape[1])])
-    # roc_auc_score(gt.flatten(), VIM_normalized.flatten())
-
+    VIM_normalized = GENIE3(
+        np.transpose(ds_normalized),
+        nthreads=nthreads,
+        ntrees=100,
+        regulators='all',
+        gene_names=[str(s) for s in range(number_genes)]
+    )
 
     # Part 3: Use data substitution for denoising and evaluate
-    ds_noisy = ds_O_L_D_C
-    # Dataset substitution
-    ds_substitute = substitute_dataset(ds_noisy.astype(np.float32))
-    VIM_substitute = GENIE3(np.transpose(ds_substitute), ntrees=100, regulators='all',
-                            gene_names=[str(s) for s in range(np.transpose(ds_substitute).shape[1])])
-    # roc_auc_score(gt.flatten(), VIM_substitute.flatten())
+    ds_substitute = substitute_dataset(ds_noisy.astype(np.float32), num_cell_types, number_genes, cells_per_type)
+    VIM_substitute = GENIE3(
+        np.transpose(ds_substitute),
+        nthreads=nthreads,
+        ntrees=100,
+        regulators='all',
+        gene_names=[str(s) for s in range(number_genes)]
+    )
 
-
-    # # Part 4: Use a CNN model to predict clean data distributions and simulate a new dataset
-    # ds_noisy = ds_O_L_D_C
-    # device = 'cuda' if torch.cuda.is_available() else 'cpu'
-
-    # # Load the model
-    # model = CNNMultiCTNet().to(device)
-    # # model.load_state_dict(torch.load('./model_ds.pth'))
-    # x_means, x_stds = np.zeros((9,100)), np.zeros((9,100))
-
-    # x = find_x(ds_noisy.astype(np.float32), x_means, x_stds) 
-    # y = model(x)
-    # y = y.detach().cpu().numpy()
-    # y_shape = (1, 2, 9, 100)
-    # y_means = y[0,0,:,:]
-    # y_stds = y[0,1,:,:]
-
-    # ds_simulated = simulate_dataset(ds_noisy.astype(np.float32), y_means, y_stds)
-    # VIM_simulated = GENIE3(np.transpose(ds_simulated), ntrees=100, regulators='all',
-    #                     gene_names=[str(s) for s in range(np.transpose(ds_simulated).shape[1])])
-    # # roc_auc_score(gt.flatten(), VIM_simulated.flatten())
-    
-    # Store results
     auc_clean = roc_auc_score(gt.flatten(), VIM_clean.flatten())
     auc_O = roc_auc_score(gt.flatten(), VIM_O.flatten())
     auc_O_L = roc_auc_score(gt.flatten(), VIM_O_L.flatten())
@@ -293,14 +310,11 @@ for data_info in datasets[1:]:
     auc_O_L_D_C = roc_auc_score(gt.flatten(), VIM_O_L_D_C.flatten())
     auc_normalized = roc_auc_score(gt.flatten(), VIM_normalized.flatten())
     auc_substitute = roc_auc_score(gt.flatten(), VIM_substitute.flatten())
-    # auc_simulated = roc_auc_score(gt.flatten(), VIM_simulated.flatten())
 
-    # Prepare the log directory
     log_dir = './results/denoise/'
     os.makedirs(log_dir, exist_ok=True)
     log_file = os.path.join(log_dir, f'log_DS{data_info["dataset_id"]}.txt')
 
-    # Write the results to the log file
     with open(log_file, 'w') as f:
         f.write(f'Dataset ID: {data_info["dataset_id"]}\n')
         f.write(f'AUC Clean: {auc_clean}\n')
@@ -310,4 +324,3 @@ for data_info in datasets[1:]:
         f.write(f'AUC O_L_D_C: {auc_O_L_D_C}\n')
         f.write(f'AUC Normalized: {auc_normalized}\n')
         f.write(f'AUC Substitute: {auc_substitute}\n')
-        # f.write(f'AUC Simulated: {auc_simulated}\n')

@@ -6,11 +6,12 @@ sys.path.append(parent_dir)
 
 from GENIE3.GENIE3 import GENIE3
 import numpy as np
-
 import re
 import SERGIO.SERGIO.sergio as sergio
 from sklearn.metrics import roc_auc_score
 from scipy.stats import pearsonr
+
+nthreads = 12
 
 # Function to parse dataset information
 def parse_dataset_name(folder_name):
@@ -103,46 +104,65 @@ def load_ground_truth(data_info):
                     continue
     return gt
 
+# Function to compute Pearson correlation matrix
+def get_pearson_correlation(ds):
+    # ds should be genes x samples
+    X = ds
+    # Subtract the mean
+    X_mean = X - np.mean(X, axis=1, keepdims=True)
+    # Compute covariance matrix
+    cov_matrix = np.dot(X_mean, X_mean.T)
+    # Compute standard deviations
+    std_devs = np.linalg.norm(X_mean, axis=1, keepdims=True)
+    # Compute denominator
+    denominator = np.dot(std_devs, std_devs.T)
+    # Avoid division by zero
+    denominator[denominator == 0] = 1
+    # Compute Pearson correlation matrix
+    gene_gene_corr_matrix = cov_matrix / denominator
+    return gene_gene_corr_matrix
+
 # Function to save individual VIM results
-def save_vim_to_file(vim, dataset_name, iteration, dir_path="../new_impute/results/transfer/"):
+def save_vim_to_file(vim, dataset_name, iteration, method='GENIE3', dir_path="../new_impute/results/transfer/"):
     # Create directory if it doesn't exist
     if not os.path.exists(dir_path):
         os.makedirs(dir_path)
 
-    vim_file_path = os.path.join(dir_path, f'vim_{dataset_name}_iter_{iteration}.npy')
+    vim_file_path = os.path.join(dir_path, f'vim_{method}_{dataset_name}_iter_{iteration}.npy')
     np.save(vim_file_path, vim)
-    print(f"    Saved VIM for iteration {iteration} at {vim_file_path}")
+    print(f"    Saved VIM ({method}) for iteration {iteration} at {vim_file_path}")
 
 # Function to save aggregated VIM results
-def save_aggregated_vim(vim_aggregated, dataset_name, dir_path="../new_impute/results/transfer/"):
+def save_aggregated_vim(vim_aggregated, dataset_name, method='GENIE3', dir_path="../new_impute/results/transfer/"):
     # Create directory if it doesn't exist
     if not os.path.exists(dir_path):
         os.makedirs(dir_path)
 
-    vim_file_path = os.path.join(dir_path, f'vim_aggregated_{dataset_name}.npy')
+    vim_file_path = os.path.join(dir_path, f'vim_aggregated_{method}_{dataset_name}.npy')
     np.save(vim_file_path, vim_aggregated)
-    print(f"    Saved aggregated VIM at {vim_file_path}")
+    print(f"    Saved aggregated VIM ({method}) at {vim_file_path}")
 
 # Function to save results to log file
-def save_results_to_file(dataset_name, iteration, auc, auc_aggregated=None, dir_path="../new_impute/results/transfer/"):
+def save_results_to_file(dataset_name, iteration, auc, auc_aggregated=None, method='GENIE3', dir_path="../new_impute/results/transfer/"):
     # Create directory if it doesn't exist
     if not os.path.exists(dir_path):
         os.makedirs(dir_path)
 
-    log_file_path = os.path.join(dir_path, f'log_{dataset_name}.txt')
+    log_file_path = os.path.join(dir_path, f'log_{method}_{dataset_name}.txt')
     
     with open(log_file_path, 'a') as log_file:
         log_file.write(f"Dataset: {dataset_name}, Iteration: {iteration}\n")
-        log_file.write(f"  AUC: {auc}\n")
+        log_file.write(f"  AUC ({method}): {auc}\n")
         if auc_aggregated is not None:
-            log_file.write(f"  Aggregated AUC: {auc_aggregated}\n")
+            log_file.write(f"  Aggregated AUC ({method}): {auc_aggregated}\n")
         log_file.write("---------------------------------------------------\n")
 
 print("Current working directory:", os.getcwd())
 print("Checking for datasets in directory '../SERGIO/data_sets'")
 datasets = get_datasets()
 print(f"Found {len(datasets)} datasets.")
-for data_info in datasets:
+
+for data_info in [datasets[2]]:
     dataset_id = data_info['dataset_id']
     dataset_name = f'DS{dataset_id}'
     num_cell_types = data_info['number_bins']
@@ -166,16 +186,15 @@ for data_info in datasets:
     gt = load_ground_truth(data_info)
     
     # Initialize lists to store VIMs and AUCs
-    VIMs = []
-    AUCs = []
-    
+    VIMs_GENIE3 = []
+    VIMs_Pearson = []
+    AUCs_GENIE3 = []
+    AUCs_Pearson = []
+    ds_clean_path = f'../SERGIO/imputation_data_2/{dataset_name}/DS6_clean.npy'
+    ds_expr_path = f'../SERGIO/imputation_data_2/{dataset_name}/DS6_expr.npy'
+
     for iteration in range(6):
         print(f"  Iteration {iteration}")
-        
-        # Paths to data files
-        ds_clean_path = f'../SERGIO/imputation_data_2/{dataset_name}/DS6_clean_iter_{iteration}.npy'
-        ds_expr_path = f'../SERGIO/imputation_data_2/{dataset_name}/DS6_expr_iter_{iteration}.npy'
-
         # Check if data files exist
         if not os.path.exists(ds_clean_path) or not os.path.exists(ds_expr_path):
             print(os.path.exists(ds_clean_path), ds_clean_path)
@@ -195,35 +214,63 @@ for data_info in datasets:
         ds_substitute = substitute_dataset(ds_noisy.astype(np.float32), num_cell_types, cells_per_type)
         
         # Compute VIM using GENIE3
-        VIM = GENIE3(
+        VIM_GENIE3 = GENIE3(
             np.transpose(ds_substitute),
+            nthreads=nthreads,
             ntrees=100,
             regulators='all',
             gene_names=[str(i) for i in range(np.transpose(ds_substitute).shape[1])]
         )
         
-        # Compute ROC AUC score
-        auc = roc_auc_score(gt.flatten(), VIM.flatten())
-        print(f"    AUC: {auc}")
+        # Compute ROC AUC score for GENIE3
+        auc_GENIE3 = roc_auc_score(gt.flatten(), VIM_GENIE3.flatten())
+        print(f"    AUC (GENIE3): {auc_GENIE3}")
         
-        # Store VIM and AUC
-        VIMs.append(VIM)
-        AUCs.append(auc)
+        # Store VIM and AUC for GENIE3
+        VIMs_GENIE3.append(VIM_GENIE3)
+        AUCs_GENIE3.append(auc_GENIE3)
         
-        # Save individual VIM and AUC
-        save_vim_to_file(VIM, dataset_name, iteration)
-        save_results_to_file(dataset_name, iteration, auc)
+        # Save individual VIM and AUC for GENIE3
+        save_vim_to_file(VIM_GENIE3, dataset_name, iteration, method='GENIE3')
+        save_results_to_file(dataset_name, iteration, auc_GENIE3, method='GENIE3')
+        
+        # Compute VIM using Pearson correlation
+        VIM_Pearson = get_pearson_correlation(ds_substitute)
+        
+        # Compute ROC AUC score for Pearson
+        auc_Pearson = roc_auc_score(gt.flatten(), VIM_Pearson.flatten())
+        print(f"    AUC (Pearson): {auc_Pearson}")
+        
+        # Store VIM and AUC for Pearson
+        VIMs_Pearson.append(VIM_Pearson)
+        AUCs_Pearson.append(auc_Pearson)
+        
+        # Save individual VIM and AUC for Pearson
+        save_vim_to_file(VIM_Pearson, dataset_name, iteration, method='Pearson')
+        save_results_to_file(dataset_name, iteration, auc_Pearson, method='Pearson')
 
-    # Aggregate VIMs over iterations
-    if VIMs:
-        VIM_aggregated = sum(VIMs)
-        auc_aggregated = roc_auc_score(gt.flatten(), VIM_aggregated.flatten())
-        print(f"  Aggregated AUC over iterations: {auc_aggregated}")
+    # Aggregate VIMs over iterations for GENIE3
+    if VIMs_GENIE3:
+        VIM_GENIE3_aggregated = sum(VIMs_GENIE3)
+        auc_GENIE3_aggregated = roc_auc_score(gt.flatten(), VIM_GENIE3_aggregated.flatten())
+        print(f"  Aggregated AUC over iterations (GENIE3): {auc_GENIE3_aggregated}")
         
-        # Save aggregated VIM and AUC
-        save_aggregated_vim(VIM_aggregated, dataset_name)
-        save_results_to_file(dataset_name, 'Aggregated', auc_aggregated)
+        # Save aggregated VIM and AUC for GENIE3
+        save_aggregated_vim(VIM_GENIE3_aggregated, dataset_name, method='GENIE3')
+        save_results_to_file(dataset_name, 'Aggregated', auc_GENIE3_aggregated, method='GENIE3')
     else:
-        print(f"  No VIMs computed for Dataset {dataset_name}")
+        print(f"  No VIMs computed for Dataset {dataset_name} using GENIE3")
+    
+    # Aggregate VIMs over iterations for Pearson
+    if VIMs_Pearson:
+        VIM_Pearson_aggregated = sum(VIMs_Pearson)
+        auc_Pearson_aggregated = roc_auc_score(gt.flatten(), VIM_Pearson_aggregated.flatten())
+        print(f"  Aggregated AUC over iterations (Pearson): {auc_Pearson_aggregated}")
+        
+        # Save aggregated VIM and AUC for Pearson
+        save_aggregated_vim(VIM_Pearson_aggregated, dataset_name, method='Pearson')
+        save_results_to_file(dataset_name, 'Aggregated', auc_Pearson_aggregated, method='Pearson')
+    else:
+        print(f"  No VIMs computed for Dataset {dataset_name} using Pearson")
 
     print(f"Finished processing Dataset {dataset_name}\n")
