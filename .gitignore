@@ -101,7 +101,7 @@ venv.bak/
 .ropeproject
 
 # mkdocs documentation
-/site
+/site       
 
 # mypy
 .mypy_cache/
@@ -116,3 +116,6 @@ venv.bak/
 # imputed results & large files
 imputations/*
 *.h5
+
+
+*.feather

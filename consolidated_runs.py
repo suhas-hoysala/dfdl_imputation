@@ -38,6 +38,22 @@ from Pearson.pearson import Pearson
 
 import arboreto as arboreto
 
+from arboreto import algo
+import scanpy as sc
+import anndata
+from arboreto.utils import load_tf_names
+from ctxcore.rnkdb import FeatherRankingDatabase as RankingDatabase
+from pyscenic.cli.utils import load_signatures
+from pyscenic.aucell import aucell
+from pyscenic.binarization import binarize
+from pyscenic.export import export2loom
+from pyscenic.prune import prune2df
+from arboreto.algo import grnboost2
+from pyscenic.utils import modules_from_adjacencies
+from pyscenic.aucell import aucell
+from pyscenic.binarization import binarize
+from pyscenic.export import export2loom
+
 from utils import gt_benchmark, reload_modules, delete_modules 
 from utils import plot_precisions, precision_at_k
 
@@ -183,6 +199,53 @@ def run_scScope(x_path, y_path, ind):
     save_str = '/yhat_scScope'
     np.save(save_path + save_str, rec_y)
 
+def run_scenic(x_path, y_path, ind):
+
+    ds_str = 'DS' + str(ind)
+    save_path = './imputations/' + ds_str
+
+    # Load data
+    y = np.transpose(np.load(y_path))
+    x = np.transpose(np.load(x_path))
+    # Create anndata object
+    adata = anndata.AnnData(y)
+    adata.var_names = [str(i) for i in range(y.shape[1])]
+    adata.obs_names = [str(i) for i in range(y.shape[0])]
+
+    # Load transcription factors
+    tf_dir = os.path.abspath(os.path.join(os.path.dirname(__file__),  'tfs'))
+    tf_fnames = [os.path.join(tf_dir, fname) for fname in os.listdir(tf_dir) if fname.endswith('.txt')]
+    tf_names = [tf for fname in tf_fnames for tf in arboreto.utils.load_tf_names(fname)]
+    print('tf_names', tf_names)
+
+    # Load ranking databases
+    feather_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), 'feather'))
+    db_fnames = [os.path.join(feather_dir, fname) for fname in os.listdir(feather_dir) if fname.endswith('.feather')]
+    dbs = [RankingDatabase(fname=fname, name=fname.split("/")[-1]) for fname in db_fnames]
+
+    # GRN inference
+    print('adj')
+    print('adata.shape[1]:', adata.shape[1])
+    gene_names = tf_names[:adata.shape[1]]
+    adjacencies = grnboost2(expression_data=adata, tf_names=tf_names, gene_names=gene_names, verbose=True)
+    print('modules')
+    # Module discovery
+    modules = list(modules_from_adjacencies(adjacencies, adata.var_names))
+
+    # Regulon prediction
+    df = prune2df(dbs, modules)
+
+    # AUCell
+    auc_mtx = aucell(adata, df)
+
+    # Binarize
+    print('binarizie')
+    binarized_mtx = binarize(auc_mtx)
+
+    # Save results
+    save_str = '/yhat_SCENIC'
+    np.save(save_path + save_str, binarized_mtx)
+
 def run_arboreto(path, roc, precision_recall_k, method_name, target, ind, regs=None):
     if regs is None:
         regs = 'all'
@@ -190,7 +253,6 @@ def run_arboreto(path, roc, precision_recall_k, method_name, target, ind, regs=N
     df = pd.DataFrame(dataset)
     c_names = [str(c) for c in df.columns]
     df.columns = c_names
-    from arboreto import algo
     #network = algo.grnboost2(expression_data=df, tf_names=regs, verbose=True)
     network = algo.genie3(expression_data=df, tf_names=regs, verbose=True)
     network['TF'] = network['TF'].astype(int)
@@ -228,7 +290,7 @@ def run_pearson(path, target, roc, precision_recall_k, method_name, ind):
     print(ret_dict)
     return ret_dict
 
-def run_simulations(datasets, sergio=True, saucie=True, scScope=True, deepImpute=True, magic=True, genie=True, pearson=False, arboreto=True, roc=True, precision_recall_k=True, run_with_regs=False):
+def run_simulations(datasets, sergio=True, saucie=True, scScope=True, deepImpute=True, magic=True, genie=True, pearson=False, arboreto=True, roc=True, scenic=False, scimtar=False, precision_recall_k=True, run_with_regs=False):
     target_file = ''
     regs_path = ''
     results = {}
@@ -265,6 +327,11 @@ def run_simulations(datasets, sergio=True, saucie=True, scScope=True, deepImpute
         if deepImpute:
             print(f"---> Running DeepImpute on DS{i}")
             run_deepImpute(save_path + '/DS6_clean.npy', save_path + '/DS6_45.npy', i)
+            count_methods += 1
+
+        if scenic:
+            print(f"---> Running Scenic on DS{i}")
+            run_scenic(save_path + '/DS6_clean.npy', save_path + '/DS6_45.npy', i)
             count_methods += 1
 
         if magic:
