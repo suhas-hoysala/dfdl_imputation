@@ -330,13 +330,37 @@ run_sincera <- function(x_path, y_path, ind) {
 }
 """
 
-SCENIC_CODE = '''
-# Load necessary libraries
-library(SCENIC)
-library(AUCell)
-library(GENIE3)
-library(RcisTarget)
+SEURAT_CODE = '''
+run_seurat <- function(x_path, y_path, ind) {
+    library(Seurat)
+    library(reticulate)
+    
+    ds_str <- paste0('DS', ind)
+    save_path <- file.path('./imputations', ds_str)
+    
+    y <- t(np$load(y_path))
+    x <- t(np$load(x_path))
+    
+    # Convert numpy arrays to Seurat objects
+    y_seurat <- CreateSeuratObject(counts = y)
+    x_seurat <- CreateSeuratObject(counts = x)
+    
+    # Run Seurat normalization and imputation
+    y_seurat <- NormalizeData(y_seurat)
+    y_seurat <- FindVariableFeatures(y_seurat)
+    y_seurat <- ScaleData(y_seurat)
+    y_seurat <- RunPCA(y_seurat)
+    y_seurat <- RunUMAP(y_seurat, dims = 1:10)
+    
+    # Extract imputed data
+    rec_y <- GetAssayData(y_seurat, slot = "data")
+    
+    save_str <- '/yhat_SEURAT.npy'
+    np$save(file.path(save_path, save_str), rec_y)
+}
+'''
 
+SCENIC_CODE = '''
 run_scenic_r <- function(x_path, y_path, ind) {
   # Load data
   y <- t(as.matrix(readRDS(y_path)))  # Load y data
@@ -377,8 +401,6 @@ run_scenic_r <- function(x_path, y_path, ind) {
   
   print("SCENIC pipeline completed!")
 }
-
-'''
 
 # Call the SINCERA function using subprocess
 def run_sincera(x_path, y_path, ind):
@@ -458,6 +480,7 @@ def run_scenic(x_path, y_path, ind):
     
     # Optionally, remove the temporary R script file
     os.remove(r_script_path)
+    '''
 
 def run_sincera(x_path, y_path, ind):
     # Convert .npy files to R-readable format and save them
