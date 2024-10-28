@@ -47,7 +47,7 @@ from pyscenic.cli.utils import load_signatures
 from pyscenic.aucell import aucell
 from pyscenic.binarization import binarize
 from pyscenic.export import export2loom
-from pyscenic.prune import prune2df
+from pyscenic.prune import prune2df, df2regulons
 from arboreto.algo import grnboost2
 from pyscenic.utils import modules_from_adjacencies
 from pyscenic.aucell import aucell
@@ -204,19 +204,16 @@ def run_scenic(x_path, y_path, ind):
     ds_str = 'DS' + str(ind)
     save_path = './imputations/' + ds_str
 
-    # Load data
-    y = np.transpose(np.load(y_path))
-    x = np.transpose(np.load(x_path))
-    # Create anndata object
-    adata = anndata.AnnData(y)
-    adata.var_names = [str(i) for i in range(y.shape[1])]
-    adata.obs_names = [str(i) for i in range(y.shape[0])]
-
+    
     # Load transcription factors
     tf_dir = os.path.abspath(os.path.join(os.path.dirname(__file__),  'tfs'))
     tf_fnames = [os.path.join(tf_dir, fname) for fname in os.listdir(tf_dir) if fname.endswith('.txt')]
     tf_names = [tf for fname in tf_fnames for tf in arboreto.utils.load_tf_names(fname)]
-    print('tf_names', tf_names)
+
+    # Load data
+    y = np.transpose(np.load(y_path, allow_pickle=True))
+    x = np.transpose(np.load(x_path, allow_pickle=True))
+    df = pd.DataFrame(y, columns=tf_names[:y.shape[1]])
 
     # Load ranking databases
     feather_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), 'feather'))
@@ -225,26 +222,34 @@ def run_scenic(x_path, y_path, ind):
 
     # GRN inference
     print('adj')
-    print('adata.shape[1]:', adata.shape[1])
-    gene_names = tf_names[:adata.shape[1]]
-    adjacencies = grnboost2(expression_data=adata, tf_names=tf_names, gene_names=gene_names, verbose=True)
+    #print('adata.shape[1]:', adata.shape[1])
+    #gene_names = tf_names[:adata.shape[1]]
+    adjacencies = grnboost2(expression_data=df, tf_names=tf_names, verbose=True)
     print('modules')
     # Module discovery
-    modules = list(modules_from_adjacencies(adjacencies, adata.var_names))
+    modules = modules_from_adjacencies(adjacencies, df)
+
+    # Load motifs
+    motif_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), 'motifs'))
+    db_mname = [os.path.join(motif_dir, fname) for fname in os.listdir(motif_dir) if fname.endswith('.tbl')][0]
 
     # Regulon prediction
-    df = prune2df(dbs, modules)
+    df_2 = prune2df(dbs, modules, db_mname)
 
+    regulons = df2regulons(df_2)
     # AUCell
-    auc_mtx = aucell(adata, df)
+    auc_mtx = aucell(df, regulons, num_workers=3)
 
     # Binarize
     print('binarizie')
-    binarized_mtx = binarize(auc_mtx)
+    binarized_mtx, binarized_series = binarize(auc_mtx)
 
     # Save results
-    save_str = '/yhat_SCENIC'
-    np.save(save_path + save_str, binarized_mtx)
+    save_str = '/yhat_SCENIC' + str(ind)
+    save_path = os.path.abspath(os.path.join(os.path.dirname(__file__),  'imputation_data'))
+    with open(save_path + save_str + '_matrix.npy', 'wb+') as f:
+        np.save(f, binarized_mtx)
+    binarized_series.to_csv(save_path + save_str + '_series.csv', mode='w+')
 
 def run_arboreto(path, roc, precision_recall_k, method_name, target, ind, regs=None):
     if regs is None:
@@ -309,6 +314,12 @@ def run_simulations(datasets, sergio=True, saucie=True, scScope=True, deepImpute
         ds_str = 'DS' + str(i)
         save_path = './imputations/' + ds_str
 
+        imp_data_dir = os.path.abspath(os.path.join(os.path.dirname(__file__),  'SERGIO/imputation_data'))
+        imp_data_45_fnames = [os.path.join(imp_data_dir, fname) for fname in os.listdir(imp_data_dir) if fname.startswith('DS' + str(i)) and '45' in fname]
+        imp_data_clean_fnames = [os.path.join(imp_data_dir, fname) for fname in os.listdir(imp_data_dir) if fname.startswith('DS' + str(i)) and 'clean' in fname]
+        
+        imp_data_45 = imp_data_45_fnames[0]
+        imp_data_clean = imp_data_clean_fnames[0]
         if sergio:
             print(f"---> Running SERGIO on DS{i}")
             run_sergio(target_file, regs_path, i)
@@ -331,7 +342,7 @@ def run_simulations(datasets, sergio=True, saucie=True, scScope=True, deepImpute
 
         if scenic:
             print(f"---> Running Scenic on DS{i}")
-            run_scenic(save_path + '/DS6_clean.npy', save_path + '/DS6_45.npy', i)
+            run_scenic(imp_data_clean, imp_data_45, i)
             count_methods += 1
 
         if magic:
@@ -632,3 +643,5 @@ def create_correlation_plots(datasets):
         fig.tight_layout(pad=2.0)
         plt.show()
     return
+
+print('hi mofo now!')

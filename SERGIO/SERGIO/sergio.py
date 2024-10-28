@@ -225,7 +225,6 @@ class sergio (object):
 
         self.master_regulators_idx_ = set(masterRegs)
 
-
         if (len(self.master_regulators_idx_) + np.shape(allTargets)[0] != self.nGenes_):
             print ("Error: Inconsistent number of genes")
             sys.exit()
