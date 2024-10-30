@@ -44,7 +44,8 @@ class DirectModel(direct_model1_squarematrix):
         self.x_train, self.y_train, self.z_train = None, None, None
         self.x_test, self.y_test, self.z_test = None, None, None
 
-    def split_data(x_path, y_path, train_ratio=0.7, val_ratio=0.15):
+    def split_data(self, x_path, y_path, train_ratio=0.7, val_ratio=0.15):
+        print(f'x data is {str(x_path)}, y data is {str(y_path)}, types are {type(x_path)} and {type(y_path)}')
         y_data = np.transpose(np.load(y_path, allow_pickle=True))
         x_data = np.transpose(np.load(x_path, allow_pickle=True))
         # Split data indices
@@ -58,8 +59,8 @@ class DirectModel(direct_model1_squarematrix):
 
         return (x_train, y_train), (x_val, y_val), (x_test, y_test)
 
-    def prepare_data_with_method(self, x_data, y_data, ind):
-        print(f"Processing DS{str(ind)} set with {self.method_name}...")
+    def prepare_data_with_method(self, x_data, y_data, ind, label):
+        print(f"Processing DS{str(ind)} set with {self.method_name} for label {label}...")
         return self.method(x_data, y_data, ind)
 
 
@@ -75,31 +76,33 @@ class DirectModel(direct_model1_squarematrix):
     def load_data_TF2(self, i):
         individual_results = {}
 
-        imp_data_dir = os.path.abspath(os.path.join(os.path.dirname(__file__),  'SERGIO/imputation_data'))
-        imp_data_45_fnames = [os.path.join(imp_data_dir, fname) for fname in os.listdir(imp_data_dir) if fname.startswith('DS' + str(i)) and '45' in fname]
-        imp_data_clean_fnames = [os.path.join(imp_data_dir, fname) for fname in os.listdir(imp_data_dir) if fname.startswith('DS' + str(i)) and 'clean' in fname]
+        imp_data_dir = os.path.abspath(os.path.join(os.path.dirname(__file__),  f'imputations/DS{str(i)}'))
+        imp_data_45_fnames = [os.path.join(imp_data_dir, fname) for fname in os.listdir(imp_data_dir) if fname.startswith('DS') and '45' in fname]
+        imp_data_clean_fnames = [os.path.join(imp_data_dir, fname) for fname in os.listdir(imp_data_dir) if fname.startswith('DS') and 'clean' in fname]
 
         imp_data_45 = imp_data_45_fnames[0]
         imp_data_clean = imp_data_clean_fnames[0]
 
-        (x_train, y_train), (x_val, y_val), (x_test, y_test) = self.split_data(imp_data_clean, imp_data_45)
+        print(f'impdata 45 fnames is {imp_data_45_fnames} and impdata clean fnames is {imp_data_clean_fnames}')
 
-        self.x_train, self.y_train = self.prepare_data_with_method(x_train, y_train, i)
-        self.x_val, self.y_val = self.prepare_data_with_method(x_val, y_val, i)
-        self.x_test, self.y_test = self.prepare_data_with_method(x_test, y_test, i)
+        print(f'imp data 45 is {imp_data_45} and imp data clean is {imp_data_clean}')
+
+        (self.x_train, self.y_train), (self.x_val, self.y_val), (self.x_test, self.y_test) = self.split_data(imp_data_clean, imp_data_45)
+
+        self.y_train_hat = self.prepare_data_with_method(self.x_train, self.y_train, i, 'train')
+        self.y_val_hat = self.prepare_data_with_method(self.x_val, self.y_val, i, 'validate')
+        self.y_test_hat = self.prepare_data_with_method(self.x_test, self.y_test, i, 'test')
 
     def update_test_train_data(self, i):
         self.load_data_TF2(i)
 
-    def train_and_test_model_dividePart_assignTForder(self,num_of_pair_ratio=1):
-        datasets = range(1,4)
-        for i in tqdm(datasets):
-            print(f"--> Updating train and test data with {self.method_name} preprocessing for DS{i}...")
-            self.update_test_train_data(i)
-            self.construct_model(self.x_train)
-            history = self.model.fit(self.x_train, self.y_train, batch_size=self.batch_size, epochs=self.epochs,
-                                        validation_split=0.2, shuffle=True, callbacks=self.callbacks_list)
-            self.test_model(self.model, self.x_test, self.y_test, self.z_test, self.save_dir, history, None)
+    def train_and_test_model_dividePart_assignTForder(self,i, num_of_pair_ratio=1):
+        print(f"--> Updating train and test data with {self.method_name} preprocessing for DS{i}...")
+        self.update_test_train_data(i)
+            #self.construct_model(self.x_train)
+            #history = self.model.fit(self.x_train, self.y_train, batch_size=self.batch_size, epochs=self.epochs,
+            #                            validation_split=0.2, shuffle=True, callbacks=self.callbacks_list)
+            #self.test_model(self.model, self.x_test, self.y_test, self.z_test, self.save_dir, history, None)
 
 
 def load_indel_lists_from_file(cross_validation_fold_divide_file):

@@ -203,7 +203,8 @@ def run_scScope(x_path, y_path, ind):
     save_str = '/yhat_scScope'
     np.save(save_path + save_str, rec_y)
 
-def run_scenic(x_path, y_path, ind):
+
+def run_scenic(x, y, ind, label=None):
 
     ds_str = 'DS' + str(ind)
     save_path = './imputations/' + ds_str
@@ -215,8 +216,6 @@ def run_scenic(x_path, y_path, ind):
     tf_names = [tf for fname in tf_fnames for tf in arboreto.utils.load_tf_names(fname)]
 
     # Load data
-    y = np.transpose(np.load(y_path, allow_pickle=True))
-    x = np.transpose(np.load(x_path, allow_pickle=True))
     df = pd.DataFrame(y, columns=tf_names[:y.shape[1]])
 
     # Load ranking databases
@@ -238,8 +237,10 @@ def run_scenic(x_path, y_path, ind):
     db_mname = [os.path.join(motif_dir, fname) for fname in os.listdir(motif_dir) if fname.endswith('.tbl')][0]
 
     # Regulon prediction
+    print('prune')
     df_2 = prune2df(dbs, modules, db_mname)
 
+    print('df2regulons')
     regulons = df2regulons(df_2)
     # AUCell
     auc_mtx = aucell(df, regulons, num_workers=3)
@@ -249,8 +250,19 @@ def run_scenic(x_path, y_path, ind):
     binarized_mtx, binarized_series = binarize(auc_mtx)
 
     # Save results
-    save_str = '/yhat_SCENIC'
-    np.save(save_path + save_str, binarized_mtx.X)
+    additional = '' if not label else '_'+label
+    save_str = f'/yhat_SCENIC{ind}{additional}'
+    np.save(save_path + save_str, binarized_mtx)
+
+    return binarized_mtx
+
+
+
+def run_scenic_prepare_data(x_path, y_path, ind, label=None):
+    # Load data
+    y = np.transpose(np.load(y_path, allow_pickle=True))
+    x = np.transpose(np.load(x_path, allow_pickle=True))
+    return run_scenic(x, y, ind, label)
     
     
 SINCERA_code = """
@@ -436,7 +448,7 @@ def run_simulations(datasets, sergio=True, saucie=True, scScope=True, deepImpute
 
         if scenic:
             print(f"---> Running Scenic on DS{i}")
-            run_scenic(imp_data_clean, imp_data_45, i)
+            run_scenic_prepare_data(imp_data_clean, imp_data_45, i)
             count_methods += 1
 
         if sincera:
