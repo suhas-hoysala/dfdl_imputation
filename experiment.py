@@ -61,7 +61,7 @@ class DirectModel(direct_model1_squarematrix):
 
     def prepare_data_with_method(self, x_data, y_data, ind, label):
         print(f"Processing DS{str(ind)} set with {self.method_name} for label {label}...")
-        return self.method(x_data, y_data, ind)
+        return self.method(x_data, y_data, ind, label)
 
 
     def run_scenic(self, x_data, y_data, z_data):
@@ -89,9 +89,9 @@ class DirectModel(direct_model1_squarematrix):
 
         (self.x_train, self.y_train), (self.x_val, self.y_val), (self.x_test, self.y_test) = self.split_data(imp_data_clean, imp_data_45)
 
-        self.y_train_hat = self.prepare_data_with_method(self.x_train, self.y_train, i, 'train')
-        self.y_val_hat = self.prepare_data_with_method(self.x_val, self.y_val, i, 'validate')
-        self.y_test_hat = self.prepare_data_with_method(self.x_test, self.y_test, i, 'test')
+        self.y_train_hat = self.prepare_data_with_method(self.x_train, self.y_train, i, label='train')
+        self.y_val_hat = self.prepare_data_with_method(self.x_val, self.y_val, i, label='validate')
+        self.y_test_hat = self.prepare_data_with_method(self.x_test, self.y_test, i, label='test')
 
     def update_test_train_data(self, i):
         self.load_data_TF2(i)

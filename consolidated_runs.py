@@ -205,9 +205,14 @@ def run_scScope(x_path, y_path, ind):
 
 
 def run_scenic(x, y, ind, label=None):
-
+    print(f'Label is {label}')
     ds_str = 'DS' + str(ind)
     save_path = './imputations/' + ds_str
+    additional = '' if not label else '_'+label
+    x_save_file = save_path + '/x_data' + f'DS{ind}' + additional
+    y_save_file = save_path + '/y_data' + f'DS{ind}' + additional
+    np.save(x_save_file, x)
+    np.save(y_save_file, y)
 
     
     # Load transcription factors
@@ -244,17 +249,19 @@ def run_scenic(x, y, ind, label=None):
     regulons = df2regulons(df_2)
     # AUCell
     auc_mtx = aucell(df, regulons, num_workers=3)
+    print('auc_mtx shape is:', auc_mtx.shape)
 
     # Binarize
-    print('binarizie')
-    binarized_mtx, binarized_series = binarize(auc_mtx)
+    #print('binarizie')
+    #binarized_mtx, binarized_series = binarize(auc_mtx)
 
     # Save results
-    additional = '' if not label else '_'+label
     save_str = f'/yhat_SCENIC{ind}{additional}'
-    np.save(save_path + save_str, binarized_mtx)
+    save_file = save_path + save_str + '.csv'
+    print(f'Saving to {save_file}')
+    auc_mtx.to_csv(save_file)
 
-    return binarized_mtx
+    return auc_mtx
 
 
 
