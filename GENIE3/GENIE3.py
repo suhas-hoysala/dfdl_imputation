@@ -281,7 +281,8 @@ def GENIE3(expr_data,gene_names=None,regulators='all',tree_method='RF',K='sqrt',
             print('Gene %d/%d...' % (i+1,ngenes))
             
             vi = GENIE3_single(expr_data,i,input_idx,tree_method,K,ntrees)
-            VIM[i,:] = vi
+            VIM[i,:] = vi # vi has the dimension ngenes
+            print(f"v1.shape is {vi.shape}, ngenes: {ngenes}")
 
    
     VIM = transpose(VIM)
@@ -309,7 +310,7 @@ def GENIE3_single(expr_data,output_idx,input_idx,tree_method,K,ntrees):
     output = output / std(output)
     
     # Remove target gene from candidate regulators
-    input_idx = input_idx[:]
+    input_idx = input_idx[:] # copy elements of input_idx to a new list
     if output_idx in input_idx:
         input_idx.remove(output_idx)
 

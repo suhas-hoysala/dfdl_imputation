@@ -12,7 +12,7 @@ def run_genie(x, target_file):
     roc_score = roc_auc_score(gt.flatten(), rescaled_vim.flatten())
     return roc_score
 
-from knn_smoothing.knn_smooth import knn_smoothing
+from baselines.knn_smoothing.knn_smooth import knn_smoothing
 def run_knn(data, k, save_path, it, file_extension='', target_file=None):
     data[data == 0] = 1e-4
     data = np.float64(data)

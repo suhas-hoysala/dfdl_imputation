@@ -1,0 +1,1103 @@
+0it [00:00, ?it/s]
+---> Running MAGIC on DS1
+Loading data for DS1
+Verifying means and variances of rows 0 to 300 in clean data
+Intra-block MSE between set 1 and set 2 in block 1: 0.15329707458219216
+Intra-block MSE between set 1 and set 3 in block 1: 0.12932491282967182
+Intra-block MSE between set 1 and set 4 in block 1: 0.13874581183617943
+Intra-block MSE between set 1 and set 5 in block 1: 0.1920077606913433
+Intra-block MSE between set 2 and set 3 in block 1: 0.27331177295168163
+Intra-block MSE between set 2 and set 4 in block 1: 0.2782343565555673
+Intra-block MSE between set 2 and set 5 in block 1: 0.2922208224335896
+Intra-block MSE between set 3 and set 4 in block 1: 0.12025251793025156
+Intra-block MSE between set 3 and set 5 in block 1: 0.2909442311098642
+Intra-block MSE between set 4 and set 5 in block 1: 0.29376406853124926
+Inter-block MSE between set 1 of block 1 and set 1 of block 2: 2.128470377374876
+Inter-block MSE between set 2 of block 1 and set 2 of block 2: 2.3876989409833755
+Inter-block MSE between set 3 of block 1 and set 3 of block 2: 1.5673477749719524
+Inter-block MSE between set 4 of block 1 and set 4 of block 2: 1.8085102122772119
+Inter-block MSE between set 5 of block 1 and set 5 of block 2: 2.229911665394731
+Total zeros in block 1 before imputation: 15174
+Computing mean and variance from the noisy data for rows 0 to 300
+Imputing missing values (zeros) for rows 0 to 300
+Imputed values for gene 0: min=1.0, max=7.474188129127289
+Imputed values for gene 1: min=1.0, max=6.855340543087272
+Imputed values for gene 2: min=1.0, max=5.016211029755326
+Imputed values for gene 3: min=1.0, max=3.0
+Imputed values for gene 4: min=1.0, max=8.227394437082209
+Imputed values for gene 5: min=1.0, max=7.734989421883222
+Imputed values for gene 6: min=1.0, max=6.14318064439011
+Imputed values for gene 7: min=1.0, max=4.307438146174555
+Imputed values for gene 8: min=1.0, max=4.271011820212279
+Imputed values for gene 9: min=1.0, max=5.362082028020911
+Imputed values for gene 10: min=1.0, max=4.87841303617466
+Imputed values for gene 11: min=1.0, max=6.625051693216877
+Imputed values for gene 12: min=1.0, max=6.520028779353448
+Imputed values for gene 13: min=1.0, max=6.8074111930034
+Imputed values for gene 14: min=1.0, max=7.558819637287721
+Imputed values for gene 15: min=1.0, max=5.2928744248136015
+Imputed values for gene 16: min=1.0, max=6.381034447245608
+Imputed values for gene 17: min=1.0, max=4.228858629015425
+Imputed values for gene 18: min=1.0, max=5.994307940046088
+Imputed values for gene 19: min=1.0, max=7.179802963480322
+Imputed values for gene 20: min=1.0, max=5.317823337265021
+Imputed values for gene 21: min=1.0, max=5.901580830602761
+Imputed values for gene 22: min=1.0, max=5.64052790717163
+Imputed values for gene 23: min=1.0, max=4.104537729522633
+Imputed values for gene 24: min=1.0, max=5.822265022516072
+Imputed values for gene 25: min=1.0, max=4.557632214632514
+Imputed values for gene 26: min=1.0, max=6.117067694417404
+Imputed values for gene 27: min=1.0, max=5.42925737447679
+Imputed values for gene 28: min=1.0, max=4.440987696277199
+Imputed values for gene 29: min=1.0, max=7.1065948484380295
+Imputed values for gene 30: min=1.0, max=5.378533308862865
+Imputed values for gene 31: min=1.0, max=3.7643376497076413
+Imputed values for gene 32: min=1.0, max=4.661833620600513
+Imputed values for gene 33: min=1.0, max=5.3432267153372255
+Imputed values for gene 34: min=1.0, max=4.788713999824095
+Imputed values for gene 35: min=1.0, max=8.419570437571391
+Imputed values for gene 36: min=1.0, max=3.7894347393868495
+Imputed values for gene 37: min=1.0, max=4.91217607050245
+Imputed values for gene 38: min=1.0, max=4.831081659394273
+Imputed values for gene 39: min=1.0, max=7.067689962090286
+Imputed values for gene 40: min=1.0, max=5.602038957441245
+Imputed values for gene 41: min=1.0, max=5.708608346970288
+Imputed values for gene 42: min=1.0, max=6.919939029257628
+Imputed values for gene 43: min=1.0, max=6.488033927650466
+Imputed values for gene 44: min=1.0, max=3.5195850922951584
+Imputed values for gene 45: min=1.0, max=5.360156492404119
+Imputed values for gene 46: min=1.0, max=4.881377900572927
+Imputed values for gene 47: min=1.0, max=9.725511037239682
+Imputed values for gene 48: min=1.0, max=4.432197017289894
+Imputed values for gene 49: min=1.0, max=3.785394815928461
+Imputed values for gene 50: min=1.0, max=5.008784177181881
+Imputed values for gene 51: min=1.0, max=5.804435452591635
+Imputed values for gene 52: min=1.0, max=9.585544223360458
+Imputed values for gene 53: min=1.0, max=13.742908392757233
+Imputed values for gene 54: min=1.0, max=9.062738468698372
+Imputed values for gene 55: min=1.0, max=8.36035633010035
+Imputed values for gene 56: min=1.0, max=5.445731334179946
+Imputed values for gene 57: min=1.0, max=6.407498269528178
+Imputed values for gene 58: min=1.0, max=3.5823196101848302
+Imputed values for gene 59: min=1.0, max=5.252424691057136
+Imputed values for gene 60: min=1.0, max=8.688672280059837
+Imputed values for gene 61: min=1.0, max=8.209834472384829
+Imputed values for gene 62: min=1.0, max=2.0
+Imputed values for gene 63: min=1.0, max=8.003293940144726
+Imputed values for gene 64: min=1.0, max=9.771192748251636
+Imputed values for gene 65: min=1.0, max=6.215636254836454
+Imputed values for gene 66: min=1.0, max=6.550690622982327
+Imputed values for gene 67: min=1.0, max=1.5512496685272277
+Imputed values for gene 68: min=1.0, max=7.748969780499779
+Imputed values for gene 69: min=1.0, max=6.264509479806588
+Imputed values for gene 70: min=1.0, max=9.446611578472833
+Imputed values for gene 71: min=1.0, max=7.6050973755116456
+Imputed values for gene 72: min=1.0, max=7.622854632224078
+Imputed values for gene 73: min=1.0, max=7.623438328214121
+Imputed values for gene 74: min=1.0, max=2.0
+Imputed values for gene 75: min=1.0, max=7.025316200495023
+Imputed values for gene 76: min=1.0, max=3.4158439322441327
+Imputed values for gene 77: min=1.0, max=18.56611423795181
+Imputed values for gene 78: min=1.0, max=6.002615038212646
+Imputed values for gene 79: min=1.0, max=6.652866599982909
+Imputed values for gene 80: min=1.0, max=9.326525119958383
+Imputed values for gene 81: min=1.0, max=5.846879380279042
+Imputed values for gene 82: min=1.0, max=7.490716876060233
+Imputed values for gene 83: min=1.0, max=7.7189678774861825
+Imputed values for gene 84: min=1.0, max=2.821646522363398
+Imputed values for gene 85: min=1.0, max=6.98325330607799
+Imputed values for gene 86: min=1.0, max=8.89933041989593
+Imputed values for gene 87: min=1.0, max=4.46155054085004
+Imputed values for gene 88: min=1.0, max=8.249461239464898
+Imputed values for gene 89: min=1.0, max=7.384463327526103
+Imputed values for gene 90: min=1.0, max=4.578913112614432
+Imputed values for gene 91: min=1.0, max=6.42802618316491
+Imputed values for gene 92: min=1.0, max=4.334239171292361
+Imputed values for gene 93: min=1.0, max=2.0
+Imputed values for gene 94: min=1.0, max=4.051444646635413
+Imputed values for gene 95: min=1.0, max=4.166046775775314
+Imputed values for gene 96: min=1.0, max=5.217314360409972
+Imputed values for gene 97: min=1.0, max=5.466871005165599
+Imputed values for gene 98: min=1.0, max=9.483154122710186
+Imputed values for gene 99: min=1.0, max=6.4812198829010175
+Verifying means and variances of rows 300 to 600 in clean data
+Intra-block MSE between set 1 and set 2 in block 2: 0.19183662178273472
+Intra-block MSE between set 1 and set 3 in block 2: 0.14488543656594677
+Intra-block MSE between set 1 and set 4 in block 2: 0.1528565623661899
+Intra-block MSE between set 1 and set 5 in block 2: 0.12051435638559337
+Intra-block MSE between set 2 and set 3 in block 2: 0.18463244508381255
+Intra-block MSE between set 2 and set 4 in block 2: 0.20506937682732576
+Intra-block MSE between set 2 and set 5 in block 2: 0.22264580914613352
+Intra-block MSE between set 3 and set 4 in block 2: 0.10938755845970456
+Intra-block MSE between set 3 and set 5 in block 2: 0.13434107936748907
+Intra-block MSE between set 4 and set 5 in block 2: 0.16545686127683448
+Inter-block MSE between set 1 of block 2 and set 1 of block 3: 0.7453562746040664
+Inter-block MSE between set 2 of block 2 and set 2 of block 3: 1.0181609439066353
+Inter-block MSE between set 3 of block 2 and set 3 of block 3: 0.9341840330137255
+Inter-block MSE between set 4 of block 2 and set 4 of block 3: 0.7368924322295921
+Inter-block MSE between set 5 of block 2 and set 5 of block 3: 1.2792148436660193
+Total zeros in block 2 before imputation: 15050
+Computing mean and variance from the noisy data for rows 300 to 600
+Imputing missing values (zeros) for rows 300 to 600
+Imputed values for gene 0: min=1.0, max=3.9202744378539567
+Imputed values for gene 1: min=1.0, max=5.735389767118584
+Imputed values for gene 2: min=1.0, max=3.767985508300841
+Imputed values for gene 3: min=1.0, max=4.238806841764286
+Imputed values for gene 4: min=1.0, max=4.525747230826776
+Imputed values for gene 5: min=1.0, max=5.526907105294712
+Imputed values for gene 6: min=1.0, max=6.018947850932454
+Imputed values for gene 7: min=1.0, max=4.843277136141143
+Imputed values for gene 8: min=1.0, max=5.1481360110898535
+Imputed values for gene 9: min=1.0, max=3.7250315158371725
+Imputed values for gene 10: min=1.0, max=4.121863094212667
+Imputed values for gene 11: min=1.0, max=5.409538240277582
+Imputed values for gene 12: min=1.0, max=4.782204320741831
+Imputed values for gene 13: min=1.0, max=4.196669353675017
+Imputed values for gene 14: min=1.0, max=8.552984489716165
+Imputed values for gene 15: min=1.0, max=3.976083439715089
+Imputed values for gene 16: min=1.0, max=5.0786075077934925
+Imputed values for gene 17: min=1.0, max=2.0
+Imputed values for gene 18: min=1.0, max=4.779245698320395
+Imputed values for gene 19: min=1.0, max=4.752955734945104
+Imputed values for gene 20: min=1.0, max=4.52957601949752
+Imputed values for gene 21: min=1.0, max=5.97244923010549
+Imputed values for gene 22: min=1.0, max=5.136203827511851
+Imputed values for gene 23: min=1.0, max=3.3921773175039176
+Imputed values for gene 24: min=1.0, max=4.60456563906764
+Imputed values for gene 25: min=1.0, max=5.172054606691042
+Imputed values for gene 26: min=1.0, max=3.8127656550121327
+Imputed values for gene 27: min=1.0, max=4.032021534795847
+Imputed values for gene 28: min=1.0, max=4.283073276928959
+Imputed values for gene 29: min=1.0, max=6.6527528414194546
+Imputed values for gene 30: min=1.0, max=5.575966844199201
+Imputed values for gene 31: min=1.0, max=5.5139110704691
+Imputed values for gene 32: min=1.0, max=4.731218407480326
+Imputed values for gene 33: min=1.0, max=5.707713122433013
+Imputed values for gene 34: min=1.0, max=5.474747686504411
+Imputed values for gene 35: min=1.0, max=4.697167239683017
+Imputed values for gene 36: min=1.0, max=3.8074593413699707
+Imputed values for gene 37: min=1.0, max=4.324986076763752
+Imputed values for gene 38: min=1.0, max=3.900682021511564
+Imputed values for gene 39: min=1.0, max=7.429414357991238
+Imputed values for gene 40: min=1.0, max=5.0502083777508915
+Imputed values for gene 41: min=1.0, max=6.293861624311913
+Imputed values for gene 42: min=1.0, max=4.8946411472822415
+Imputed values for gene 43: min=1.0, max=5.564361514401093
+Imputed values for gene 44: min=1.0, max=2.0
+Imputed values for gene 45: min=1.0, max=4.0
+Imputed values for gene 46: min=1.0, max=3.8573940960689477
+Imputed values for gene 47: min=1.0, max=10.115999093033686
+Imputed values for gene 48: min=1.0, max=3.796143017282605
+Imputed values for gene 49: min=1.0, max=4.314136204167334
+Imputed values for gene 50: min=1.0, max=4.238165702041174
+Imputed values for gene 51: min=1.0, max=5.087431441562413
+Imputed values for gene 52: min=1.0, max=12.835505384230204
+Imputed values for gene 53: min=1.0, max=7.442250515269143
+Imputed values for gene 54: min=1.0, max=9.140956826883095
+Imputed values for gene 55: min=1.0, max=7.93978261318013
+Imputed values for gene 56: min=1.0, max=3.8070525544053275
+Imputed values for gene 57: min=1.0, max=4.882704048260984
+Imputed values for gene 58: min=1.0, max=4.125297634277933
+Imputed values for gene 59: min=1.0, max=5.73108330043318
+Imputed values for gene 60: min=1.0, max=8.858503816237045
+Imputed values for gene 61: min=1.0, max=10.876818793775698
+Imputed values for gene 62: min=1.0, max=2.5268810515329134
+Imputed values for gene 63: min=1.0, max=9.601899198949052
+Imputed values for gene 64: min=1.0, max=11.244037123934557
+Imputed values for gene 65: min=1.0, max=4.379792014855359
+Imputed values for gene 66: min=1.0, max=6.717395650489268
+Imputed values for gene 67: min=1.0, max=3.0526115148885973
+Imputed values for gene 68: min=1.0, max=7.101281409706308
+Imputed values for gene 69: min=1.0, max=7.1124611384578955
+Imputed values for gene 70: min=1.0, max=7.031178210647319
+Imputed values for gene 71: min=1.0, max=7.670581374240436
+Imputed values for gene 72: min=1.0, max=7.253230130895021
+Imputed values for gene 73: min=1.0, max=7.481524218093944
+Imputed values for gene 74: min=1.0, max=4.0065430925015395
+Imputed values for gene 75: min=1.0, max=5.977904472654411
+Imputed values for gene 76: min=1.0, max=4.992054470221869
+Imputed values for gene 77: min=1.0, max=11.604773361310048
+Imputed values for gene 78: min=1.0, max=5.907616358743342
+Imputed values for gene 79: min=1.0, max=6.87814421272906
+Imputed values for gene 80: min=1.0, max=6.841861286774511
+Imputed values for gene 81: min=1.0, max=4.521958694079192
+Imputed values for gene 82: min=1.0, max=4.0
+Imputed values for gene 83: min=1.0, max=8.738845396647813
+Imputed values for gene 84: min=1.0, max=3.0
+Imputed values for gene 85: min=1.0, max=6.306985319175682
+Imputed values for gene 86: min=1.0, max=7.203159593558317
+Imputed values for gene 87: min=1.0, max=4.936234489339044
+Imputed values for gene 88: min=1.0, max=9.906908512971349
+Imputed values for gene 89: min=1.0, max=10.560344708941612
+Imputed values for gene 90: min=1.0, max=5.9974630309566965
+Imputed values for gene 91: min=1.0, max=5.863426422736711
+Imputed values for gene 92: min=1.0, max=4.248960647761882
+Imputed values for gene 93: min=1.0, max=1.7085586690729189
+Imputed values for gene 94: min=1.0, max=3.9356047043321407
+Imputed values for gene 95: min=1.0, max=5.370004005044411
+Imputed values for gene 96: min=1.0, max=5.8081955586745835
+Imputed values for gene 97: min=1.0, max=6.672555077684979
+Imputed values for gene 98: min=1.0, max=11.126198971385747
+Imputed values for gene 99: min=1.0, max=5.326125672620215
+Verifying means and variances of rows 600 to 900 in clean data
+Intra-block MSE between set 1 and set 2 in block 3: 0.15184039787984696
+Intra-block MSE between set 1 and set 3 in block 3: 0.11468437213889508
+Intra-block MSE between set 1 and set 4 in block 3: 0.11440872833772646
+Intra-block MSE between set 1 and set 5 in block 3: 0.235818877606931
+Intra-block MSE between set 2 and set 3 in block 3: 0.1454159610889169
+Intra-block MSE between set 2 and set 4 in block 3: 0.21923709807471806
+Intra-block MSE between set 2 and set 5 in block 3: 0.21050017098959295
+Intra-block MSE between set 3 and set 4 in block 3: 0.10019968914541806
+Intra-block MSE between set 3 and set 5 in block 3: 0.2062241283211489
+Intra-block MSE between set 4 and set 5 in block 3: 0.23731984194349895
+Inter-block MSE between set 1 of block 3 and set 1 of block 4: 4.126219376525544
+Inter-block MSE between set 2 of block 3 and set 2 of block 4: 5.001315740890831
+Inter-block MSE between set 3 of block 3 and set 3 of block 4: 4.9414425695509925
+Inter-block MSE between set 4 of block 3 and set 4 of block 4: 4.204612713249636
+Inter-block MSE between set 5 of block 3 and set 5 of block 4: 5.887721511995205
+Total zeros in block 3 before imputation: 16121
+Computing mean and variance from the noisy data for rows 600 to 900
+Imputing missing values (zeros) for rows 600 to 900
+Imputed values for gene 0: min=1.0, max=4.578371887672642
+Imputed values for gene 1: min=1.0, max=7.09120366389716
+Imputed values for gene 2: min=1.0, max=3.0992050509696085
+Imputed values for gene 3: min=1.0, max=4.479808389654884
+Imputed values for gene 4: min=1.0, max=4.2127207836357705
+Imputed values for gene 5: min=1.0, max=4.6509223631253
+Imputed values for gene 6: min=1.0, max=4.307191669197243
+Imputed values for gene 7: min=1.0, max=3.7904190870559558
+Imputed values for gene 8: min=1.0, max=3.7725492703133496
+Imputed values for gene 9: min=1.0, max=3.8507224075059954
+Imputed values for gene 10: min=1.0, max=3.427035813059599
+Imputed values for gene 11: min=1.0, max=4.292623939037694
+Imputed values for gene 12: min=1.0, max=3.7105020048466146
+Imputed values for gene 13: min=1.0, max=5.018846971313033
+Imputed values for gene 14: min=1.0, max=7.344221768074833
+Imputed values for gene 15: min=1.0, max=4.49997755634339
+Imputed values for gene 16: min=1.0, max=6.01002855472056
+Imputed values for gene 17: min=1.0, max=4.5164299111808
+Imputed values for gene 18: min=1.0, max=4.735811225662652
+Imputed values for gene 19: min=1.0, max=4.835080113557767
+Imputed values for gene 20: min=1.0, max=5.0745243101283775
+Imputed values for gene 21: min=1.0, max=5.237304756255885
+Imputed values for gene 22: min=1.0, max=4.52879184470324
+Imputed values for gene 23: min=1.0, max=6.736492387476638
+Imputed values for gene 24: min=1.0, max=5.74397477141488
+Imputed values for gene 25: min=1.0, max=5.49330747122581
+Imputed values for gene 26: min=1.0, max=4.758557505224762
+Imputed values for gene 27: min=1.0, max=3.48148710634844
+Imputed values for gene 28: min=1.0, max=3.491653477267003
+Imputed values for gene 29: min=1.0, max=5.258266866226922
+Imputed values for gene 30: min=1.0, max=4.713497800780964
+Imputed values for gene 31: min=1.0, max=4.308204520827299
+Imputed values for gene 32: min=1.0, max=3.9994534725510666
+Imputed values for gene 33: min=1.0, max=5.900903704021866
+Imputed values for gene 34: min=1.0, max=5.552667312402311
+Imputed values for gene 35: min=1.0, max=3.828453130186534
+Imputed values for gene 36: min=1.0, max=3.2060146662838616
+Imputed values for gene 37: min=1.0, max=4.8660626129872195
+Imputed values for gene 38: min=1.0, max=3.848021201181016
+Imputed values for gene 39: min=1.0, max=4.893226937196534
+Imputed values for gene 40: min=1.0, max=4.285938849439971
+Imputed values for gene 41: min=1.0, max=4.325254761827367
+Imputed values for gene 42: min=1.0, max=7.668238821630017
+Imputed values for gene 43: min=1.0, max=4.52721973834435
+Imputed values for gene 44: min=1.0, max=1.9475175265096465
+Imputed values for gene 45: min=1.0, max=3.2261932960860777
+Imputed values for gene 46: min=1.0, max=4.334370088599434
+Imputed values for gene 47: min=1.0, max=11.981005153018106
+Imputed values for gene 48: min=1.0, max=3.8920215815634736
+Imputed values for gene 49: min=1.0, max=6.0041713117476885
+Imputed values for gene 50: min=1.0, max=3.697310866976975
+Imputed values for gene 51: min=1.0, max=4.768163827366823
+Imputed values for gene 52: min=1.0, max=13.310064026592176
+Imputed values for gene 53: min=1.0, max=9.539946012275632
+Imputed values for gene 54: min=1.0, max=9.88456913105485
+Imputed values for gene 55: min=1.0, max=9.718038813457214
+Imputed values for gene 56: min=1.0, max=2.7530001199030627
+Imputed values for gene 57: min=1.0, max=4.065508114562288
+Imputed values for gene 58: min=1.0, max=5.2789120337778215
+Imputed values for gene 59: min=1.0, max=5.840956679799358
+Imputed values for gene 60: min=1.0, max=9.402952355678782
+Imputed values for gene 61: min=1.0, max=9.304754351296717
+Imputed values for gene 62: min=1.0, max=3.0
+Imputed values for gene 63: min=1.0, max=9.356763041316865
+Imputed values for gene 64: min=1.0, max=14.230138189181849
+Imputed values for gene 65: min=1.0, max=6.183292832265634
+Imputed values for gene 66: min=1.0, max=7.61098515165055
+Imputed values for gene 67: min=1.0, max=4.340605199705599
+Imputed values for gene 68: min=1.0, max=8.064083682517431
+Imputed values for gene 69: min=1.0, max=8.217731671913544
+Imputed values for gene 70: min=1.0, max=8.447049870648897
+Imputed values for gene 71: min=1.0, max=9.818277281419334
+Imputed values for gene 72: min=1.0, max=6.202378610806688
+Imputed values for gene 73: min=1.0, max=6.522511684195029
+Imputed values for gene 74: min=1.0, max=3.3348762612367153
+Imputed values for gene 75: min=1.0, max=8.319044427883089
+Imputed values for gene 76: min=1.0, max=5.405201878748582
+Imputed values for gene 77: min=1.0, max=14.390072088309125
+Imputed values for gene 78: min=1.0, max=6.577804976536768
+Imputed values for gene 79: min=1.0, max=8.863344272260363
+Imputed values for gene 80: min=1.0, max=7.692175332068986
+Imputed values for gene 81: min=1.0, max=5.338996523932791
+Imputed values for gene 82: min=1.0, max=5.648749215494843
+Imputed values for gene 83: min=1.0, max=8.21757570879051
+Imputed values for gene 84: min=1.0, max=2.0
+Imputed values for gene 85: min=1.0, max=6.686441311439617
+Imputed values for gene 86: min=1.0, max=7.642049797967982
+Imputed values for gene 87: min=1.0, max=4.511979983863805
+Imputed values for gene 88: min=1.0, max=9.71463728704364
+Imputed values for gene 89: min=1.0, max=9.560081185672011
+Imputed values for gene 90: min=1.0, max=7.278482973939551
+Imputed values for gene 91: min=1.0, max=7.820605925185854
+Imputed values for gene 92: min=1.0, max=3.236626143215658
+Imputed values for gene 93: min=1.0, max=2.799073082615556
+Imputed values for gene 94: min=1.0, max=5.329905396526257
+Imputed values for gene 95: min=1.0, max=4.673660252527813
+Imputed values for gene 96: min=1.0, max=6.066656425551251
+Imputed values for gene 97: min=1.0, max=6.496547881884872
+Imputed values for gene 98: min=1.0, max=8.851092543885333
+Imputed values for gene 99: min=1.0, max=6.781552672671956
+Verifying means and variances of rows 900 to 1200 in clean data
+Intra-block MSE between set 1 and set 2 in block 4: 0.20695950993807088
+Intra-block MSE between set 1 and set 3 in block 4: 0.14123866824612116
+Intra-block MSE between set 1 and set 4 in block 4: 0.18138588212551293
+Intra-block MSE between set 1 and set 5 in block 4: 0.19956615913886303
+Intra-block MSE between set 2 and set 3 in block 4: 0.2135793104480065
+Intra-block MSE between set 2 and set 4 in block 4: 0.36425278282798745
+Intra-block MSE between set 2 and set 5 in block 4: 0.2704066860732053
+Intra-block MSE between set 3 and set 4 in block 4: 0.20038141250486483
+Intra-block MSE between set 3 and set 5 in block 4: 0.26659506411388656
+Intra-block MSE between set 4 and set 5 in block 4: 0.32806114082211785
+Inter-block MSE between set 1 of block 4 and set 1 of block 5: 1.2147232026772254
+Inter-block MSE between set 2 of block 4 and set 2 of block 5: 0.8821045482004267
+Inter-block MSE between set 3 of block 4 and set 3 of block 5: 1.0972546937500836
+Inter-block MSE between set 4 of block 4 and set 4 of block 5: 1.2014277582882336
+Inter-block MSE between set 5 of block 4 and set 5 of block 5: 1.9773153640771195
+Total zeros in block 4 before imputation: 14789
+Computing mean and variance from the noisy data for rows 900 to 1200
+Imputing missing values (zeros) for rows 900 to 1200
+Imputed values for gene 0: min=1.0, max=6.168856801340928
+Imputed values for gene 1: min=1.0, max=6.593373503954879
+Imputed values for gene 2: min=1.0, max=5.009852767685772
+Imputed values for gene 3: min=1.0, max=3.541628006199917
+Imputed values for gene 4: min=1.0, max=4.401370976764046
+Imputed values for gene 5: min=1.0, max=5.578381578713888
+Imputed values for gene 6: min=1.0, max=6.913923275504192
+Imputed values for gene 7: min=1.0, max=4.592216070862831
+Imputed values for gene 8: min=1.0, max=5.393077882658233
+Imputed values for gene 9: min=1.0, max=4.0
+Imputed values for gene 10: min=1.0, max=5.733628934207626
+Imputed values for gene 11: min=1.0, max=5.934608775536477
+Imputed values for gene 12: min=1.0, max=4.824582419645563
+Imputed values for gene 13: min=1.0, max=6.016560655952455
+Imputed values for gene 14: min=1.0, max=7.043356463568483
+Imputed values for gene 15: min=1.0, max=4.576279511811245
+Imputed values for gene 16: min=1.0, max=7.967718827099446
+Imputed values for gene 17: min=1.0, max=2.773000525568764
+Imputed values for gene 18: min=1.0, max=6.254694416525307
+Imputed values for gene 19: min=1.0, max=5.147401344028955
+Imputed values for gene 20: min=1.0, max=5.068282273834571
+Imputed values for gene 21: min=1.0, max=6.129536617369053
+Imputed values for gene 22: min=1.0, max=4.373399774573305
+Imputed values for gene 23: min=1.0, max=4.564083400642076
+Imputed values for gene 24: min=1.0, max=6.242084563681495
+Imputed values for gene 25: min=1.0, max=4.977430473593414
+Imputed values for gene 26: min=1.0, max=6.882745519523215
+Imputed values for gene 27: min=1.0, max=3.8149667183825313
+Imputed values for gene 28: min=1.0, max=3.9442450639457034
+Imputed values for gene 29: min=1.0, max=6.115777579818011
+Imputed values for gene 30: min=1.0, max=5.813717789788049
+Imputed values for gene 31: min=1.0, max=6.635917322988705
+Imputed values for gene 32: min=1.0, max=5.806955164481263
+Imputed values for gene 33: min=1.0, max=4.8783748581384145
+Imputed values for gene 34: min=1.0, max=5.168751431596033
+Imputed values for gene 35: min=1.0, max=5.681829800334961
+Imputed values for gene 36: min=1.0, max=4.486288155936089
+Imputed values for gene 37: min=1.0, max=5.428073922681599
+Imputed values for gene 38: min=1.0, max=3.5582574964294333
+Imputed values for gene 39: min=1.0, max=5.750138826194392
+Imputed values for gene 40: min=1.0, max=6.236142034948713
+Imputed values for gene 41: min=1.0, max=4.9324253326073215
+Imputed values for gene 42: min=1.0, max=6.4618793399694585
+Imputed values for gene 43: min=1.0, max=6.116916257960966
+Imputed values for gene 44: min=1.0, max=2.8799458125064934
+Imputed values for gene 45: min=1.0, max=4.956312547989638
+Imputed values for gene 46: min=1.0, max=6.115994970562399
+Imputed values for gene 47: min=1.0, max=7.014088213995242
+Imputed values for gene 48: min=1.0, max=4.155928196028976
+Imputed values for gene 49: min=1.0, max=4.1092759731805
+Imputed values for gene 50: min=1.0, max=5.573020879767461
+Imputed values for gene 51: min=1.0, max=5.387814825935698
+Imputed values for gene 52: min=1.0, max=8.152254864448166
+Imputed values for gene 53: min=1.0, max=6.209857402101722
+Imputed values for gene 54: min=1.0, max=7.980933484267858
+Imputed values for gene 55: min=1.0, max=7.152130087205745
+Imputed values for gene 56: min=1.0, max=2.435614351292365
+Imputed values for gene 57: min=1.0, max=6.156262276330359
+Imputed values for gene 58: min=1.0, max=3.955175202232838
+Imputed values for gene 59: min=1.0, max=6.393639422307542
+Imputed values for gene 60: min=1.0, max=8.930606122979109
+Imputed values for gene 61: min=1.0, max=8.330037891479673
+Imputed values for gene 62: min=1.0, max=2.6028995760444005
+Imputed values for gene 63: min=1.0, max=7.744680328556576
+Imputed values for gene 64: min=1.0, max=9.08397330816448
+Imputed values for gene 65: min=1.0, max=5.787146525790746
+Imputed values for gene 66: min=1.0, max=7.110282061189225
+Imputed values for gene 67: min=1.0, max=2.6375242873850535
+Imputed values for gene 68: min=1.0, max=6.899850068722451
+Imputed values for gene 69: min=1.0, max=5.1702574557696614
+Imputed values for gene 70: min=1.0, max=7.4030814519109605
+Imputed values for gene 71: min=1.0, max=5.912092296944801
+Imputed values for gene 72: min=1.0, max=7.860742232915678
+Imputed values for gene 73: min=1.0, max=6.680867037271587
+Imputed values for gene 74: min=1.0, max=2.868078772319679
+Imputed values for gene 75: min=1.0, max=5.707946829590671
+Imputed values for gene 76: min=1.0, max=8.08105821532793
+Imputed values for gene 77: min=1.0, max=7.909879673332323
+Imputed values for gene 78: min=1.0, max=4.900284587036934
+Imputed values for gene 79: min=1.0, max=6.4246799469203415
+Imputed values for gene 80: min=1.0, max=5.842747907660613
+Imputed values for gene 81: min=1.0, max=6.571834271752744
+Imputed values for gene 82: min=1.0, max=4.086184629909141
+Imputed values for gene 83: min=1.0, max=6.922379482810127
+Imputed values for gene 84: min=1.0, max=3.085247189569852
+Imputed values for gene 85: min=1.0, max=4.053258775522032
+Imputed values for gene 86: min=1.0, max=7.173408771887052
+Imputed values for gene 87: min=1.0, max=6.260568785238689
+Imputed values for gene 88: min=1.0, max=7.154953602110819
+Imputed values for gene 89: min=1.0, max=5.244519240673879
+Imputed values for gene 90: min=1.0, max=6.806243702262664
+Imputed values for gene 91: min=1.0, max=7.018016441531501
+Imputed values for gene 92: min=1.0, max=5.01431089076235
+Imputed values for gene 93: min=1.0, max=2.0
+Imputed values for gene 94: min=1.0, max=6.2662983089593745
+Imputed values for gene 95: min=1.0, max=5.396355364141794
+Imputed values for gene 96: min=1.0, max=4.48634945339894
+Imputed values for gene 97: min=1.0, max=5.362780615731291
+Imputed values for gene 98: min=1.0, max=8.109966804337772
+Imputed values for gene 99: min=1.0, max=4.09129056954624
+Verifying means and variances of rows 1200 to 1500 in clean data
+Intra-block MSE between set 1 and set 2 in block 5: 0.31195594732794346
+Intra-block MSE between set 1 and set 3 in block 5: 0.13401887498179607
+Intra-block MSE between set 1 and set 4 in block 5: 0.13251303041932436
+Intra-block MSE between set 1 and set 5 in block 5: 0.17048909478883328
+Intra-block MSE between set 2 and set 3 in block 5: 0.2714931073586687
+Intra-block MSE between set 2 and set 4 in block 5: 0.4647436952427531
+Intra-block MSE between set 2 and set 5 in block 5: 0.4571994716452856
+Intra-block MSE between set 3 and set 4 in block 5: 0.14800382782045463
+Intra-block MSE between set 3 and set 5 in block 5: 0.20659338804975022
+Intra-block MSE between set 4 and set 5 in block 5: 0.259561534342762
+Inter-block MSE between set 1 of block 5 and set 1 of block 6: 1.1191159494690894
+Inter-block MSE between set 2 of block 5 and set 2 of block 6: 1.2508940704477225
+Inter-block MSE between set 3 of block 5 and set 3 of block 6: 1.1436431252003842
+Inter-block MSE between set 4 of block 5 and set 4 of block 6: 1.0869015520812013
+Inter-block MSE between set 5 of block 5 and set 5 of block 6: 1.242694140400741
+Total zeros in block 5 before imputation: 14206
+Computing mean and variance from the noisy data for rows 1200 to 1500
+Imputing missing values (zeros) for rows 1200 to 1500
+Imputed values for gene 0: min=1.0, max=7.98512115898616
+Imputed values for gene 1: min=1.0, max=8.351780799970605
+Imputed values for gene 2: min=1.0, max=4.438329171364523
+Imputed values for gene 3: min=1.0, max=4.762471939854134
+Imputed values for gene 4: min=1.0, max=6.019289480041724
+Imputed values for gene 5: min=1.0, max=4.622052921146393
+Imputed values for gene 6: min=1.0, max=9.670512801891832
+Imputed values for gene 7: min=1.0, max=8.68948366940209
+Imputed values for gene 8: min=1.0, max=4.498738034488944
+Imputed values for gene 9: min=1.0, max=4.213966642136604
+Imputed values for gene 10: min=1.0, max=4.24758360512085
+Imputed values for gene 11: min=1.0, max=8.074448775755465
+Imputed values for gene 12: min=1.0, max=6.705859382273076
+Imputed values for gene 13: min=1.0, max=7.60465892726539
+Imputed values for gene 14: min=1.0, max=7.599005787674008
+Imputed values for gene 15: min=1.0, max=4.033632185920458
+Imputed values for gene 16: min=1.0, max=6.171966046524007
+Imputed values for gene 17: min=1.0, max=3.3763429293599674
+Imputed values for gene 18: min=1.0, max=8.202917383669098
+Imputed values for gene 19: min=1.0, max=7.3548741787966225
+Imputed values for gene 20: min=1.0, max=6.994275000045025
+Imputed values for gene 21: min=1.0, max=6.524091737125449
+Imputed values for gene 22: min=1.0, max=5.318422462048917
+Imputed values for gene 23: min=1.0, max=6.034670702857182
+Imputed values for gene 24: min=1.0, max=5.804475490438158
+Imputed values for gene 25: min=1.0, max=5.600637042070071
+Imputed values for gene 26: min=1.0, max=7.165723340629745
+Imputed values for gene 27: min=1.0, max=5.1585805383887715
+Imputed values for gene 28: min=1.0, max=5.401008494678484
+Imputed values for gene 29: min=1.0, max=8.700727869322474
+Imputed values for gene 30: min=1.0, max=7.113873258181316
+Imputed values for gene 31: min=1.0, max=4.431572615334223
+Imputed values for gene 32: min=1.0, max=5.364924584574483
+Imputed values for gene 33: min=1.0, max=6.600017407198683
+Imputed values for gene 34: min=1.0, max=5.077930500341977
+Imputed values for gene 35: min=1.0, max=6.22189888330422
+Imputed values for gene 36: min=1.0, max=6.103798648246004
+Imputed values for gene 37: min=1.0, max=4.52447975683155
+Imputed values for gene 38: min=1.0, max=6.039628374508485
+Imputed values for gene 39: min=1.0, max=8.930622608732051
+Imputed values for gene 40: min=1.0, max=5.163620781875246
+Imputed values for gene 41: min=1.0, max=7.444140682698795
+Imputed values for gene 42: min=1.0, max=10.670900213228444
+Imputed values for gene 43: min=1.0, max=7.888748209938405
+Imputed values for gene 44: min=1.0, max=3.017194052016884
+Imputed values for gene 45: min=1.0, max=4.962650173996055
+Imputed values for gene 46: min=1.0, max=5.824562086329884
+Imputed values for gene 47: min=1.0, max=9.710294030528509
+Imputed values for gene 48: min=1.0, max=4.595206872815656
+Imputed values for gene 49: min=1.0, max=6.3287377428730895
+Imputed values for gene 50: min=1.0, max=5.1902735380221605
+Imputed values for gene 51: min=1.0, max=6.926264152018305
+Imputed values for gene 52: min=1.0, max=9.652664489875642
+Imputed values for gene 53: min=1.0, max=10.835417040922387
+Imputed values for gene 54: min=1.0, max=10.002998664095712
+Imputed values for gene 55: min=1.0, max=8.217195606621903
+Imputed values for gene 56: min=1.0, max=4.3040980068096495
+Imputed values for gene 57: min=1.0, max=5.880407538344061
+Imputed values for gene 58: min=1.0, max=5.0684755103705825
+Imputed values for gene 59: min=1.0, max=8.011527954240929
+Imputed values for gene 60: min=1.0, max=9.842782551404241
+Imputed values for gene 61: min=1.0, max=9.460688549659523
+Imputed values for gene 62: min=1.0, max=4.756179722741107
+Imputed values for gene 63: min=1.0, max=12.573174232382769
+Imputed values for gene 64: min=1.0, max=11.504712735194328
+Imputed values for gene 65: min=1.0, max=6.993816618326745
+Imputed values for gene 66: min=1.0, max=8.3811199263392
+Imputed values for gene 67: min=1.0, max=4.458227852763981
+Imputed values for gene 68: min=1.0, max=8.505407450084476
+Imputed values for gene 69: min=1.0, max=7.65995316765259
+Imputed values for gene 70: min=1.0, max=9.403119730465548
+Imputed values for gene 71: min=1.0, max=8.579672622549918
+Imputed values for gene 72: min=1.0, max=10.633615461321467
+Imputed values for gene 73: min=1.0, max=10.327067846694044
+Imputed values for gene 74: min=1.0, max=4.067999306185941
+Imputed values for gene 75: min=1.0, max=8.575591513173563
+Imputed values for gene 76: min=1.0, max=6.601210053227778
+Imputed values for gene 77: min=1.0, max=9.628277962006827
+Imputed values for gene 78: min=1.0, max=5.909428683606589
+Imputed values for gene 79: min=1.0, max=8.148447823945856
+Imputed values for gene 80: min=1.0, max=7.050023862002426
+Imputed values for gene 81: min=1.0, max=7.584537341518137
+Imputed values for gene 82: min=1.0, max=6.734574145256323
+Imputed values for gene 83: min=1.0, max=7.662645380938052
+Imputed values for gene 84: min=1.0, max=5.742041826819055
+Imputed values for gene 85: min=1.0, max=4.89568907821259
+Imputed values for gene 86: min=1.0, max=8.409894420517276
+Imputed values for gene 87: min=1.0, max=8.141277828878279
+Imputed values for gene 88: min=1.0, max=10.154800073474002
+Imputed values for gene 89: min=1.0, max=10.732383965992483
+Imputed values for gene 90: min=1.0, max=5.473242603018202
+Imputed values for gene 91: min=1.0, max=13.59494048033069
+Imputed values for gene 92: min=1.0, max=4.786762695892593
+Imputed values for gene 93: min=1.0, max=3.0648888471040205
+Imputed values for gene 94: min=1.0, max=6.380518333672048
+Imputed values for gene 95: min=1.0, max=7.097605767800765
+Imputed values for gene 96: min=1.0, max=4.136816293223243
+Imputed values for gene 97: min=1.0, max=5.269072269239581
+Imputed values for gene 98: min=1.0, max=12.327456502768221
+Imputed values for gene 99: min=1.0, max=7.55942340669417
+Verifying means and variances of rows 1500 to 1800 in clean data
+Intra-block MSE between set 1 and set 2 in block 6: 0.40787246247007103
+Intra-block MSE between set 1 and set 3 in block 6: 0.15706359226330835
+Intra-block MSE between set 1 and set 4 in block 6: 0.15317540078737626
+Intra-block MSE between set 1 and set 5 in block 6: 0.16022903621512521
+Intra-block MSE between set 2 and set 3 in block 6: 0.3719566194633221
+Intra-block MSE between set 2 and set 4 in block 6: 0.3570338756921101
+Intra-block MSE between set 2 and set 5 in block 6: 0.4265647336457614
+Intra-block MSE between set 3 and set 4 in block 6: 0.1350256913094405
+Intra-block MSE between set 3 and set 5 in block 6: 0.2342880485290571
+Intra-block MSE between set 4 and set 5 in block 6: 0.22914962494786636
+Inter-block MSE between set 1 of block 6 and set 1 of block 7: 0.7413616098717221
+Inter-block MSE between set 2 of block 6 and set 2 of block 7: 0.8381333580864139
+Inter-block MSE between set 3 of block 6 and set 3 of block 7: 0.5701873878688795
+Inter-block MSE between set 4 of block 6 and set 4 of block 7: 0.8391962097529937
+Inter-block MSE between set 5 of block 6 and set 5 of block 7: 1.0857641137250713
+Total zeros in block 6 before imputation: 15004
+Computing mean and variance from the noisy data for rows 1500 to 1800
+Imputing missing values (zeros) for rows 1500 to 1800
+Imputed values for gene 0: min=1.0, max=5.384749177961265
+Imputed values for gene 1: min=1.0, max=5.645230122868243
+Imputed values for gene 2: min=1.0, max=3.9207297635309466
+Imputed values for gene 3: min=1.0, max=4.004275526131135
+Imputed values for gene 4: min=1.0, max=4.247389465668296
+Imputed values for gene 5: min=1.0, max=6.784596653453988
+Imputed values for gene 6: min=1.0, max=5.408866730254276
+Imputed values for gene 7: min=1.0, max=5.6652909144801
+Imputed values for gene 8: min=1.0, max=5.729800700139833
+Imputed values for gene 9: min=1.0, max=6.932723469267366
+Imputed values for gene 10: min=1.0, max=4.448331492084052
+Imputed values for gene 11: min=1.0, max=6.829166079635678
+Imputed values for gene 12: min=1.0, max=6.144096576177673
+Imputed values for gene 13: min=1.0, max=5.2997130336815
+Imputed values for gene 14: min=1.0, max=5.998941256869823
+Imputed values for gene 15: min=1.0, max=3.6943596465338837
+Imputed values for gene 16: min=1.0, max=7.145621774483963
+Imputed values for gene 17: min=1.0, max=3.571452527895954
+Imputed values for gene 18: min=1.0, max=5.158965898189573
+Imputed values for gene 19: min=1.0, max=7.028882758957929
+Imputed values for gene 20: min=1.0, max=8.58464259972363
+Imputed values for gene 21: min=1.0, max=9.964165287494511
+Imputed values for gene 22: min=1.0, max=4.8718219623115795
+Imputed values for gene 23: min=1.0, max=5.202059831305894
+Imputed values for gene 24: min=1.0, max=7.041032503871527
+Imputed values for gene 25: min=1.0, max=4.222385706509896
+Imputed values for gene 26: min=1.0, max=6.278742396756286
+Imputed values for gene 27: min=1.0, max=4.427898144130639
+Imputed values for gene 28: min=1.0, max=4.788451704031005
+Imputed values for gene 29: min=1.0, max=5.7048298656870795
+Imputed values for gene 30: min=1.0, max=5.486245679631293
+Imputed values for gene 31: min=1.0, max=6.306045331351062
+Imputed values for gene 32: min=1.0, max=5.7246954196323605
+Imputed values for gene 33: min=1.0, max=6.381846919832598
+Imputed values for gene 34: min=1.0, max=3.6158915775330414
+Imputed values for gene 35: min=1.0, max=6.105438900246925
+Imputed values for gene 36: min=1.0, max=3.4384616492070115
+Imputed values for gene 37: min=1.0, max=4.085083858667461
+Imputed values for gene 38: min=1.0, max=4.34467081477816
+Imputed values for gene 39: min=1.0, max=4.573575000341684
+Imputed values for gene 40: min=1.0, max=4.88945525666574
+Imputed values for gene 41: min=1.0, max=5.825535540521531
+Imputed values for gene 42: min=1.0, max=6.060334438167701
+Imputed values for gene 43: min=1.0, max=5.1318652111855
+Imputed values for gene 44: min=1.0, max=3.8675477348359406
+Imputed values for gene 45: min=1.0, max=5.584570748518378
+Imputed values for gene 46: min=1.0, max=4.495475171931357
+Imputed values for gene 47: min=1.0, max=8.112989617918231
+Imputed values for gene 48: min=1.0, max=4.231758490496974
+Imputed values for gene 49: min=1.0, max=4.221490642210494
+Imputed values for gene 50: min=1.0, max=5.449746841099922
+Imputed values for gene 51: min=1.0, max=5.100693877290371
+Imputed values for gene 52: min=1.0, max=9.789871892075722
+Imputed values for gene 53: min=1.0, max=7.497678504724183
+Imputed values for gene 54: min=1.0, max=10.333523389998392
+Imputed values for gene 55: min=1.0, max=6.790947822579232
+Imputed values for gene 56: min=1.0, max=2.416066820089163
+Imputed values for gene 57: min=1.0, max=4.510698640802996
+Imputed values for gene 58: min=1.0, max=4.2799940444135505
+Imputed values for gene 59: min=1.0, max=5.7771127319107185
+Imputed values for gene 60: min=1.0, max=9.17743452979759
+Imputed values for gene 61: min=1.0, max=9.903137526381293
+Imputed values for gene 62: min=1.0, max=2.653716559772671
+Imputed values for gene 63: min=1.0, max=9.253173310420157
+Imputed values for gene 64: min=1.0, max=11.304718952157891
+Imputed values for gene 65: min=1.0, max=7.659032712122567
+Imputed values for gene 66: min=1.0, max=5.291469863055893
+Imputed values for gene 67: min=1.0, max=2.7201571884253606
+Imputed values for gene 68: min=1.0, max=6.032459685891963
+Imputed values for gene 69: min=1.0, max=6.073082842257511
+Imputed values for gene 70: min=1.0, max=10.463291467730844
+Imputed values for gene 71: min=1.0, max=8.078510499283976
+Imputed values for gene 72: min=1.0, max=9.114278775471474
+Imputed values for gene 73: min=1.0, max=8.745974353410599
+Imputed values for gene 74: min=1.0, max=3.9667184093613366
+Imputed values for gene 75: min=1.0, max=9.368447190328949
+Imputed values for gene 76: min=1.0, max=3.046610558321923
+Imputed values for gene 77: min=1.0, max=12.547615626052416
+Imputed values for gene 78: min=1.0, max=6.897559122680137
+Imputed values for gene 79: min=1.0, max=6.778647106008961
+Imputed values for gene 80: min=1.0, max=9.020493057419824
+Imputed values for gene 81: min=1.0, max=5.936795504222002
+Imputed values for gene 82: min=1.0, max=6.270880622101133
+Imputed values for gene 83: min=1.0, max=7.491114398919879
+Imputed values for gene 84: min=1.0, max=2.8350953504253362
+Imputed values for gene 85: min=1.0, max=6.431455999033004
+Imputed values for gene 86: min=1.0, max=8.334052181501217
+Imputed values for gene 87: min=1.0, max=4.430595793506659
+Imputed values for gene 88: min=1.0, max=10.23930429890061
+Imputed values for gene 89: min=1.0, max=9.725240103340077
+Imputed values for gene 90: min=1.0, max=6.380390047967321
+Imputed values for gene 91: min=1.0, max=6.600426836667541
+Imputed values for gene 92: min=1.0, max=5.542532187056208
+Imputed values for gene 93: min=1.0, max=3.5008228875202496
+Imputed values for gene 94: min=1.0, max=5.314691806118999
+Imputed values for gene 95: min=1.0, max=3.9367905955861566
+Imputed values for gene 96: min=1.0, max=4.226834930276714
+Imputed values for gene 97: min=1.0, max=5.713727952229284
+Imputed values for gene 98: min=1.0, max=10.230642712761687
+Imputed values for gene 99: min=1.0, max=6.821763499244276
+Verifying means and variances of rows 1800 to 2100 in clean data
+Intra-block MSE between set 1 and set 2 in block 7: 0.2007059582367391
+Intra-block MSE between set 1 and set 3 in block 7: 0.14432121534207384
+Intra-block MSE between set 1 and set 4 in block 7: 0.17345119512701734
+Intra-block MSE between set 1 and set 5 in block 7: 0.20190791176723144
+Intra-block MSE between set 2 and set 3 in block 7: 0.20805007104797227
+Intra-block MSE between set 2 and set 4 in block 7: 0.30699373861616747
+Intra-block MSE between set 2 and set 5 in block 7: 0.23801452752801727
+Intra-block MSE between set 3 and set 4 in block 7: 0.13783220822947667
+Intra-block MSE between set 3 and set 5 in block 7: 0.1991238583911724
+Intra-block MSE between set 4 and set 5 in block 7: 0.19450052940015927
+Inter-block MSE between set 1 of block 7 and set 1 of block 8: 0.9543944280541031
+Inter-block MSE between set 2 of block 7 and set 2 of block 8: 0.9751555059466027
+Inter-block MSE between set 3 of block 7 and set 3 of block 8: 0.8586475372584355
+Inter-block MSE between set 4 of block 7 and set 4 of block 8: 1.2029271203240122
+Inter-block MSE between set 5 of block 7 and set 5 of block 8: 1.1376839115075748
+Total zeros in block 7 before imputation: 14986
+Computing mean and variance from the noisy data for rows 1800 to 2100
+Imputing missing values (zeros) for rows 1800 to 2100
+Imputed values for gene 0: min=1.0, max=6.229649011033789
+Imputed values for gene 1: min=1.0, max=7.001132246756672
+Imputed values for gene 2: min=1.0, max=5.577582711484159
+Imputed values for gene 3: min=1.0, max=3.303750262253931
+Imputed values for gene 4: min=1.0, max=4.764730357195996
+Imputed values for gene 5: min=1.0, max=5.784670949592
+Imputed values for gene 6: min=1.0, max=4.598464720935448
+Imputed values for gene 7: min=1.0, max=4.819549626734647
+Imputed values for gene 8: min=1.0, max=3.5815574516465216
+Imputed values for gene 9: min=1.0, max=4.626983770214258
+Imputed values for gene 10: min=1.0, max=4.201167043501253
+Imputed values for gene 11: min=1.0, max=5.00958686453237
+Imputed values for gene 12: min=1.0, max=5.975654575450629
+Imputed values for gene 13: min=1.0, max=5.801906461769953
+Imputed values for gene 14: min=1.0, max=5.901229609246798
+Imputed values for gene 15: min=1.0, max=4.5987146377345365
+Imputed values for gene 16: min=1.0, max=4.811161456768573
+Imputed values for gene 17: min=1.0, max=2.981769693833475
+Imputed values for gene 18: min=1.0, max=5.359220070813681
+Imputed values for gene 19: min=1.0, max=4.423045994247164
+Imputed values for gene 20: min=1.0, max=5.263626713527378
+Imputed values for gene 21: min=1.0, max=5.480743200982883
+Imputed values for gene 22: min=1.0, max=3.980240924982794
+Imputed values for gene 23: min=1.0, max=4.3593755675390025
+Imputed values for gene 24: min=1.0, max=4.196593297651855
+Imputed values for gene 25: min=1.0, max=3.667346902044219
+Imputed values for gene 26: min=1.0, max=4.612458567671044
+Imputed values for gene 27: min=1.0, max=3.538555393342284
+Imputed values for gene 28: min=1.0, max=4.639268562802037
+Imputed values for gene 29: min=1.0, max=4.545691190388034
+Imputed values for gene 30: min=1.0, max=5.0908790234754395
+Imputed values for gene 31: min=1.0, max=3.3459992450936156
+Imputed values for gene 32: min=1.0, max=4.661604748869899
+Imputed values for gene 33: min=1.0, max=4.611304190174009
+Imputed values for gene 34: min=1.0, max=4.81878730044393
+Imputed values for gene 35: min=1.0, max=3.895975197597603
+Imputed values for gene 36: min=1.0, max=4.0
+Imputed values for gene 37: min=1.0, max=3.773084583285759
+Imputed values for gene 38: min=1.0, max=3.1956794644013558
+Imputed values for gene 39: min=1.0, max=5.405185072939644
+Imputed values for gene 40: min=1.0, max=4.327766059400136
+Imputed values for gene 41: min=1.0, max=4.821216419274019
+Imputed values for gene 42: min=1.0, max=6.28573932238374
+Imputed values for gene 43: min=1.0, max=5.726132314294709
+Imputed values for gene 44: min=1.0, max=2.882677449211097
+Imputed values for gene 45: min=1.0, max=4.45451420939692
+Imputed values for gene 46: min=1.0, max=5.643816086625793
+Imputed values for gene 47: min=1.0, max=8.45232814613772
+Imputed values for gene 48: min=1.0, max=3.3943631833114116
+Imputed values for gene 49: min=1.0, max=5.800626131638455
+Imputed values for gene 50: min=1.0, max=3.435207028024143
+Imputed values for gene 51: min=1.0, max=4.528278205157458
+Imputed values for gene 52: min=1.0, max=11.894571744239922
+Imputed values for gene 53: min=1.0, max=9.755655500444671
+Imputed values for gene 54: min=1.0, max=6.839270242534903
+Imputed values for gene 55: min=1.0, max=7.206652180820729
+Imputed values for gene 56: min=1.0, max=3.0
+Imputed values for gene 57: min=1.0, max=4.569676523525899
+Imputed values for gene 58: min=1.0, max=4.684122818593148
+Imputed values for gene 59: min=1.0, max=5.234123655015235
+Imputed values for gene 60: min=1.0, max=6.3001675291828825
+Imputed values for gene 61: min=1.0, max=8.93503401033658
+Imputed values for gene 62: min=1.0, max=1.5548852598022624
+Imputed values for gene 63: min=1.0, max=8.432371849340576
+Imputed values for gene 64: min=1.0, max=8.307931554970436
+Imputed values for gene 65: min=1.0, max=4.600951166628864
+Imputed values for gene 66: min=1.0, max=5.5196644515041715
+Imputed values for gene 67: min=1.0, max=2.2924073525526114
+Imputed values for gene 68: min=1.0, max=5.2081743829727785
+Imputed values for gene 69: min=1.0, max=7.314470459368859
+Imputed values for gene 70: min=1.0, max=9.895380440209342
+Imputed values for gene 71: min=1.0, max=10.18609801648033
+Imputed values for gene 72: min=1.0, max=6.415846988889111
+Imputed values for gene 73: min=1.0, max=6.174648286186094
+Imputed values for gene 74: min=1.0, max=2.5202090737371226
+Imputed values for gene 75: min=1.0, max=4.9177449653373415
+Imputed values for gene 76: min=1.0, max=4.093150601000222
+Imputed values for gene 77: min=1.0, max=10.08069533361299
+Imputed values for gene 78: min=1.0, max=4.751440001405666
+Imputed values for gene 79: min=1.0, max=5.61425157767499
+Imputed values for gene 80: min=1.0, max=6.397786539225916
+Imputed values for gene 81: min=1.0, max=4.891456042252971
+Imputed values for gene 82: min=1.0, max=4.816719850246031
+Imputed values for gene 83: min=1.0, max=5.842646320034295
+Imputed values for gene 84: min=1.0, max=3.2361781522152313
+Imputed values for gene 85: min=1.0, max=4.990869822318162
+Imputed values for gene 86: min=1.0, max=7.667400066799377
+Imputed values for gene 87: min=1.0, max=3.938584882528705
+Imputed values for gene 88: min=1.0, max=8.52803848490263
+Imputed values for gene 89: min=1.0, max=7.163734737816043
+Imputed values for gene 90: min=1.0, max=5.124184664354149
+Imputed values for gene 91: min=1.0, max=5.680829565626803
+Imputed values for gene 92: min=1.0, max=4.098778057982695
+Imputed values for gene 93: min=1.0, max=2.0
+Imputed values for gene 94: min=1.0, max=5.15039012901132
+Imputed values for gene 95: min=1.0, max=4.921171835782137
+Imputed values for gene 96: min=1.0, max=4.284977300763509
+Imputed values for gene 97: min=1.0, max=4.708929560666772
+Imputed values for gene 98: min=1.0, max=10.52547675341409
+Imputed values for gene 99: min=1.0, max=6.792750244483342
+Verifying means and variances of rows 2100 to 2400 in clean data
+Intra-block MSE between set 1 and set 2 in block 8: 0.15520988374184988
+Intra-block MSE between set 1 and set 3 in block 8: 0.11436815533229738
+Intra-block MSE between set 1 and set 4 in block 8: 0.15934051161110782
+Intra-block MSE between set 1 and set 5 in block 8: 0.1250166778402047
+Intra-block MSE between set 2 and set 3 in block 8: 0.18635086352902028
+Intra-block MSE between set 2 and set 4 in block 8: 0.24908731098695847
+Intra-block MSE between set 2 and set 5 in block 8: 0.21705493066832932
+Intra-block MSE between set 3 and set 4 in block 8: 0.15229996047046643
+Intra-block MSE between set 3 and set 5 in block 8: 0.13122708433736735
+Intra-block MSE between set 4 and set 5 in block 8: 0.21665980717171945
+Inter-block MSE between set 1 of block 8 and set 1 of block 9: 2.39888802707121
+Inter-block MSE between set 2 of block 8 and set 2 of block 9: 2.3929418208311493
+Inter-block MSE between set 3 of block 8 and set 3 of block 9: 3.20983358397024
+Inter-block MSE between set 4 of block 8 and set 4 of block 9: 2.8222758502872
+Inter-block MSE between set 5 of block 8 and set 5 of block 9: 2.5468761399415385
+Total zeros in block 8 before imputation: 15001
+Computing mean and variance from the noisy data for rows 2100 to 2400
+Imputing missing values (zeros) for rows 2100 to 2400
+Imputed values for gene 0: min=1.0, max=6.586194736451827
+Imputed values for gene 1: min=1.0, max=6.923864492308367
+Imputed values for gene 2: min=1.0, max=5.009951545005709
+Imputed values for gene 3: min=1.0, max=3.6653197050254276
+Imputed values for gene 4: min=1.0, max=4.518969301871758
+Imputed values for gene 5: min=1.0, max=3.8397739108645794
+Imputed values for gene 6: min=1.0, max=4.691716992389484
+Imputed values for gene 7: min=1.0, max=5.204877400775654
+Imputed values for gene 8: min=1.0, max=4.624403619964906
+Imputed values for gene 9: min=1.0, max=4.942230038853641
+Imputed values for gene 10: min=1.0, max=3.3534128994764596
+Imputed values for gene 11: min=1.0, max=6.8669357760999645
+Imputed values for gene 12: min=1.0, max=5.497967197316112
+Imputed values for gene 13: min=1.0, max=5.817660769697165
+Imputed values for gene 14: min=1.0, max=5.661641957671991
+Imputed values for gene 15: min=1.0, max=3.0160419004821866
+Imputed values for gene 16: min=1.0, max=6.776484692413506
+Imputed values for gene 17: min=1.0, max=2.4808678921655396
+Imputed values for gene 18: min=1.0, max=4.77220575720525
+Imputed values for gene 19: min=1.0, max=4.871155935718642
+Imputed values for gene 20: min=1.0, max=5.516200183121953
+Imputed values for gene 21: min=1.0, max=4.90345537181247
+Imputed values for gene 22: min=1.0, max=4.17647409412506
+Imputed values for gene 23: min=1.0, max=4.647837437919924
+Imputed values for gene 24: min=1.0, max=6.424055574237258
+Imputed values for gene 25: min=1.0, max=3.3520245298991735
+Imputed values for gene 26: min=1.0, max=5.0361500238030334
+Imputed values for gene 27: min=1.0, max=4.169238151570861
+Imputed values for gene 28: min=1.0, max=4.285301450119283
+Imputed values for gene 29: min=1.0, max=4.909688431157036
+Imputed values for gene 30: min=1.0, max=4.183769505340694
+Imputed values for gene 31: min=1.0, max=4.6128061406507985
+Imputed values for gene 32: min=1.0, max=4.72949902751821
+Imputed values for gene 33: min=1.0, max=5.403012231668027
+Imputed values for gene 34: min=1.0, max=4.7839702629202066
+Imputed values for gene 35: min=1.0, max=4.370873093397064
+Imputed values for gene 36: min=1.0, max=4.429588947922968
+Imputed values for gene 37: min=1.0, max=4.644568963915774
+Imputed values for gene 38: min=1.0, max=4.96138117636708
+Imputed values for gene 39: min=1.0, max=4.66209539717569
+Imputed values for gene 40: min=1.0, max=5.142306889199251
+Imputed values for gene 41: min=1.0, max=5.228314569388709
+Imputed values for gene 42: min=1.0, max=4.336959323980181
+Imputed values for gene 43: min=1.0, max=5.355780467606148
+Imputed values for gene 44: min=1.0, max=2.4957830382041637
+Imputed values for gene 45: min=1.0, max=3.1838305514807947
+Imputed values for gene 46: min=1.0, max=6.1602800822923784
+Imputed values for gene 47: min=1.0, max=8.535486226605546
+Imputed values for gene 48: min=1.0, max=2.9974475197596564
+Imputed values for gene 49: min=1.0, max=4.500358252969588
+Imputed values for gene 50: min=1.0, max=5.044433894296773
+Imputed values for gene 51: min=1.0, max=5.039400867591656
+Imputed values for gene 52: min=1.0, max=6.713801427715971
+Imputed values for gene 53: min=1.0, max=7.742904577619115
+Imputed values for gene 54: min=1.0, max=8.961970975535895
+Imputed values for gene 55: min=1.0, max=6.1799360900200675
+Imputed values for gene 56: min=1.0, max=2.0
+Imputed values for gene 57: min=1.0, max=5.557074275945627
+Imputed values for gene 58: min=1.0, max=3.836922907204541
+Imputed values for gene 59: min=1.0, max=5.00730575603569
+Imputed values for gene 60: min=1.0, max=7.325723582509973
+Imputed values for gene 61: min=1.0, max=8.596346967727005
+Imputed values for gene 62: min=1.0, max=2.3821129804594543
+Imputed values for gene 63: min=1.0, max=7.720150718597711
+Imputed values for gene 64: min=1.0, max=7.340449903869221
+Imputed values for gene 65: min=1.0, max=5.552206739230906
+Imputed values for gene 66: min=1.0, max=5.7700306451304115
+Imputed values for gene 67: min=1.0, max=2.3090253160593908
+Imputed values for gene 68: min=1.0, max=7.495469747008347
+Imputed values for gene 69: min=1.0, max=4.857986281306708
+Imputed values for gene 70: min=1.0, max=7.470546700372079
+Imputed values for gene 71: min=1.0, max=7.846981304159636
+Imputed values for gene 72: min=1.0, max=5.994565951724173
+Imputed values for gene 73: min=1.0, max=6.428919369752274
+Imputed values for gene 74: min=1.0, max=2.8203402771516317
+Imputed values for gene 75: min=1.0, max=7.7739950441448995
+Imputed values for gene 76: min=1.0, max=3.0
+Imputed values for gene 77: min=1.0, max=9.21285736371251
+Imputed values for gene 78: min=1.0, max=5.1839110995319135
+Imputed values for gene 79: min=1.0, max=7.095060268297981
+Imputed values for gene 80: min=1.0, max=6.376921799218922
+Imputed values for gene 81: min=1.0, max=4.4560238002745844
+Imputed values for gene 82: min=1.0, max=5.42945639791953
+Imputed values for gene 83: min=1.0, max=7.465763413225016
+Imputed values for gene 84: min=1.0, max=2.57795527569517
+Imputed values for gene 85: min=1.0, max=5.397100107408487
+Imputed values for gene 86: min=1.0, max=6.80858360230128
+Imputed values for gene 87: min=1.0, max=3.640713040190242
+Imputed values for gene 88: min=1.0, max=6.54785311198812
+Imputed values for gene 89: min=1.0, max=5.792386544218012
+Imputed values for gene 90: min=1.0, max=4.5015690269437165
+Imputed values for gene 91: min=1.0, max=6.217788368704818
+Imputed values for gene 92: min=1.0, max=4.331301550875823
+Imputed values for gene 93: min=1.0, max=3.0
+Imputed values for gene 94: min=1.0, max=3.0065697527169286
+Imputed values for gene 95: min=1.0, max=3.9839077230353683
+Imputed values for gene 96: min=1.0, max=3.0668887813176497
+Imputed values for gene 97: min=1.0, max=5.696947541483992
+Imputed values for gene 98: min=1.0, max=9.164942148270825
+Imputed values for gene 99: min=1.0, max=5.706059380116408
+Verifying means and variances of rows 2400 to 2700 in clean data
+Intra-block MSE between set 1 and set 2 in block 9: 0.08741199062492995
+Intra-block MSE between set 1 and set 3 in block 9: 0.14606291657840598
+Intra-block MSE between set 1 and set 4 in block 9: 0.14429229493195916
+Intra-block MSE between set 1 and set 5 in block 9: 0.15188525063975272
+Intra-block MSE between set 2 and set 3 in block 9: 0.17918554403330667
+Intra-block MSE between set 2 and set 4 in block 9: 0.16880952267238153
+Intra-block MSE between set 2 and set 5 in block 9: 0.2242031678011182
+Intra-block MSE between set 3 and set 4 in block 9: 0.1484322644693588
+Intra-block MSE between set 3 and set 5 in block 9: 0.33450864950986964
+Intra-block MSE between set 4 and set 5 in block 9: 0.22303348276616375
+Total zeros in block 9 before imputation: 15759
+Computing mean and variance from the noisy data for rows 2400 to 2700
+Imputing missing values (zeros) for rows 2400 to 2700
+Imputed values for gene 0: min=1.0, max=6.1172740939986845
+Imputed values for gene 1: min=1.0, max=6.013201108416455
+Imputed values for gene 2: min=1.0, max=3.101501599652103
+Imputed values for gene 3: min=1.0, max=2.7768763146269357
+Imputed values for gene 4: min=1.0, max=4.023667436766822
+Imputed values for gene 5: min=1.0, max=5.349233452877116
+Imputed values for gene 6: min=1.0, max=4.072171542017099
+Imputed values for gene 7: min=1.0, max=4.858796917055571
+Imputed values for gene 8: min=1.0, max=4.327027442664526
+Imputed values for gene 9: min=1.0, max=5.270224529903193
+Imputed values for gene 10: min=1.0, max=4.408760194903988
+Imputed values for gene 11: min=1.0, max=5.99535474854893
+Imputed values for gene 12: min=1.0, max=4.898085937892009
+Imputed values for gene 13: min=1.0, max=4.568635332901962
+Imputed values for gene 14: min=1.0, max=6.125314868048468
+Imputed values for gene 15: min=1.0, max=3.510486062583456
+Imputed values for gene 16: min=1.0, max=3.8596404267315787
+Imputed values for gene 17: min=1.0, max=4.558614947577726
+Imputed values for gene 18: min=1.0, max=4.580335586808055
+Imputed values for gene 19: min=1.0, max=5.488535105987679
+Imputed values for gene 20: min=1.0, max=4.59181993221814
+Imputed values for gene 21: min=1.0, max=5.624460331541174
+Imputed values for gene 22: min=1.0, max=3.460688811924167
+Imputed values for gene 23: min=1.0, max=4.095824119988133
+Imputed values for gene 24: min=1.0, max=5.51593081325786
+Imputed values for gene 25: min=1.0, max=4.002583844560669
+Imputed values for gene 26: min=1.0, max=5.2336576132162556
+Imputed values for gene 27: min=1.0, max=4.178290013167993
+Imputed values for gene 28: min=1.0, max=4.243730928021585
+Imputed values for gene 29: min=1.0, max=4.476468088925594
+Imputed values for gene 30: min=1.0, max=4.4040963152943124
+Imputed values for gene 31: min=1.0, max=3.0
+Imputed values for gene 32: min=1.0, max=4.775725479149251
+Imputed values for gene 33: min=1.0, max=3.6371347951080297
+Imputed values for gene 34: min=1.0, max=3.7402725167339588
+Imputed values for gene 35: min=1.0, max=4.656110617645502
+Imputed values for gene 36: min=1.0, max=3.551302839744266
+Imputed values for gene 37: min=1.0, max=4.569347807040095
+Imputed values for gene 38: min=1.0, max=4.520571680823921
+Imputed values for gene 39: min=1.0, max=4.500867768156775
+Imputed values for gene 40: min=1.0, max=5.435101032119482
+Imputed values for gene 41: min=1.0, max=4.005808435239359
+Imputed values for gene 42: min=1.0, max=5.07562886094043
+Imputed values for gene 43: min=1.0, max=4.595549876699595
+Imputed values for gene 44: min=1.0, max=2.5948096586461946
+Imputed values for gene 45: min=1.0, max=3.422141095740993
+Imputed values for gene 46: min=1.0, max=4.389418135799151
+Imputed values for gene 47: min=1.0, max=11.942732854573013
+Imputed values for gene 48: min=1.0, max=3.2199730109733373
+Imputed values for gene 49: min=1.0, max=4.205531446545087
+Imputed values for gene 50: min=1.0, max=4.53151347214345
+Imputed values for gene 51: min=1.0, max=4.541264913042882
+Imputed values for gene 52: min=1.0, max=7.532601751682242
+Imputed values for gene 53: min=1.0, max=7.4527922071893755
+Imputed values for gene 54: min=1.0, max=9.700980303679025
+Imputed values for gene 55: min=1.0, max=8.125767702510137
+Imputed values for gene 56: min=1.0, max=4.601932740399338
+Imputed values for gene 57: min=1.0, max=5.626971013171797
+Imputed values for gene 58: min=1.0, max=4.755679302328597
+Imputed values for gene 59: min=1.0, max=3.8413985641033905
+Imputed values for gene 60: min=1.0, max=7.329830857686214
+Imputed values for gene 61: min=1.0, max=9.269023211718409
+Imputed values for gene 62: min=1.0, max=2.7792306859679368
+Imputed values for gene 63: min=1.0, max=11.722222774245225
+Imputed values for gene 64: min=1.0, max=8.664910867234621
+Imputed values for gene 65: min=1.0, max=5.103939136612368
+Imputed values for gene 66: min=1.0, max=7.43247806023299
+Imputed values for gene 67: min=1.0, max=3.0
+Imputed values for gene 68: min=1.0, max=6.255691602796791
+Imputed values for gene 69: min=1.0, max=6.166395637799961
+Imputed values for gene 70: min=1.0, max=8.80338982080273
+Imputed values for gene 71: min=1.0, max=9.090566672075871
+Imputed values for gene 72: min=1.0, max=7.71741508264439
+Imputed values for gene 73: min=1.0, max=6.9555714249343605
+Imputed values for gene 74: min=1.0, max=3.5636457710239284
+Imputed values for gene 75: min=1.0, max=7.191898124527974
+Imputed values for gene 76: min=1.0, max=5.333609707716033
+Imputed values for gene 77: min=1.0, max=10.325254147851851
+Imputed values for gene 78: min=1.0, max=5.259275278826042
+Imputed values for gene 79: min=1.0, max=6.492864428821063
+Imputed values for gene 80: min=1.0, max=6.579698491526918
+Imputed values for gene 81: min=1.0, max=4.888778230022525
+Imputed values for gene 82: min=1.0, max=5.37745695942995
+Imputed values for gene 83: min=1.0, max=8.076008051944473
+Imputed values for gene 84: min=1.0, max=2.9559699549149014
+Imputed values for gene 85: min=1.0, max=6.756690115774813
+Imputed values for gene 86: min=1.0, max=9.330260041136967
+Imputed values for gene 87: min=1.0, max=5.152960067569935
+Imputed values for gene 88: min=1.0, max=9.329877090877964
+Imputed values for gene 89: min=1.0, max=10.843810528849382
+Imputed values for gene 90: min=1.0, max=4.78239611307445
+Imputed values for gene 91: min=1.0, max=5.483866145131039
+Imputed values for gene 92: min=1.0, max=3.829277262224278
+Imputed values for gene 93: min=1.0, max=4.829796694516774
+Imputed values for gene 94: min=1.0, max=6.336967545900913
+Imputed values for gene 95: min=1.0, max=5.126439336722608
+Imputed values for gene 96: min=1.0, max=3.8794142978745514
+Imputed values for gene 97: min=1.0, max=5.173375115961606
+Imputed values for gene 98: min=1.0, max=11.839720748280577
+Imputed values for gene 99: min=1.0, max=6.013143731830964
+imputed y in the method is: [[3 5 1 ... 2 8 2]
+ [2 1 4 ... 3 2 2]
+ [2 3 1 ... 2 2 1]
+ ...
+ [3 2 1 ... 1 2 2]
+ [1 1 1 ... 1 2 1]
+ [4 1 1 ... 1 1 1]]
+Saving final imputed data for DS1
+Exp1 imputation completed for DS1 and final dataset saved.
+what is y?:  [[0 5 0 ... 0 8 2]
+ [2 0 0 ... 0 2 2]
+ [2 3 1 ... 0 2 0]
+ ...
+ [0 2 1 ... 0 2 0]
+ [1 0 0 ... 0 2 0]
+ [0 0 0 ... 1 1 1]]
+[[3 5 1 ... 2 8 2]
+ [2 1 4 ... 3 2 2]
+ [2 3 1 ... 2 2 1]
+ ...
+ [3 2 1 ... 1 2 2]
+ [1 1 1 ... 1 2 1]
+ [4 1 1 ... 1 1 1]]
+---> Running GENIE3 on exp1 Data for DS3
+Tree method: RF
+K: sqrt
+Number of trees: 100
+
+
+running jobs on 12 threads
+Elapsed time: 38.32 seconds
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 93/93 [00:00<00:00, 328065.83it/s]
+1it [00:38, 38.72s/it]
+saved exp1 files

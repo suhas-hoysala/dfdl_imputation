@@ -29,7 +29,8 @@ libFactor, expr_O_L = sim.lib_size_effect(expr_O, mean = 4.5, scale = 0.7)
 """
 Add Dropouts
 """
-binary_ind = sim.dropout_indicator(expr_O_L, shape = 8, percentile = 45)
+percentile = 45
+binary_ind = sim.dropout_indicator(expr_O_L, shape = 8, percentile = percentile)
 expr_O_L_D = np.multiply(binary_ind, expr_O_L)
 
 """
@@ -42,4 +43,4 @@ Make a 2d gene expression matrix
 """
 count_matrix = np.concatenate(count_matrix, axis = 1)
 
-np.save('imputation_data/DS6_45', count_matrix)
+np.save(f'imputation_data/DS6_{percentile}', count_matrix)

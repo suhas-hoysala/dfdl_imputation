@@ -119,3 +119,6 @@ imputations/*
 
 
 *.feather
+SERGIO/data_sets
+SERGIO/imputation_data_temp
+SERGIO/run.sbatch

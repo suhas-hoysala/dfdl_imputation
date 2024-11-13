@@ -11,6 +11,7 @@ from tqdm import tqdm
 from sklearn.metrics import roc_auc_score
 
 #sys.path.append(os.getcwd())
+sys.path.append(os.path.abspath('./baselines'))
 
 # path_to_SERGIO = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'SERGIO'))
 # path_to_MAGIC = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'MAGIC'))
@@ -23,20 +24,20 @@ from sklearn.metrics import roc_auc_score
 from SERGIO.SERGIO.sergio import sergio
 # if path_to_MAGIC not in sys.path:
 #     sys.path.insert(0, path_to_MAGIC)
-import MAGIC.magic as magic
+import baselines.MAGIC.magic as magic
 # if path_to_SAUCIE not in sys.path:
 #     sys.path.insert(0, path_to_SAUCIE)
-import SAUCIE.SAUCIE as SAUCIE
+import baselines.SAUCIE.SAUCIE as SAUCIE
 # if path_to_scScope not in sys.path:
 #     sys.path.insert(0, path_to_scScope)
-import scScope.scscope.scscope as DeepImpute
+import baselines.scScope.scscope.scscope as scScope
 # if path_to_DeepImpute not in sys.path:
 #     sys.path.insert(0, path_to_DeepImpute)
-import deepimpute.deepimpute as deepimpute
+import baselines.deepimpute.deepimpute as deepimpute
 
-from Pearson.pearson import Pearson
+from metrics.Pearson.pearson import Pearson
 
-import arboreto as arboreto
+import prev_methods.reconstruct_grn.arboreto as arboreto
 
 from utils import gt_benchmark, reload_modules, delete_modules 
 from utils import plot_precisions, precision_at_k
@@ -165,7 +166,7 @@ def run_scScope(x_path, y_path, ind, file_extension = ''):
     save_path = './zero_imputation_experiments/' + ds_str
     y = np.transpose(np.load(y_path))
     x = np.transpose(np.load(x_path))
-    DI_model = DeepImpute.train(
+    DI_model = scScope.train(
           y,
           15,
           use_mask=True,
@@ -179,7 +180,7 @@ def run_scScope(x_path, y_path, ind, file_extension = ''):
           learning_rate=0.0001,
           beta1=0.05,
           num_gpus=1)
-    latent_code, rec_y, _ = DeepImpute.predict(y, DI_model, batch_effect=[])
+    latent_code, rec_y, _ = scScope.predict(y, DI_model, batch_effect=[])
     save_str = '/yhat_scScope' + file_extension
     np.save(save_path + save_str, rec_y)
 
@@ -190,7 +191,7 @@ def run_arboreto(path, roc, precision_recall_k, method_name, target, ind, regs=N
     df = pd.DataFrame(dataset)
     c_names = [str(c) for c in df.columns]
     df.columns = c_names
-    from arboreto import algo
+    from prev_methods.reconstruct_grn.arboreto import algo
     #network = algo.grnboost2(expression_data=df, tf_names=regs, verbose=True)
     network = algo.genie3(expression_data=df, tf_names=regs, verbose=True)
     network['TF'] = network['TF'].astype(int)
@@ -523,7 +524,7 @@ def run_simulation(dataset, sergio=True, saucie=True, scScope=True, deepImpute=T
 
 def create_correlation_plots(datasets):
     for i in tqdm(datasets):
-        print(f"---> Calculating correlations for data from DS{dataset} ")
+        print(f"---> Calculating correlations for data from DS{datasets} ")
         ds_str = 'DS' + str(i)
         save_path = './zero_imputation_experiments/' + ds_str
 
@@ -545,7 +546,7 @@ def create_correlation_plots(datasets):
         
         # Create subplots
         fig, axs = plt.subplots(3, 2, figsize=(12, 12))
-        fig.suptitle(f'Correlation plots for DS{dataset} ')
+        fig.suptitle(f'Correlation plots for DS{datasets} ')
         axs[0, 0].stairs(*np.histogram(x_corr, bins = 100, density=True), fill=True, color="green")
         axs[0, 0].set_xlim(-1, 1)
         axs[0, 0].set_title("Clean")

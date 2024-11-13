@@ -1,0 +1,16 @@
+Lmod has detected the following error: The following module(s) are unknown:
+"bio2"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore-cache load "bio2"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+cp: cannot stat '/scratch/yz5944/yz5944/bio/dfdl_imputation/GENIE3/poc.py': No such file or directory
+cp: cannot stat '/scratch/yz5944/yz5944/bio/dfdl_imputation/GENIE3/data_sets': No such file or directory
+python: can't open file '/scratch/yz5944/genie3_analysis/run-51201796/poc.py': [Errno 2] No such file or directory
+cp: cannot stat './results': No such file or directory
