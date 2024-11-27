@@ -5,7 +5,7 @@ import argparse
 import sys
 import os
 
-parser = argparse.ArgumentParser(description="example")
+#parser = argparse.ArgumentParser(description="example")
 
 
 #parser.add_argument('-node_num',help='')
@@ -41,18 +41,19 @@ import pandas as pd
 from tqdm import tqdm
 
 
+def get_args():
+    parser = argparse.ArgumentParser(description="")
 
-parser = argparse.ArgumentParser(description="")
+    parser.add_argument('-num_batches', type=int, required=True, default=None, help="Number of TF or the number of x file.")
+    parser.add_argument('-data_path', required=True, default=None, help="The path that includes x file, y file and z file.")
+    parser.add_argument('-output_dir', required=True, default="./output/", help="Indicate the path for output.")
+    parser.add_argument('-cross_validation_fold_divide_file', default=None, help="A file that indicate how to divide the x file into three-fold. The file include three line, each line list the ID of the x files for the folder (split by ',')")
 
-parser.add_argument('-num_batches', type=int, required=True, default=None, help="Number of TF or the number of x file.")
-parser.add_argument('-data_path', required=True, default=None, help="The path that includes x file, y file and z file.")
-parser.add_argument('-output_dir', required=True, default="./output/", help="Indicate the path for output.")
-parser.add_argument('-cross_validation_fold_divide_file', default=None, help="A file that indicate how to divide the x file into three-fold. The file include three line, each line list the ID of the x files for the folder (split by ',')")
+    parser.add_argument('-to_predict', default=False, help="True or False. Default is False, then the code will do cross-validation evaluation. If set to True, we need to indicate weight_path for a trained model and the code will do prediction based on the trained model.")
+    parser.add_argument('-weight_path', default=None, help="The path for a trained model.")
 
-parser.add_argument('-to_predict', default=False, help="True or False. Default is False, then the code will do cross-validation evaluation. If set to True, we need to indicate weight_path for a trained model and the code will do prediction based on the trained model.")
-parser.add_argument('-weight_path', default=None, help="The path for a trained model.")
+    return parser.parse_args()
 
-args = parser.parse_args()
 
 
 class direct_model1_squarematrix:
@@ -448,6 +449,7 @@ class direct_model1_squarematrix:
             s = open(save_dir + '/divided_RPKM_AUCs1+2.txt', 'w')
             tprs = []
             mean_fpr = np.linspace(0, 1, 100)  # 3068
+            count_set = self.count_set
             for jj in range(len(self.count_set) - 1):  # len(count_set)-1):
                 if self.count_set[jj] < self.count_set[jj + 1]:
                     print(test_indel, jj, count_set[jj], count_set[jj + 1])
@@ -671,6 +673,7 @@ def main_predict():
 
 
 if __name__ == '__main__':
+    args = get_args()
     if args.to_predict:
         if args.weight_path is not None:
             

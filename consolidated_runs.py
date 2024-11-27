@@ -203,7 +203,8 @@ def run_scScope(x_path, y_path, ind):
     save_str = '/yhat_scScope'
     np.save(save_path + save_str, rec_y)
 
-def run_scenic_py(x_path, y_path, ind):
+
+def run_scenic(x, y, ind, label=None):
 
     ds_str = 'DS' + str(ind)
     save_path = './imputations/' + ds_str
@@ -215,8 +216,6 @@ def run_scenic_py(x_path, y_path, ind):
     tf_names = [tf for fname in tf_fnames for tf in arboreto.utils.load_tf_names(fname)]
 
     # Load data
-    y = np.transpose(np.load(y_path, allow_pickle=True))
-    x = np.transpose(np.load(x_path, allow_pickle=True))
     df = pd.DataFrame(y, columns=tf_names[:y.shape[1]])
 
     # Load ranking databases
@@ -238,8 +237,10 @@ def run_scenic_py(x_path, y_path, ind):
     db_mname = [os.path.join(motif_dir, fname) for fname in os.listdir(motif_dir) if fname.endswith('.tbl')][0]
 
     # Regulon prediction
+    print('prune')
     df_2 = prune2df(dbs, modules, db_mname)
 
+    print('df2regulons')
     regulons = df2regulons(df_2)
     # AUCell
     auc_mtx = aucell(df, regulons, num_workers=3)
@@ -249,8 +250,19 @@ def run_scenic_py(x_path, y_path, ind):
     binarized_mtx, binarized_series = binarize(auc_mtx)
 
     # Save results
-    save_str = '/yhat_SCENIC'
-    np.save(save_path + save_str, binarized_mtx.X)
+    additional = '' if not label else '_'+label
+    save_str = f'/yhat_SCENIC{ind}{additional}'
+    np.save(save_path + save_str, binarized_mtx)
+
+    return binarized_mtx
+
+
+
+def run_scenic_prepare_data(x_path, y_path, ind, label=None):
+    # Load data
+    y = np.transpose(np.load(y_path, allow_pickle=True))
+    x = np.transpose(np.load(x_path, allow_pickle=True))
+    return run_scenic(x, y, ind, label)
     
     
 SINCERA_code = """
@@ -305,128 +317,6 @@ run_seurat <- function(x_path, y_path, ind) {
     np$save(file.path(save_path, save_str), rec_y)
 }
 '''
-
-SCENIC_CODE = '''
-run_scenic_r <- function(x_path, y_path, ind) {
-  # Load data
-  y <- t(as.matrix(readRDS(y_path)))  # Load y data
-  x <- t(as.matrix(readRDS(x_path)))  # Load x data
-  print(dim(y))  # y shape (2700 x 1200)
-  print(dim(x))  # x shape (2700 x 1200)
-  
-  # Subset genes for testing
-  subset_genes <- rownames(y)[1:100]  # First 100 genes for testing
-  
-  # Load transcription factors
-  tf_path <- "./tfs/tf_names.txt"  # Path to TF names file
-  tf_names <- readLines(tf_path)
-  
-  # Filter TFs present in subset_genes
-  subset_tfs <- intersect(tf_names, subset_genes)
-  
-  # SCENIC pipeline steps:
-  # 1. GRN inference with GENIE3
-  print("Running GENIE3 for GRN inference...")
-  adjacencies <- GENIE3(as.matrix(y), regulators=subset_tfs)
-  
-  # 2. Module discovery
-  print("Discovering modules...")
-  modules <- arboreto::getModules(adjacencies, genes=subset_genes)
-  
-  # 3. Prune modules using RcisTarget
-  print("Running RcisTarget for pruning...")
-  db_files <- list.files("./feather", pattern="*.feather", full.names=TRUE)
-  df <- pruneModulesUsingRcisTarget(modules, db_files)
-  
-  # 4. Run AUCell
-  print("Running AUCell for regulon activity...")
-  auc_mtx <- AUCell::runAUCell(df, as.matrix(y))
-  
-  # Save results
-  saveRDS(auc_mtx, file=paste0("./imputations/DS", ind, "/yhat_SCENIC.rds"))
-  
-  print("SCENIC pipeline completed!")
-}
-
-# Call the SINCERA function using subprocess
-def run_sincera(x_path, y_path, ind):
-    # Convert .npy files to R-readable format and save them
-    x_rds_path = f"./imputations/DS{ind}/x_data.rds"
-    y_rds_path = f"./imputations/DS{ind}/y_data.rds"
-    
-    x_data = np.transpose(np.load(x_path))
-    y_data = np.transpose(np.load(y_path))
-    
-    # Save the data as .rds files
-    pd.DataFrame(x_data).to_csv(x_rds_path, index=False)
-    pd.DataFrame(y_data).to_csv(y_rds_path, index=False)
-    
-    # Define the R script content
-    r_script_content = SINCERA_code + f"""
-    run_sincera("{x_rds_path}", "{y_rds_path}", {ind})
-    """
-    
-    # Write the R script to a temporary file
-    r_script_path = f"./run_sincera_{ind}.R"
-    with open(r_script_path, "w") as r_script_file:
-        r_script_file.write(r_script_content)
-    
-    # Call the R script using subprocess
-    result = subprocess.run(
-        ['Rscript', r_script_path],
-        capture_output=True,
-        text=True
-    )
-    
-    # Print the output and error (if any)
-    print("SINCERA run in R is complete.")
-    print("Output:", result.stdout)
-    if result.stderr:
-        print("Error:", result.stderr)
-    
-    # Optionally, remove the temporary R script file
-    os.remove(r_script_path)
-
-
-# Call the R scenic function using subprocess
-def run_scenic(x_path, y_path, ind):
-    # Convert .npy files to R-readable format and save them
-    x_rds_path = f"./imputations/DS{ind}/x_data.rds"
-    y_rds_path = f"./imputations/DS{ind}/y_data.rds"
-    
-    x_data = np.transpose(np.load(x_path))
-    y_data = np.transpose(np.load(y_path))
-    
-    # Save the data as .rds files
-    pd.DataFrame(x_data).to_csv(x_rds_path, index=False)
-    pd.DataFrame(y_data).to_csv(y_rds_path, index=False)
-    
-    # Define the R script content
-    r_script_content = SCENIC_CODE + f"""
-    run_scenic_r("{x_rds_path}", "{y_rds_path}", {ind})
-    """
-    
-    # Write the R script to a temporary file
-    r_script_path = f"./run_scenic_{ind}.R"
-    with open(r_script_path, "w") as r_script_file:
-        r_script_file.write(r_script_content)
-    
-    # Call the R script using subprocess
-    result = subprocess.run(
-        ['Rscript', r_script_path],
-        capture_output=True,
-        text=True
-    )
-    
-    # Print the output and error (if any)
-    print("SCENIC run in R is complete.")
-    print("Output:", result.stdout)
-    if result.stderr:
-        print("Error:", result.stderr)
-    
-    # Optionally, remove the temporary R script file
-    os.remove(r_script_path)
-    '''
 
 def run_sincera(x_path, y_path, ind):
     # Convert .npy files to R-readable format and save them
@@ -558,7 +448,7 @@ def run_simulations(datasets, sergio=True, saucie=True, scScope=True, deepImpute
 
         if scenic:
             print(f"---> Running Scenic on DS{i}")
-            run_scenic(imp_data_clean, imp_data_45, i)
+            run_scenic_prepare_data(imp_data_clean, imp_data_45, i)
             count_methods += 1
 
         if sincera:
