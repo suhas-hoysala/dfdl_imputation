@@ -115,7 +115,7 @@ class direct_model1_squarematrix:
                 zzdata.append(zdata[k])
             count_setx = count_setx + len(ydata)
             count_set.append(count_setx)
-            print (i,len(ydata))
+            print (i,len(ydata)) 
         yydata_array = np.array(yydata)
         yydata_x = yydata_array.astype('int')
         print(np.array(xxdata_list).shape)
